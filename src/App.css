@@ -1,28 +1,348 @@
-.App {
-  text-align: center;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3f4142;
+    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.nation-picker__option {
+    color: #eeeeee;
+
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.nation-picker__option--era_ {
+    background-color: #3f4142;
+
 }
 
-.App-title {
-  font-size: 1.5em;
+.nation-picker__option--era_0 {
+    background-color: #eeeeee;
+    color: #222222;
+
 }
 
-.App-intro {
-  font-size: large;
+.nation-picker__option--era_1 {
+    background-color: #888888;
+    color: #eeeeee;
+
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.nation-picker__option--era_2 {
+    background-color: #111111;
+    color: #bbbbbb;
+
+}
+
+.form {
+    border-color: #c1ab5d;
+    border-width: 5px;
+    border-style: solid;
+    margin: 10px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__header {
+    color: #eeeeee;
+    text-align: center;
+    font-size: 14px;
+    padding: 3px;
+    background-color: #403838;
+    width: 100%;
+    z-index: -1;
+}
+
+.form__body {
+    color: #eeeeee;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 3px;
+}
+
+.form__body--bless-effects {
+    color: #dddddd;
+    font-size: 11px;
+    align-self: flex-start;
+    flex-flow: column;
+    padding: 3px 10px;
+}
+
+
+.bless-effects {
+    margin: 0;
+    display: none;
+}
+
+.bless-effects--visible {
+    display: block;
+}
+.bless-effects--morale {
+    color: #eeeedd;
+}
+.bless-effects--fire {
+    color: #d55a3b;
+}
+.bless-effects--air {
+    color: #d3bec6;
+}
+.bless-effects--water {
+    color: #806aff;
+}
+.bless-effects--earth {
+    color: #b08130;
+}
+.bless-effects--astral {
+    color: #b0dbd6;
+}
+.bless-effects--death {
+    color: #a550a8;
+}
+.bless-effects--nature {
+    color: #4d9533;
+}
+.bless-effects--blood {
+    color: #bd4e49;
+}
+
+
+.form__section {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.form__body--imprisonment {
+    flex-direction: column;
+}
+
+.value-picker {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin: 2px 2px;
+}
+
+
+.value-picker--scale {
+    margin: 2px 1px;
+}
+
+.value-picker__label {
+    font-size: 12px;
+    padding: 2px 6px;
+    font-family: monospace;;
+    display: block;
+}
+
+.value-picker__label--magic {
+    padding: 2px 5px;
+}
+
+.value-picker__label--dominion {
+    background-color: #ffffee;
+    color: #111111;
+    padding: 2px 3px;
+}
+
+.value-picker__label--fire {
+    background-color: #b03523;
+}
+.value-picker__label--air {
+    background-color: #a38e96;
+}
+.value-picker__label--water {
+    background-color: #331d98;
+}
+.value-picker__label--earth {
+    background-color: #b08130;
+}
+.value-picker__label--astral {
+    background-color: #709b96;
+}
+.value-picker__label--death {
+    background-color: #701b63;
+}
+.value-picker__label--nature {
+    background-color: #3d7523;
+}
+.value-picker__label--blood {
+    background-color: #7d1b16;
+}
+
+.value-picker--dominion {
+    margin-right: 12px;
+
+}
+
+.value-picker__label--scale {
+    font-size: 10px;
+    padding: 2px;
+}
+
+.value-picker--imprisonment {
+    border-width: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 0;
+}
+
+.value-picker__label--imprisonment {
+    font-size: 12px;
+    font-family: inherit;
+    border-width: 0;
+    cursor: inherit;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 0;
+}
+
+.value-picker__input {
+    color: #eeeeee;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: monospace;
+    width: 2.5em;
+    background-color: inherit;
+    border-width: 0;
+    text-align: center;
+}
+
+.value-picker__input--magic {
+    padding: 0;
+}
+
+.value-picker__input--scale {
+    padding: 0;
+    width: 2.4em;
+    margin: 0;
+}
+
+
+.value-picker__input--positive{
+    color: #22dd22;
+}
+
+.value-picker__input--negative{
+    color: #dd2222;
+}
+
+.value-picker__input--dominion {
+
+}
+
+.value-picker__input--imprisonment {
+    cursor: inherit;
+    margin-right: 0;
+    padding-right: 0;
+    width: 20px;
+}
+
+.value-picker__input--imprisonment:focus {
+    cursor: inherit;
+    border-width: 0;
+}
+
+#debugger {
+    font-family: monospace;
+    font-size: 11px;
+}
+
+.debug__log {
+    margin: 0 0;
+}
+
+.pretenders-table {
+    font-size: 12px;
+    color: #cccccc;
+}
+
+.pretenders-table__header {
+    padding-left: 6px;
+}
+
+.pretenders-table__cell {
+    padding: 1px;
+    text-align: center;
+    background: linear-gradient(#3f4142, #3d3940);
+}
+
+.pretenders-table__cell--name {
+    text-align: left;
+}
+
+.pretenders-table__text--magic {
+    color: #eeeeee;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: monospace;
+    padding: 0 1px;
+}
+
+.pretenders-table__cell--fire {
+    background-image: none;
+    background-color: #b03523;
+}
+.pretenders-table__cell--fire::before {
+  content: 'F';
+}
+.pretenders-table__cell--air {
+    background-image: none;
+    background-color: #a38e96;
+    color: #f6f6f6;
+}
+.pretenders-table__cell--air::before {
+    content: 'A';
+}
+.pretenders-table__cell--water {
+    background-image: none;
+    background-color: #331d98;
+}
+.pretenders-table__cell--water::before {
+    content: 'W';
+}
+.pretenders-table__cell--earth {
+    background-image: none;
+    background-color: #b08130;
+    color: #f6f6f6;
+}
+.pretenders-table__cell--earth::before {
+    content: 'E';
+}
+.pretenders-table__cell--astral {
+    background-image: none;
+    background-color: #709b96;
+    color: #f6f6f6;
+}
+.pretenders-table__cell--astral::before {
+    content: 'S';
+}
+.pretenders-table__cell--death {
+    background-image: none;
+    background-color: #701b63;
+}
+.pretenders-table__cell--death::before {
+    content: 'D';
+}
+.pretenders-table__cell--nature {
+    background-image: none;
+    background-color: #3d7523;
+}
+.pretenders-table__cell--nature::before {
+    content: 'N';
+}
+.pretenders-table__cell--blood {
+    background-image: none;
+    background-color: #7d1b16;
+}
+.pretenders-table__cell--blood::before {
+    content: 'B';
 }
