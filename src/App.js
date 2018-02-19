@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-
-
 class Debug extends React.Component {
   render() {
     return (
@@ -11,11 +9,9 @@ class Debug extends React.Component {
   }
 }
 
-
 class App extends Component {
   constructor(props) {
     super(props);
-
     this.magicMin = 0;
     this.magicMax = 10;
     this.dominionMin = 1;
@@ -141,14 +137,8 @@ class App extends Component {
       imprisonment: 1,
     };
 
-    // this.changeName = this.changeName.bind(this);
     // this.changeNumber = this.changeNumber.bind(this);
-    // this.changeThroneNumber = this.changeThroneNumber.bind(this);
-    // this.changeSiteFrequency = this.changeSiteFrequency.bind(this);
-    // this.changeCheckbox = this.changeCheckbox.bind(this);
     this.changeOption = this.changeOption.bind(this);
-    // this.changeNationStatus = this.changeNationStatus.bind(this);
-    // this.compileThrones = this.compileThrones.bind(this);
   }
 
   changeOption(event) {
@@ -168,7 +158,6 @@ class App extends Component {
     });
 
 
-
     return (
       <main>
         <div className="form">
@@ -182,8 +171,9 @@ class App extends Component {
           </div>
         </div>
 
-        <Debug nation={this.nations[this.state.nationId].label} />
-
+        <Debug
+          nation={this.nations[this.state.nationId].label}
+        />
 
       </main>
     );
