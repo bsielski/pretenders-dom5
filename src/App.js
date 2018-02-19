@@ -4,7 +4,10 @@ import './App.css';
 class Debug extends React.Component {
   render() {
     return (
-      <section id="debugger">Selected nation is: {this.props.nation}</section>
+      <div>
+        <section id="debugger">Selected nation is: {this.props.nation}</section>
+        <section id="debugger">Imprisonment is: {this.props.imprisonment}</section>
+      </div>
     );
   }
 }
@@ -139,11 +142,20 @@ class App extends Component {
 
     // this.changeNumber = this.changeNumber.bind(this);
     this.changeOption = this.changeOption.bind(this);
+    this.changeRadio = this.changeRadio.bind(this);
+
   }
 
   changeOption(event) {
      const target = event.target;
      this.setState({[target.name]: target.value});
+  }
+
+  changeRadio(event) {
+    const target = event.target;
+    this.setState({
+      imprisonment: parseInt(target.value, 10)
+    });
   }
 
   render() {
@@ -154,6 +166,26 @@ class App extends Component {
         <option key={nationId} value={nationId} className={"nation-picker__option nation-picker__option--era_" + this.nations[nationId].era}>
           {this.nations[nationId].label}
         </option>
+      );
+    });
+
+    const currentImprisonment = this.state.imprisonment;
+    const isImprosonmentChecked = (value) => {
+      return currentImprisonment === parseInt(value, 10);
+    };
+    const imprisonmentOptions = Object.keys(this.imprisonmentOptions).map(imprisonmentLevel => {
+      return (
+        <div key={imprisonmentLevel} className="value-picker value-picker--imprisonment value-picker--imprisonment-checked">
+          <input type="radio" id={"imprisonment_"+imprisonmentLevel.toString()+"_picker__input"}
+            onChange={this.changeRadio} checked={isImprosonmentChecked(imprisonmentLevel)}
+            name="imprisonment" value={imprisonmentLevel} className="value-picker__input value-picker__input--imprisonment"
+          />
+          <label className="value-picker__label value-picker__label--imprisonment"
+            htmlFor={"imprisonment_"+imprisonmentLevel.toString()+"_picker__input"}
+          >
+            {this.imprisonmentOptions[imprisonmentLevel].label + " " + isImprosonmentChecked(imprisonmentLevel)}
+          </label>
+        </div>
       );
     });
 
@@ -171,8 +203,17 @@ class App extends Component {
           </div>
         </div>
 
+        <div className="form">
+          <header className="form__header">Imprisonment</header>
+          <div className="form__body form__body--imprisonment">
+            {imprisonmentOptions}
+
+          </div>
+        </div>
+
         <Debug
-          nation={this.nations[this.state.nationId].label}
+          nation={this.nations[currentNationId].label}
+          imprisonment={this.imprisonmentOptions[currentImprisonment].label}
         />
 
       </main>
@@ -272,23 +313,7 @@ class App extends Component {
         //   </div>
         // </div>
         //
-        // <div className="form">
-        //   <header className="form__header">Imprisonment</header>
-        //   <div className="form__body form__body--imprisonment">
-        //     <div className="value-picker value-picker--imprisonment value-picker--imprisonment-checked">
-        //       <input type="radio" checked name="imprisonment" value="0" className="value-picker__input value-picker__input--imprisonment" id="awake-picker__input" />
-        //       <label className="value-picker__label value-picker__label--imprisonment" for="awake-picker__input">Awake (0 points)</label>
-        //     </div>
-        //     <div className="value-picker value-picker--imprisonment">
-        //       <input type="radio" name="imprisonment" value="150" className="value-picker__input value-picker__input--imprisonment" id="dormant-picker__input" />
-        //       <label className="value-picker__label value-picker__label--imprisonment" for="dormant-picker__input">Dormant (gain 150 points)</label>
-        //     </div>
-        //     <div className="value-picker value-picker--imprisonment">
-        //       <input type="radio" name="imprisonment" value="250" className="value-picker__input value-picker__input--imprisonment" id="imprisoned-picker__input" />
-        //       <label className="value-picker__label value-picker__label--imprisonment" for="imprisoned-picker__input">Imprisoned (gain 250 points)</label>
-        //     </div>
-        //   </div>
-        // </div>
+
         //
         // <div className="form">
         //   <header className="form__header">Pretenders</header>
