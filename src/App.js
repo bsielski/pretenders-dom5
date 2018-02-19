@@ -7,6 +7,15 @@ class Debug extends React.Component {
       <div>
         <section id="debugger">Selected nation is: {this.props.nation}</section>
         <section id="debugger">Imprisonment is: {this.props.imprisonment}</section>
+        <section id="debugger">Magic path F is: {this.props.pathF}</section>
+        <section id="debugger">Magic path A is: {this.props.pathA}</section>
+        <section id="debugger">Magic path W is: {this.props.pathW}</section>
+        <section id="debugger">Magic path E is: {this.props.pathE}</section>
+        <section id="debugger">Magic path S is: {this.props.pathS}</section>
+        <section id="debugger">Magic path D is: {this.props.pathD}</section>
+        <section id="debugger">Magic path N is: {this.props.pathN}</section>
+        <section id="debugger">Magic path B is: {this.props.pathB}</section>
+
       </div>
     );
   }
@@ -140,7 +149,7 @@ class App extends Component {
       imprisonment: 1,
     };
 
-    // this.changeNumber = this.changeNumber.bind(this);
+    this.changeNumber = this.changeNumber.bind(this);
     this.changeOption = this.changeOption.bind(this);
     this.changeRadio = this.changeRadio.bind(this);
 
@@ -149,6 +158,11 @@ class App extends Component {
   changeOption(event) {
      const target = event.target;
      this.setState({[target.name]: target.value});
+  }
+
+  changeNumber(event) {
+    const target = event.target;
+    this.setState({[target.name]: target.value});
   }
 
   changeRadio(event) {
@@ -189,6 +203,14 @@ class App extends Component {
       );
     });
 
+    const currentPathF = this.state.pathF;
+    const currentPathA = this.state.pathA;
+    const currentPathW = this.state.pathW;
+    const currentPathE = this.state.pathE;
+    const currentPathS = this.state.pathS;
+    const currentPathD = this.state.pathD;
+    const currentPathN = this.state.pathN;
+    const currentPathB = this.state.pathB;
 
     return (
       <main>
@@ -204,6 +226,59 @@ class App extends Component {
         </div>
 
         <div className="form">
+          <header className="form__header">Magic</header>
+          <div className="form__body">
+            <div className="form__section">
+              <div className="value-picker value-picker--magic value-picker--fire">
+                <label className="value-picker__label value-picker__label--magic value-picker__label--fire" htmlFor="fire-picker__input">F</label>
+                <input type="number" name="pathF" onChange={this.changeNumber} min="0" max="10" value={currentPathF} id="fire-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--fire"/>
+              </div>
+              <div className="value-picker value-picker--magic value-picker--air">
+                <label className="value-picker__label value-picker__label--magic value-picker__label--air" htmlFor="air-picker__input">A</label>
+                <input type="number" name="pathA" onChange={this.changeNumber} min="0" max="10" value={currentPathA} id="air-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--air" />
+              </div>
+              <div className="value-picker value-picker--magic value-picker--water">
+                <label className="value-picker__label value-picker__label--magic value-picker__label--water" htmlFor="water-picker__input">W</label>
+                <input type="number" name="pathW" onChange={this.changeNumber} min="0" max="10" value={currentPathW} id="water-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--water" />
+              </div>
+              <div className="value-picker value-picker--magic value-picker--earth">
+                <label className="value-picker__label value-picker__label--magic value-picker__label--earth" htmlFor="earth-picker__input">E</label>
+                <input type="number" name="pathE" onChange={this.changeNumber} min="0" max="10" value={currentPathE} id="earth-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--earth" />
+              </div>
+            </div>
+            <div className="form__section">
+              <div className="value-picker value-picker--magic value-picker--astral">
+                <label className="value-picker__label value-picker__label--magic value-picker__label--astral" htmlFor="astral-picker__input">S</label>
+                <input type="number" name="pathS" onChange={this.changeNumber} min="0" max="10" value={currentPathS} id="astral-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--astral" />
+              </div>
+              <div className="value-picker value-picker--magic value-picker--death">
+                <label className="value-picker__label value-picker__label--magic value-picker__label--death" htmlFor="death-picker__input">D</label>
+                <input type="number" name="pathD" onChange={this.changeNumber} min="0" max="10" value={currentPathD} id="death-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--death" />
+              </div>
+              <div className="value-picker value-picker--magic value-picker--nature">
+                <label className="value-picker__label value-picker__label--magic value-picker__label--nature" htmlFor="nature-picker__input">N</label>
+                <input type="number" name="pathN" onChange={this.changeNumber} min="0" max="10" value={currentPathN} id="nature-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--nature" />
+              </div>
+              <div className="value-picker value-picker--magic value-picker--blood">
+                <label className="value-picker__label value-picker__label--magic value-picker__label--blood" htmlFor="blood-picker__input">B</label>
+                <input type="number" name="pathB" onChange={this.changeNumber} min="0" max="10" value={currentPathB} id="blood-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--blood" />
+              </div>
+            </div>
+          </div>
+          <div className="form__body form__body--bless-effects">
+          <p id="bless-effects-morale" className="bless-effects bless-effects--visible bless-effects-morale">Morale + 1</p>
+          <p id="bless-effects-fire" className="bless-effects bless-effects--fire"></p>
+          <p id="bless-effects-air" className="bless-effects bless-effects--air"></p>
+          <p id="bless-effects-water" className="bless-effects bless-effects--water"></p>
+          <p id="bless-effects-earth" className="bless-effects bless-effects--earth"></p>
+          <p id="bless-effects-astral" className="bless-effects bless-effects--astral"></p>
+          <p id="bless-effects-death" className="bless-effects bless-effects--death"></p>
+          <p id="bless-effects-nature" className="bless-effects bless-effects--nature"></p>
+          <p id="bless-effects-blood" className="bless-effects bless-effects--blood"></p>
+          </div>
+        </div>
+
+        <div className="form">
           <header className="form__header">Imprisonment</header>
           <div className="form__body form__body--imprisonment">
             {imprisonmentOptions}
@@ -214,62 +289,18 @@ class App extends Component {
         <Debug
           nation={this.nations[currentNationId].label}
           imprisonment={this.imprisonmentOptions[currentImprisonment].label}
+          pathF={currentPathF}
+          pathA={currentPathA}
+          pathW={currentPathW}
+          pathE={currentPathE}
+          pathS={currentPathS}
+          pathD={currentPathD}
+          pathN={currentPathN}
+          pathB={currentPathB}
         />
 
       </main>
     );
-        // <div className="form">
-        //   <header className="form__header">Magic</header>
-        //   <div className="form__body">
-        //     <div className="form__section">
-        //       <div className="value-picker value-picker--fire">
-        //         <label className="value-picker__label value-picker__label--magic value-picker__label--fire" for="fire-picker__input">F</label>
-        //         <input type="number" min="0" max="10" value="0" id="fire-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--fire"/>
-        //       </div>
-        //       <div className="value-picker value-picker--air">
-        //         <label className="value-picker__label value-picker__label--magic value-picker__label--air" for="air-picker__input">A</label>
-        //         <input type="number" min="0" max="10" value="0" id="air-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--air" />
-        //       </div>
-        //       <div className="value-picker value-picker--water">
-        //         <label className="value-picker__label value-picker__label--magic value-picker__label--water" for="water-picker__input">W</label>
-        //         <input type="number" min="0" max="10" value="0" id="water-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--water" />
-        //       </div>
-        //       <div className="value-picker value-picker--earth">
-        //         <label className="value-picker__label value-picker__label--magic value-picker__label--earth" for="earth-picker__input">E</label>
-        //         <input type="number" min="0" max="10" value="0" id="earth-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--earth" />
-        //       </div>
-        //     </div>
-        //     <div className="form__section">
-        //       <div className="value-picker value-picker--astral">
-        //         <label className="value-picker__label value-picker__label--magic value-picker__label--astral" for="astral-picker__input">S</label>
-        //         <input type="number" min="0" max="10" value="0" id="astral-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--astral" />
-        //       </div>
-        //       <div className="value-picker value-picker--death">
-        //         <label className="value-picker__label value-picker__label--magic value-picker__label--death" for="death-picker__input">D</label>
-        //         <input type="number" min="0" max="10" value="0" id="death-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--death" />
-        //       </div>
-        //       <div className="value-picker value-picker--nature">
-        //         <label className="value-picker__label value-picker__label--magic value-picker__label--nature" for="nature-picker__input">N</label>
-        //         <input type="number" min="0" max="10" value="0" id="nature-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--nature" />
-        //       </div>
-        //       <div className="value-picker value-picker--blood">
-        //         <label className="value-picker__label value-picker__label--magic value-picker__label--blood" for="blood-picker__input">B</label>
-        //         <input type="number" min="0" max="10" value="0" id="blood-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--blood" />
-        //       </div>
-        //     </div>
-        //   </div>
-        //   <div className="form__body form__body--bless-effects">
-        //   <p id="bless-effects-morale" className="bless-effects bless-effects--visible bless-effects-morale">Morale + 1</p>
-        //   <p id="bless-effects-fire" className="bless-effects bless-effects--fire"></p>
-        //   <p id="bless-effects-air" className="bless-effects bless-effects--air"></p>
-        //   <p id="bless-effects-water" className="bless-effects bless-effects--water"></p>
-        //   <p id="bless-effects-earth" className="bless-effects bless-effects--earth"></p>
-        //   <p id="bless-effects-astral" className="bless-effects bless-effects--astral"></p>
-        //   <p id="bless-effects-death" className="bless-effects bless-effects--death"></p>
-        //   <p id="bless-effects-nature" className="bless-effects bless-effects--nature"></p>
-        //   <p id="bless-effects-blood" className="bless-effects bless-effects--blood"></p>
-        //   </div>
-        // </div>
         //
         // <div className="form">
         //   <header className="form__header">Dominion</header>
