@@ -1,9 +1,9 @@
 export function getNations() {
   return {
     0:   { era: null, label: "Any nation",
-    "realms": [],
-    "cheapgods20": [],
-    "cheapgods40": []},},},
+      "realms": [],
+      "cheapgods20": [],
+      "cheapgods40": []},},},
     5:   { era: 0, label: "EA Arcoscephale - Golden Era",
       "realms": [],
       "cheapgods20": [],
