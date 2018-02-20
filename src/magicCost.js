@@ -1,4 +1,4 @@
-export function magicPathCost(newPathCost, baseLevel, wantedLevel) {
+function magicPathCost(newPathCost, baseLevel, wantedLevel) {
   if (baseLevel === null || baseLevel === undefined || baseLevel === "") {
     baseLevel = 0;
   }
