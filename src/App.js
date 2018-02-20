@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import {getNations} from './nations';
+import {magicPathCost} from './magicCost';
+import {magicCost} from './magicCost';
 import './App.css';
 
 class Debug extends React.Component {
   render() {
     return (
       <div>
+        <section id="debugger">Points left (without pretender): {this.props.points}</section>
         <section id="debugger">Selected nation is: {this.props.nation}</section>
         <section id="debugger">Imprisonment is: {this.props.imprisonment}</section>
         <section id="debugger">Magic path F is: {this.props.pathF}</section>
@@ -25,6 +28,7 @@ class Debug extends React.Component {
 class App extends Component {
   constructor(props) {
     super(props);
+    this.points = 425;
     this.magicMin = 0;
     this.magicMax = 10;
     this.dominionMin = 1;
@@ -110,7 +114,7 @@ class App extends Component {
           <label className="value-picker__label value-picker__label--imprisonment"
             htmlFor={"imprisonment_"+imprisonmentLevel.toString()+"_picker__input"}
           >
-            {this.imprisonmentOptions[imprisonmentLevel].label + " " + isImprosonmentChecked(imprisonmentLevel)}
+            {this.imprisonmentOptions[imprisonmentLevel].label}
           </label>
         </div>
       );
@@ -124,6 +128,8 @@ class App extends Component {
     const currentPathD = this.state.pathD;
     const currentPathN = this.state.pathN;
     const currentPathB = this.state.pathB;
+
+    const currentBasePointsLeft = this.points + this.imprisonmentOptions[currentImprisonment].points;
 
     return (
       <main>
@@ -210,6 +216,7 @@ class App extends Component {
           pathD={currentPathD}
           pathN={currentPathN}
           pathB={currentPathB}
+          points={currentBasePointsLeft}
         />
 
       </main>
