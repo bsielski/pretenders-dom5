@@ -19,7 +19,13 @@ class Debug extends React.Component {
         <section id="debugger">Magic path D is: {this.props.pathD}</section>
         <section id="debugger">Magic path N is: {this.props.pathN}</section>
         <section id="debugger">Magic path B is: {this.props.pathB}</section>
-
+        <section id="debugger">Dominion is: {this.props.dominion}</section>
+        <section id="debugger">Order is: {this.props.order}</section>
+        <section id="debugger">Productivity is: {this.props.productivity}</section>
+        <section id="debugger">Heat is: {this.props.heat}</section>
+        <section id="debugger">Growth is: {this.props.growth}</section>
+        <section id="debugger">Fortune is: {this.props.fortune}</section>
+        <section id="debugger">Magic is: {this.props.magic}</section>
       </div>
     );
   }
@@ -59,6 +65,7 @@ class App extends Component {
       pathB: 0,
       dominion: 1,
       order: 0,
+      productivity: 0,
       heat: 0,
       growth: 0,
       fortune: 0,
@@ -198,6 +205,48 @@ class App extends Component {
         </div>
 
         <div className="form">
+          <header className="form__header">Dominion</header>
+          <div className="form__body">
+            <div className="form__section">
+              <div className="value-picker value-picker--dominion">
+                <label className="value-picker__label value-picker__label--dominion" htmlFor="dominion-picker__input">Dom</label>
+                <input type="number" name="dominion" onChange={this.changeNumber} min="1" max="10" value={this.state.dominion} id="dominion-picker__input" className="value-picker__input value-picker__input--dominion" />
+              </div>
+            </div>
+            <div className="form__body">
+              <div className="form__section">
+                <div className="value-picker value-picker--scale">
+                  <label className="value-picker__label value-picker__label--scale value-picker__label--order" htmlFor="order-picker__input">Ord</label>
+                  <input type="number" name="order" onChange={this.changeNumber} min="-3" max="3" value={this.state.order} id="order-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--order" />
+                </div>
+                <div className="value-picker value-picker--scale">
+                  <label className="value-picker__label value-picker__label--scale value-picker__label--productivity" htmlFor="productivity-picker__input">Prd</label>
+                  <input type="number" name="productivity" onChange={this.changeNumber} min="-3" max="3" value={this.state.productivity} id="productivity-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--productivity" />
+                </div>
+                <div className="value-picker value-picker--scale">
+                  <label className="value-picker__label value-picker__label--scale value-picker__label--heat" htmlFor="heat-picker__input">Heat</label>
+                  <input type="number" name="heat" onChange={this.changeNumber} min="-3" max="3" value={this.state.heat} id="heat-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--heat" />
+                </div>
+              </div>
+              <div className="form__section">
+                <div className="value-picker value-picker--scale">
+                  <label className="value-picker__label value-picker__label--scale value-picker__label--growth" htmlFor="growth-picker__input">Grw</label>
+                  <input type="number" name="growth" onChange={this.changeNumber} min="-3" max="3" value={this.state.growth} id="growth-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--growth" />
+                </div>
+                <div className="value-picker value-picker--scale">
+                  <label className="value-picker__label value-picker__label--scale value-picker__label--fortune" htmlFor="fortune-picker__input">Frt</label>
+                  <input type="number" name="fortune" onChange={this.changeNumber} min="-3" max="3" value={this.state.fortune} id="fortune-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--fortune" />
+                </div>
+                <div className="value-picker value-picker--scale">
+                  <label className="value-picker__label value-picker__label--scale value-picker__label--magic" htmlFor="magic-picker__input">Mgc</label>
+                  <input type="number" name="magic" onChange={this.changeNumber} min="-3" max="3" value={this.state.magic} id="magic-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--magic" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="form">
           <header className="form__header">Imprisonment</header>
           <div className="form__body form__body--imprisonment">
             {imprisonmentOptions}
@@ -208,6 +257,7 @@ class App extends Component {
         <Debug
           nation={this.nations[currentNationId].label}
           imprisonment={this.imprisonmentOptions[currentImprisonment].label}
+          points={currentBasePointsLeft}
           pathF={currentPathF}
           pathA={currentPathA}
           pathW={currentPathW}
@@ -216,55 +266,16 @@ class App extends Component {
           pathD={currentPathD}
           pathN={currentPathN}
           pathB={currentPathB}
-          points={currentBasePointsLeft}
+          dominion={this.state.dominion}
+          order={this.state.order}
+          productivity={this.state.productivity}
+          heat={this.state.heat}
+          growth={this.state.growth}
+          fortune={this.state.fortune}
+          magic={this.state.magic}
         />
-
       </main>
     );
-        //
-        // <div className="form">
-        //   <header className="form__header">Dominion</header>
-        //   <div className="form__body">
-        //     <div className="form__section">
-        //       <div className="value-picker value-picker--dominion">
-        //         <label className="value-picker__label value-picker__label--dominion" for="dominion-picker__input">Dom</label>
-        //         <input type="number" min="1" max="10" value="1" id="dominion-picker__input" className="value-picker__input value-picker__input--dominion" />
-        //       </div>
-        //     </div>
-        //     <div className="form__body">
-        //       <div className="form__section">
-        //         <div className="value-picker value-picker--scale">
-        //           <label className="value-picker__label value-picker__label--scale value-picker__label--order" for="order-picker__input">Ord</label>
-        //           <input type="number" min="-3" max="3" value="0" id="order-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--order" />
-        //         </div>
-        //         <div className="value-picker value-picker--scale">
-        //           <label className="value-picker__label value-picker__label--scale value-picker__label--productivity" for="productivity-picker__input">Prd</label>
-        //           <input type="number" min="-3" max="3" value="0" id="productivity-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--productivity" />
-        //         </div>
-        //         <div className="value-picker value-picker--scale">
-        //           <label className="value-picker__label value-picker__label--scale value-picker__label--heat" for="heat-picker__input">Heat</label>
-        //           <input type="number" min="-3" max="3" value="0" id="heat-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--heat" />
-        //         </div>
-        //       </div>
-        //       <div className="form__section">
-        //         <div className="value-picker value-picker--scale">
-        //           <label className="value-picker__label value-picker__label--scale value-picker__label--growth" for="growth-picker__input">Grw</label>
-        //           <input type="number" min="-3" max="3" value="0" id="growth-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--growth" />
-        //         </div>
-        //         <div className="value-picker value-picker--scale">
-        //           <label className="value-picker__label value-picker__label--scale value-picker__label--fortune" for="fortune-picker__input">Frt</label>
-        //           <input type="number" min="-3" max="3" value="0" id="fortune-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--fortune" />
-        //         </div>
-        //         <div className="value-picker value-picker--scale">
-        //           <label className="value-picker__label value-picker__label--scale value-picker__label--magic" for="magic-picker__input">Mgc</label>
-        //           <input type="number" min="-3" max="3" value="0" id="magic-picker__input" className="value-picker__input value-picker__input--scale value-picker__input--magic" />
-        //         </div>
-        //       </div>
-        //     </div>
-        //   </div>
-        // </div>
-        //
-
         //
         // <div className="form">
         //   <header className="form__header">Pretenders</header>

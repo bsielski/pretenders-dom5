@@ -133,7 +133,8 @@ body {
 }
 
 .value-picker--scale {
-    margin: 2px 1px;
+  flex-flow: column;
+  margin: 2px 1px;
 }
 
 .value-picker__label {
@@ -180,7 +181,7 @@ body {
 
 .value-picker--dominion {
     margin-right: 12px;
-
+    flex-flow: column;
 }
 
 .value-picker__label--scale {
