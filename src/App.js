@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {getNations} from './nations';
-import {magicPathCost} from './magicCost';
 import {magicCost} from './magicCost';
+import {scalesCost} from './scalesCost';
 import './App.css';
 
 class Debug extends React.Component {
