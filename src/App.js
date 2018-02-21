@@ -58,14 +58,16 @@ class App extends Component {
     this.nations = getNations();
     this.state = {
       nationId: 0,
-      pathF: 0,
-      pathA: 0,
-      pathW: 0,
-      pathE: 0,
-      pathS: 0,
-      pathD: 0,
-      pathN: 0,
-      pathB: 0,
+      path: {
+        f: 0,
+        a: 0,
+        w: 0,
+        e: 0,
+        s: 0,
+        d: 0,
+        n: 0,
+        b: 0,
+      },
       dominion: 1,
       order: 0,
       productivity: 0,
@@ -77,6 +79,7 @@ class App extends Component {
     };
 
     this.changeNumber = this.changeNumber.bind(this);
+    this.changePathLevel = this.changePathLevel.bind(this);
     this.changeOption = this.changeOption.bind(this);
     this.changeRadio = this.changeRadio.bind(this);
 
@@ -90,6 +93,13 @@ class App extends Component {
   changeNumber(event) {
     const target = event.target;
     this.setState({[target.name]: parseInt(target.value, 10)});
+  }
+
+  changePathLevel(event) {
+    const target = event.target;
+    const newPath = Object.assign({}, this.state.path);
+    newPath[target.name] = parseInt(target.value, 10);
+    this.setState({path: newPath});
   }
 
   changeRadio(event) {
@@ -147,16 +157,6 @@ class App extends Component {
                                                       magic: this.state.magic,
                                                     }
                                                  );
-    const currentPaths = {
-      f: this.state.pathF,
-      a: this.state.pathA,
-      w: this.state.pathW,
-      e: this.state.pathE,
-      s: this.state.pathS,
-      d: this.state.pathD,
-      n: this.state.pathN,
-      b: this.state.pathB,
-    };
 
     const blessBonuses = {
       f: this.nations[this.state.nationId].blessF,
@@ -169,7 +169,7 @@ class App extends Component {
       b: this.nations[this.state.nationId].blessB,
     };
 
-    const blessPoints = totalBlessPoints(currentPaths, blessBonuses);
+    const blessPoints = totalBlessPoints(this.state.path, blessBonuses);
 
     return (
       <main>
@@ -190,37 +190,37 @@ class App extends Component {
             <div className="form__section">
               <div className="value-picker value-picker--magic value-picker--fire">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--fire" htmlFor="fire-picker__input">F</label>
-                <input type="number" name="pathF" onChange={this.changeNumber} min="0" max="10" value={this.state.pathF} id="fire-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--fire"/>
+                <input type="number" name="f" onChange={this.changePathLevel} min="0" max="10" value={this.state.path.f} id="fire-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--fire"/>
               </div>
               <div className="value-picker value-picker--magic value-picker--air">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--air" htmlFor="air-picker__input">A</label>
-                <input type="number" name="pathA" onChange={this.changeNumber} min="0" max="10" value={this.state.pathA} id="air-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--air" />
+                <input type="number" name="a" onChange={this.changePathLevel} min="0" max="10" value={this.state.path.a} id="air-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--air" />
               </div>
               <div className="value-picker value-picker--magic value-picker--water">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--water" htmlFor="water-picker__input">W</label>
-                <input type="number" name="pathW" onChange={this.changeNumber} min="0" max="10" value={this.state.pathW} id="water-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--water" />
+                <input type="number" name="w" onChange={this.changePathLevel} min="0" max="10" value={this.state.path.w} id="water-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--water" />
               </div>
               <div className="value-picker value-picker--magic value-picker--earth">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--earth" htmlFor="earth-picker__input">E</label>
-                <input type="number" name="pathE" onChange={this.changeNumber} min="0" max="10" value={this.state.pathE} id="earth-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--earth" />
+                <input type="number" name="e" onChange={this.changePathLevel} min="0" max="10" value={this.state.path.e} id="earth-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--earth" />
               </div>
             </div>
             <div className="form__section">
               <div className="value-picker value-picker--magic value-picker--astral">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--astral" htmlFor="astral-picker__input">S</label>
-                <input type="number" name="pathS" onChange={this.changeNumber} min="0" max="10" value={this.state.pathS} id="astral-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--astral" />
+                <input type="number" name="s" onChange={this.changePathLevel} min="0" max="10" value={this.state.path.s} id="astral-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--astral" />
               </div>
               <div className="value-picker value-picker--magic value-picker--death">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--death" htmlFor="death-picker__input">D</label>
-                <input type="number" name="pathD" onChange={this.changeNumber} min="0" max="10" value={this.state.pathD} id="death-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--death" />
+                <input type="number" name="d" onChange={this.changePathLevel} min="0" max="10" value={this.state.path.d} id="death-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--death" />
               </div>
               <div className="value-picker value-picker--magic value-picker--nature">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--nature" htmlFor="nature-picker__input">N</label>
-                <input type="number" name="pathN" onChange={this.changeNumber} min="0" max="10" value={this.state.pathN} id="nature-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--nature" />
+                <input type="number" name="n" onChange={this.changePathLevel} min="0" max="10" value={this.state.path.n} id="nature-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--nature" />
               </div>
               <div className="value-picker value-picker--magic value-picker--blood">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--blood" htmlFor="blood-picker__input">B</label>
-                <input type="number" name="pathB" onChange={this.changeNumber} min="0" max="10" value={this.state.pathB} id="blood-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--blood" />
+                <input type="number" name="b" onChange={this.changePathLevel} min="0" max="10" value={this.state.path.b} id="blood-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--blood" />
               </div>
             </div>
           </div>
@@ -307,14 +307,14 @@ class App extends Component {
           nation={this.nations[this.state.nationId].label}
           imprisonment={this.imprisonmentOptions[this.state.imprisonment].label}
           points={pointsLeftWithoutPretenders}
-          pathF={this.state.pathF}
-          pathA={this.state.pathA}
-          pathW={this.state.pathW}
-          pathE={this.state.pathE}
-          pathS={this.state.pathS}
-          pathD={this.state.pathD}
-          pathN={this.state.pathN}
-          pathB={this.state.pathB}
+          pathF={this.state.path.f}
+          pathA={this.state.path.a}
+          pathW={this.state.path.w}
+          pathE={this.state.path.e}
+          pathS={this.state.path.s}
+          pathD={this.state.path.d}
+          pathN={this.state.path.n}
+          pathB={this.state.path.b}
           dominion={this.state.dominion}
           order={this.state.order}
           productivity={this.state.productivity}
