@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {getNations} from './nations';
 import {magicCost} from './magicCost';
 import {scalesCost} from './scalesCost';
+import {getPretenders} from './pretenders';
+
 import './App.css';
 
 class Debug extends React.Component {
@@ -86,7 +88,7 @@ class App extends Component {
 
   changeNumber(event) {
     const target = event.target;
-    this.setState({[target.name]: target.value});
+    this.setState({[target.name]: parseInt(target.value, 10)});
   }
 
   changeRadio(event) {
@@ -155,6 +157,32 @@ class App extends Component {
                                                       magic: this.state.magic,
                                                     }
                                                  );
+
+    const elementalPathBlessPointsLeft = (currentPath, blessBonus) => {
+     if ((currentPath >= 4) || (currentPathF >= 3 && currentPathA >=3 && currentPathW >= 3 && currentPathE >= 3)) {
+       return currentPath + blessBonus;
+     }
+     else {
+       return 0;
+     }
+    };
+    const sorceryPathBlessPointsLeft = (currentPath, blessBonus) => {
+     if ((currentPath >= 4) || (currentPathS >= 3 && currentPathD >=3 && currentPathN >= 3 && currentPathB >= 3)) {
+       return currentPath + blessBonus;
+     }
+     else {
+       return 0;
+     }
+    };
+
+    const blessPointsLeftF = elementalPathBlessPointsLeft(currentPathF, this.nations[currentNationId].blessF);
+    const blessPointsLeftA = elementalPathBlessPointsLeft(currentPathA, this.nations[currentNationId].blessA);
+    const blessPointsLeftW = elementalPathBlessPointsLeft(currentPathW, this.nations[currentNationId].blessW);
+    const blessPointsLeftE = elementalPathBlessPointsLeft(currentPathE, this.nations[currentNationId].blessE);
+    const blessPointsLeftS = sorceryPathBlessPointsLeft(currentPathS, this.nations[currentNationId].blessS);
+    const blessPointsLeftD = sorceryPathBlessPointsLeft(currentPathD, this.nations[currentNationId].blessD);
+    const blessPointsLeftN = sorceryPathBlessPointsLeft(currentPathN, this.nations[currentNationId].blessN);
+    const blessPointsLeftB = sorceryPathBlessPointsLeft(currentPathB, this.nations[currentNationId].blessB);
 
     return (
       <main>
@@ -225,6 +253,16 @@ class App extends Component {
         <div className="form">
           <header className="form__header">Bless Effects</header>
           <div className="form__body form__body--bless">
+            <div className="form__section">
+              <div className="value-picker__label value-picker__label--magic value-picker__label--fire">F: {blessPointsLeftF}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--air">A: {blessPointsLeftA}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--water">W: {blessPointsLeftW}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--earth">E: {blessPointsLeftE}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--astral">S: {blessPointsLeftS}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--death">D: {blessPointsLeftD}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--nature">N: {blessPointsLeftN}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--blood">B: {blessPointsLeftB}</div>
+            </div>
           </div>
         </div>
 
