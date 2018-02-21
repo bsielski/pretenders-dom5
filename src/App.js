@@ -205,6 +205,12 @@ class App extends Component {
         </div>
 
         <div className="form">
+          <header className="form__header">Bless Effects</header>
+          <div className="form__body form__body--bless">
+          </div>
+        </div>
+
+        <div className="form">
           <header className="form__header">Dominion</header>
           <div className="form__body">
             <div className="form__section">
