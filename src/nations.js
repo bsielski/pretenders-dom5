@@ -386,7 +386,7 @@ export function getNations() {
 
 };
 
-const nations = getNations()
-console.log(
-  nations[95]
-);
+// const nations = getNations()
+// console.log(
+//   nations[95]
+// );
