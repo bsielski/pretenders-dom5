@@ -55,23 +55,23 @@ export function scalesCost(nationStartLevels, wantedLevels) {
 //   heatCost(-1, 1)
 // );
 
-console.log( "Should be 40: " +
-  scalesCost( {order: 0, productivity: 0, heat: 1, growth: 0, fortune: 0, magic: 0},
-              {order: 0, productivity: 0, heat: 0, growth: 0, fortune: 0, magic: 0}
-           )
-);
-console.log( "Should be 80: " +
-  scalesCost( {order: 0, productivity: 0, heat: -1, growth: 0, fortune: 0, magic: 0},
-              {order: 0, productivity: 0, heat:  0, growth: 0, fortune: 1, magic: 0}
-           )
-);
-console.log( "Should be 0: " +
-  scalesCost( {order: 0, productivity: 0, heat: -1, growth: 0, fortune: 0, magic: 0},
-              {order: -2, productivity: 0, heat:  0, growth: 0, fortune: 1, magic: 0}
-           )
-);
-console.log( "Should be -80: " +
-  scalesCost( {order:  0, productivity:  0, heat: -1, growth: 0, fortune: 0, magic:  0},
-              {order: -2, productivity: -1, heat:  0, growth: 0, fortune: 1, magic: -1}
-           )
-);
+// console.log( "Should be 40: " +
+//   scalesCost( {order: 0, productivity: 0, heat: 1, growth: 0, fortune: 0, magic: 0},
+//               {order: 0, productivity: 0, heat: 0, growth: 0, fortune: 0, magic: 0}
+//            )
+// );
+// console.log( "Should be 80: " +
+//   scalesCost( {order: 0, productivity: 0, heat: -1, growth: 0, fortune: 0, magic: 0},
+//               {order: 0, productivity: 0, heat:  0, growth: 0, fortune: 1, magic: 0}
+//            )
+// );
+// console.log( "Should be 0: " +
+//   scalesCost( {order: 0, productivity: 0, heat: -1, growth: 0, fortune: 0, magic: 0},
+//               {order: -2, productivity: 0, heat:  0, growth: 0, fortune: 1, magic: 0}
+//            )
+// );
+// console.log( "Should be -80: " +
+//   scalesCost( {order:  0, productivity:  0, heat: -1, growth: 0, fortune: 0, magic:  0},
+//               {order: -2, productivity: -1, heat:  0, growth: 0, fortune: 1, magic: -1}
+//            )
+// );
