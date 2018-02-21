@@ -136,7 +136,25 @@ class App extends Component {
     const currentPathN = this.state.pathN;
     const currentPathB = this.state.pathB;
 
-    const currentBasePointsLeft = this.points + this.imprisonmentOptions[currentImprisonment].points;
+    const pointsLeftWithoutPretenders = this.points
+                                      + this.imprisonmentOptions[currentImprisonment].points
+                                      - scalesCost( {
+                                                      order: 0,
+                                                      productivity: 0,
+                                                      heat: this.nations[this.state.nationId].heat,
+                                                      growth: this.nations[this.state.nationId].growth,
+                                                      fortune: 0,
+                                                      magic: 0,
+                                                    },
+                                                    {
+                                                      order: this.state.order,
+                                                      productivity: this.state.productivity,
+                                                      heat: this.state.heat,
+                                                      growth: this.state.growth,
+                                                      fortune: this.state.fortune,
+                                                      magic: this.state.magic,
+                                                    }
+                                                 );
 
     return (
       <main>
@@ -263,7 +281,7 @@ class App extends Component {
         <Debug
           nation={this.nations[currentNationId].label}
           imprisonment={this.imprisonmentOptions[currentImprisonment].label}
-          points={currentBasePointsLeft}
+          points={pointsLeftWithoutPretenders}
           pathF={currentPathF}
           pathA={currentPathA}
           pathW={currentPathW}
