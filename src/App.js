@@ -99,7 +99,6 @@ class App extends Component {
   }
 
   render() {
-    const currentNationId = this.state.nationId;
 
     const nationOptions = Object.keys(this.nations).map(nationId => {
       return (
@@ -109,9 +108,8 @@ class App extends Component {
       );
     });
 
-    const currentImprisonment = this.state.imprisonment;
     const isImprosonmentChecked = (value) => {
-      return currentImprisonment === parseInt(value, 10);
+      return this.state.imprisonment === parseInt(value, 10);
     };
     const imprisonmentOptions = Object.keys(this.imprisonmentOptions).map(imprisonmentLevel => {
       return (
@@ -129,17 +127,8 @@ class App extends Component {
       );
     });
 
-    const currentPathF = this.state.pathF;
-    const currentPathA = this.state.pathA;
-    const currentPathW = this.state.pathW;
-    const currentPathE = this.state.pathE;
-    const currentPathS = this.state.pathS;
-    const currentPathD = this.state.pathD;
-    const currentPathN = this.state.pathN;
-    const currentPathB = this.state.pathB;
-
     const pointsLeftWithoutPretenders = this.points
-                                      + this.imprisonmentOptions[currentImprisonment].points
+                                      + this.imprisonmentOptions[this.state.imprisonment].points
                                       - scalesCost( {
                                                       order: 0,
                                                       productivity: 0,
@@ -159,7 +148,7 @@ class App extends Component {
                                                  );
 
     const elementalPathBlessPointsLeft = (currentPath, blessBonus) => {
-     if ((currentPath >= 4) || (currentPathF >= 3 && currentPathA >=3 && currentPathW >= 3 && currentPathE >= 3)) {
+     if ((currentPath >= 4) || (this.state.pathF >= 3 && this.state.pathA >=3 && this.state.pathW >= 3 && this.state.pathE >= 3)) {
        return currentPath + blessBonus;
      }
      else {
@@ -167,7 +156,7 @@ class App extends Component {
      }
     };
     const sorceryPathBlessPointsLeft = (currentPath, blessBonus) => {
-     if ((currentPath >= 4) || (currentPathS >= 3 && currentPathD >=3 && currentPathN >= 3 && currentPathB >= 3)) {
+     if ((currentPath >= 4) || (this.state.pathS >= 3 && this.state.pathD >=3 && this.state.pathN >= 3 && this.state.pathB >= 3)) {
        return currentPath + blessBonus;
      }
      else {
@@ -175,21 +164,21 @@ class App extends Component {
      }
     };
 
-    const blessPointsLeftF = elementalPathBlessPointsLeft(currentPathF, this.nations[currentNationId].blessF);
-    const blessPointsLeftA = elementalPathBlessPointsLeft(currentPathA, this.nations[currentNationId].blessA);
-    const blessPointsLeftW = elementalPathBlessPointsLeft(currentPathW, this.nations[currentNationId].blessW);
-    const blessPointsLeftE = elementalPathBlessPointsLeft(currentPathE, this.nations[currentNationId].blessE);
-    const blessPointsLeftS = sorceryPathBlessPointsLeft(currentPathS, this.nations[currentNationId].blessS);
-    const blessPointsLeftD = sorceryPathBlessPointsLeft(currentPathD, this.nations[currentNationId].blessD);
-    const blessPointsLeftN = sorceryPathBlessPointsLeft(currentPathN, this.nations[currentNationId].blessN);
-    const blessPointsLeftB = sorceryPathBlessPointsLeft(currentPathB, this.nations[currentNationId].blessB);
+    const blessPointsLeftF = elementalPathBlessPointsLeft(this.state.pathF, this.nations[this.state.nationId].blessF);
+    const blessPointsLeftA = elementalPathBlessPointsLeft(this.state.pathA, this.nations[this.state.nationId].blessA);
+    const blessPointsLeftW = elementalPathBlessPointsLeft(this.state.pathW, this.nations[this.state.nationId].blessW);
+    const blessPointsLeftE = elementalPathBlessPointsLeft(this.state.pathE, this.nations[this.state.nationId].blessE);
+    const blessPointsLeftS = sorceryPathBlessPointsLeft(this.state.pathS, this.nations[this.state.nationId].blessS);
+    const blessPointsLeftD = sorceryPathBlessPointsLeft(this.state.pathD, this.nations[this.state.nationId].blessD);
+    const blessPointsLeftN = sorceryPathBlessPointsLeft(this.state.pathN, this.nations[this.state.nationId].blessN);
+    const blessPointsLeftB = sorceryPathBlessPointsLeft(this.state.pathB, this.nations[this.state.nationId].blessB);
 
     return (
       <main>
         <div className="form">
           <header className="form__header">Nation</header>
           <div className="form__body">
-            <select name="nationId" value={currentNationId} onChange={this.changeOption}
+            <select name="nationId" value={this.state.nationId} onChange={this.changeOption}
               className="nation-picker__select" id="nation-picker__select"
             >
               {nationOptions}
@@ -203,37 +192,37 @@ class App extends Component {
             <div className="form__section">
               <div className="value-picker value-picker--magic value-picker--fire">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--fire" htmlFor="fire-picker__input">F</label>
-                <input type="number" name="pathF" onChange={this.changeNumber} min="0" max="10" value={currentPathF} id="fire-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--fire"/>
+                <input type="number" name="pathF" onChange={this.changeNumber} min="0" max="10" value={this.state.pathF} id="fire-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--fire"/>
               </div>
               <div className="value-picker value-picker--magic value-picker--air">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--air" htmlFor="air-picker__input">A</label>
-                <input type="number" name="pathA" onChange={this.changeNumber} min="0" max="10" value={currentPathA} id="air-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--air" />
+                <input type="number" name="pathA" onChange={this.changeNumber} min="0" max="10" value={this.state.pathA} id="air-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--air" />
               </div>
               <div className="value-picker value-picker--magic value-picker--water">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--water" htmlFor="water-picker__input">W</label>
-                <input type="number" name="pathW" onChange={this.changeNumber} min="0" max="10" value={currentPathW} id="water-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--water" />
+                <input type="number" name="pathW" onChange={this.changeNumber} min="0" max="10" value={this.state.pathW} id="water-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--water" />
               </div>
               <div className="value-picker value-picker--magic value-picker--earth">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--earth" htmlFor="earth-picker__input">E</label>
-                <input type="number" name="pathE" onChange={this.changeNumber} min="0" max="10" value={currentPathE} id="earth-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--earth" />
+                <input type="number" name="pathE" onChange={this.changeNumber} min="0" max="10" value={this.state.pathE} id="earth-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--earth" />
               </div>
             </div>
             <div className="form__section">
               <div className="value-picker value-picker--magic value-picker--astral">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--astral" htmlFor="astral-picker__input">S</label>
-                <input type="number" name="pathS" onChange={this.changeNumber} min="0" max="10" value={currentPathS} id="astral-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--astral" />
+                <input type="number" name="pathS" onChange={this.changeNumber} min="0" max="10" value={this.state.pathS} id="astral-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--astral" />
               </div>
               <div className="value-picker value-picker--magic value-picker--death">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--death" htmlFor="death-picker__input">D</label>
-                <input type="number" name="pathD" onChange={this.changeNumber} min="0" max="10" value={currentPathD} id="death-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--death" />
+                <input type="number" name="pathD" onChange={this.changeNumber} min="0" max="10" value={this.state.pathD} id="death-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--death" />
               </div>
               <div className="value-picker value-picker--magic value-picker--nature">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--nature" htmlFor="nature-picker__input">N</label>
-                <input type="number" name="pathN" onChange={this.changeNumber} min="0" max="10" value={currentPathN} id="nature-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--nature" />
+                <input type="number" name="pathN" onChange={this.changeNumber} min="0" max="10" value={this.state.pathN} id="nature-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--nature" />
               </div>
               <div className="value-picker value-picker--magic value-picker--blood">
                 <label className="value-picker__label value-picker__label--magic value-picker__label--blood" htmlFor="blood-picker__input">B</label>
-                <input type="number" name="pathB" onChange={this.changeNumber} min="0" max="10" value={currentPathB} id="blood-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--blood" />
+                <input type="number" name="pathB" onChange={this.changeNumber} min="0" max="10" value={this.state.pathB} id="blood-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--blood" />
               </div>
             </div>
           </div>
@@ -317,17 +306,17 @@ class App extends Component {
         </div>
 
         <Debug
-          nation={this.nations[currentNationId].label}
-          imprisonment={this.imprisonmentOptions[currentImprisonment].label}
+          nation={this.nations[this.state.nationId].label}
+          imprisonment={this.imprisonmentOptions[this.state.imprisonment].label}
           points={pointsLeftWithoutPretenders}
-          pathF={currentPathF}
-          pathA={currentPathA}
-          pathW={currentPathW}
-          pathE={currentPathE}
-          pathS={currentPathS}
-          pathD={currentPathD}
-          pathN={currentPathN}
-          pathB={currentPathB}
+          pathF={this.state.pathF}
+          pathA={this.state.pathA}
+          pathW={this.state.pathW}
+          pathE={this.state.pathE}
+          pathS={this.state.pathS}
+          pathD={this.state.pathD}
+          pathN={this.state.pathN}
+          pathB={this.state.pathB}
           dominion={this.state.dominion}
           order={this.state.order}
           productivity={this.state.productivity}
