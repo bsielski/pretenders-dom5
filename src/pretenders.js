@@ -2057,11 +2057,14 @@ export function getPretenders() {
     if (!vanilla_pretenders_data[pretenderId].D) {
       vanilla_pretenders_data[pretenderId].D = 0;
     }
-    if (!vanilla_pretenders_data[pretenderId].B) {
-      vanilla_pretenders_data[pretenderId].B = 0;
+    if (!vanilla_pretenders_data[pretenderId].N) {
+      vanilla_pretenders_data[pretenderId].N = 0;
     }
     if (!vanilla_pretenders_data[pretenderId].B) {
       vanilla_pretenders_data[pretenderId].B = 0;
+    }
+    if (!vanilla_pretenders_data[pretenderId].pathcost) {
+      vanilla_pretenders_data[pretenderId].pathcost = 10;
     }
   });
 

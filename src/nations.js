@@ -4,7 +4,7 @@ import {putPretendersToNations} from './nationsPretenders';
 export function getNations() {
   const nationsData = {
     0:   { era: null, label: "Any nation",
-      realms: [],
+      realms: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       cheapgods20: [],
       cheapgods40: []},
     5:   { era: 0, label: "EA Arcoscephale - Golden Era",
@@ -384,12 +384,11 @@ export function getNations() {
     if (!nationsData[nationId].blessB) {
       nationsData[nationId].blessB = 0;
     }
+    nationsData[nationId].pretenders = [];
   });
+
+  putPretendersToNations(nationsData, getPretenders());
+
   return nationsData;
 
 };
-
-// const nations = getNations()
-// console.log(
-//   nations[95]
-// );

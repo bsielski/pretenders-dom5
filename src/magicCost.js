@@ -18,14 +18,14 @@ function magicPathCost(newPathCost, baseLevel, wantedLevel) {
 
 export function magicCost(pretenderStartLevels, pretenderNewPathCost, wantedLevels) {
   return (
-      magicPathCost(pretenderNewPathCost, pretenderStartLevels.F, wantedLevels.F)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.A, wantedLevels.A)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.W, wantedLevels.W)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.E, wantedLevels.E)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.S, wantedLevels.S)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.D, wantedLevels.D)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.N, wantedLevels.N)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.B, wantedLevels.B)
+      magicPathCost(pretenderNewPathCost, pretenderStartLevels.F, wantedLevels.f)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.A, wantedLevels.a)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.W, wantedLevels.w)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.E, wantedLevels.e)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.S, wantedLevels.s)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.D, wantedLevels.d)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.N, wantedLevels.n)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.B, wantedLevels.b)
   );
 }
 

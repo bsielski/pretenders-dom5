@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import {getPretenders} from './pretenders';
 import {getNations} from './nations';
 import {magicCost} from './magicCost';
 import {scalesCost} from './scalesCost';
+import {dominionCost} from './dominionCost';
 import {totalBlessPoints} from './blessPoints';
 
 import './App.css';
@@ -44,16 +46,17 @@ class App extends Component {
     this.scaleMin = -3;
     this.scaleMax = 3;
     this.imprisonmentOptions = {
-      1:  { points: 0,
-            label: "Awake (0 points)",
-          },
-      2:  { points: 150,
-            label: "Dormant (gain 150 points)",
-          },
-      3:  { points: 250,
-            label: "Imprisoned (gain 250 points)",
-          },
+      1: { points: 0,
+          label: "Awake (0 points)",
+        },
+      2: { points: 150,
+          label: "Dormant (gain 150 points)",
+        },
+      3: { points: 250,
+          label: "Imprisoned (gain 250 points)",
+        },
     };
+    this.pretenders = getPretenders();
     this.nations = getNations();
     this.state = {
       nationId: 0,
@@ -121,6 +124,7 @@ class App extends Component {
     const isImprosonmentChecked = (value) => {
       return this.state.imprisonment === parseInt(value, 10);
     };
+
     const imprisonmentOptions = Object.keys(this.imprisonmentOptions).map(imprisonmentLevel => {
       return (
         <div key={imprisonmentLevel} className="value-picker value-picker--imprisonment value-picker--imprisonment-checked">
@@ -136,6 +140,7 @@ class App extends Component {
         </div>
       );
     });
+
 
     const pointsLeftWithoutPretenders = this.points
                                       + this.imprisonmentOptions[this.state.imprisonment].points
@@ -169,6 +174,56 @@ class App extends Component {
     };
 
     const blessPoints = totalBlessPoints(this.state.path, blessBonuses);
+
+    const pretenderRows = this.nations[this.state.nationId].pretenders.map(pretenderId => {
+      const pretender = this.pretenders[pretenderId];
+      return (
+        {
+          pretenderId: pretenderId,
+          name: pretender.name,
+          pointsLeft: pointsLeftWithoutPretenders - magicCost(
+                          { F: pretender.F, A: pretender.A, W: pretender.W, E: pretender.E,
+                            S: pretender.S, D: pretender.D, N: pretender.N, B: pretender.B,
+                          },
+                          pretender.pathcost,
+                          this.state.path
+                        ) - pretender.pointcost - dominionCost(pretender.startdom, this.state.dominion),
+          dominion: pretender.startdom > this.state.dominion ? pretender.startdom : this.state.dominion,
+          f: pretender.F > this.state.path.f ? pretender.F : this.state.path.f,
+          a: pretender.A > this.state.path.a ? pretender.A : this.state.path.a,
+          w: pretender.W > this.state.path.w ? pretender.W : this.state.path.w,
+          e: pretender.E > this.state.path.e ? pretender.E : this.state.path.e,
+          s: pretender.S > this.state.path.s ? pretender.S : this.state.path.s,
+          d: pretender.D > this.state.path.d ? pretender.D : this.state.path.d,
+          n: pretender.N > this.state.path.n ? pretender.N : this.state.path.n,
+          b: pretender.B > this.state.path.b ? pretender.B : this.state.path.b,
+        }
+      );
+    }).sort((a, b) => {
+      if (a.pointsLeft < b.pointsLeft) {
+        return 1;
+      }
+      if (a.pointsLeft > b.pointsLeft) {
+        return -1;
+      }
+      return 0;
+    }).map(data => {
+      return (
+        <tr key={data.pretenderId} className="pretenders-table__row">
+          <td className="pretenders-table__cell pretenders-table__cell--name">{data.name + " (id: " + data.pretenderId + ")"}</td>
+          <td className="pretenders-table__cell pretenders-table__cell--left">{data.pointsLeft}</td>
+          <td className="pretenders-table__cell pretenders-table__cell--dominion">{data.dominion}</td>
+          <td className={"pretenders-table__cell" + (data.f > 0 ? " pretenders-table__cell--fire" : ""  ) }>{data.f > 0 ? data.f : ""}</td>
+          <td className={"pretenders-table__cell" + (data.a > 0 ? " pretenders-table__cell--air" : ""   ) }>{data.a > 0 ? data.a : ""}</td>
+          <td className={"pretenders-table__cell" + (data.w > 0 ? " pretenders-table__cell--water" : "" ) }>{data.w > 0 ? data.w : ""}</td>
+          <td className={"pretenders-table__cell" + (data.e > 0 ? " pretenders-table__cell--earth" : "" ) }>{data.e > 0 ? data.e : ""}</td>
+          <td className={"pretenders-table__cell" + (data.s > 0 ? " pretenders-table__cell--astral" : "") }>{data.s > 0 ? data.s : ""}</td>
+          <td className={"pretenders-table__cell" + (data.d > 0 ? " pretenders-table__cell--death" : "" ) }>{data.d > 0 ? data.d : ""}</td>
+          <td className={"pretenders-table__cell" + (data.n > 0 ? " pretenders-table__cell--nature" : "") }>{data.n > 0 ? data.n : ""}</td>
+          <td className={"pretenders-table__cell" + (data.b > 0 ? " pretenders-table__cell--blood" : "" ) }>{data.b > 0 ? data.b : ""}</td>
+        </tr>
+      );
+    });
 
     return (
       <main>
@@ -302,6 +357,24 @@ class App extends Component {
           </div>
         </div>
 
+        <div className="form">
+          <header className="form__header">Pretenders</header>
+          <table className="pretenders-table" id="pretenders-table">
+            <thead className="pretenders-table__head" id="pretenders-table__head">
+              <tr className="pretenders-table__row">
+                <th className="pretenders-table__header">Name</th>
+                <th className="pretenders-table__header">Points left</th>
+                <th className="pretenders-table__header">Dominion</th>
+                <th className="pretenders-table__header" colSpan="8">Magic</th>
+              </tr>
+            </thead>
+            <tbody className="pretenders-table__body" id="pretenders-table__body">
+              {pretenderRows}
+            </tbody>
+          </table>
+        </div>
+
+
         <Debug
           nation={this.nations[this.state.nationId].label}
           imprisonment={this.imprisonmentOptions[this.state.imprisonment].label}
@@ -322,24 +395,10 @@ class App extends Component {
           fortune={this.state.fortune}
           magic={this.state.magic}
         />
+
+
       </main>
     );
-        //
-        // <div className="form">
-        //   <header className="form__header">Pretenders</header>
-        //   <table className="pretenders-table" id="pretenders-table">
-        //     <thead className="pretenders-table__head" id="pretenders-table__head">
-        //       <tr className="pretenders-table__row">
-        //         <th className="pretenders-table__header">Name</th>
-        //         <th className="pretenders-table__header">Points left</th>
-        //         <th className="pretenders-table__header">Dominion</th>
-        //         <th className="pretenders-table__header" colspan="8">Magic</th>
-        //       </tr>
-        //     </thead>
-        //     <tbody className="pretenders-table__body" id="pretenders-table__body">
-        //     </tbody>
-        //   </table>
-        // </div>
   }
 
 }
