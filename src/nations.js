@@ -357,8 +357,8 @@ export function getNations() {
     if (!nationsData[nationId].growth) {
       nationsData[nationId].growth = 0;
     }
-    if (!nationsData[nationId].blessA) {
-      nationsData[nationId].blessA = 0;
+    if (!nationsData[nationId].blessF) {
+      nationsData[nationId].blessF = 0;
     }
     if (!nationsData[nationId].blessA) {
       nationsData[nationId].blessA = 0;
