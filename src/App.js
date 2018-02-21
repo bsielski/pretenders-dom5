@@ -3,6 +3,7 @@ import {getNations} from './nations';
 import {magicCost} from './magicCost';
 import {scalesCost} from './scalesCost';
 import {getPretenders} from './pretenders';
+import {totalBlessPoints} from './blessPoints';
 
 import './App.css';
 
@@ -146,32 +147,29 @@ class App extends Component {
                                                       magic: this.state.magic,
                                                     }
                                                  );
-
-    const elementalPathBlessPointsLeft = (currentPath, blessBonus) => {
-     if ((currentPath >= 4) || (this.state.pathF >= 3 && this.state.pathA >=3 && this.state.pathW >= 3 && this.state.pathE >= 3)) {
-       return currentPath + blessBonus;
-     }
-     else {
-       return 0;
-     }
-    };
-    const sorceryPathBlessPointsLeft = (currentPath, blessBonus) => {
-     if ((currentPath >= 4) || (this.state.pathS >= 3 && this.state.pathD >=3 && this.state.pathN >= 3 && this.state.pathB >= 3)) {
-       return currentPath + blessBonus;
-     }
-     else {
-       return 0;
-     }
+    const currentPaths = {
+      f: this.state.pathF,
+      a: this.state.pathA,
+      w: this.state.pathW,
+      e: this.state.pathE,
+      s: this.state.pathS,
+      d: this.state.pathD,
+      n: this.state.pathN,
+      b: this.state.pathB,
     };
 
-    const blessPointsLeftF = elementalPathBlessPointsLeft(this.state.pathF, this.nations[this.state.nationId].blessF);
-    const blessPointsLeftA = elementalPathBlessPointsLeft(this.state.pathA, this.nations[this.state.nationId].blessA);
-    const blessPointsLeftW = elementalPathBlessPointsLeft(this.state.pathW, this.nations[this.state.nationId].blessW);
-    const blessPointsLeftE = elementalPathBlessPointsLeft(this.state.pathE, this.nations[this.state.nationId].blessE);
-    const blessPointsLeftS = sorceryPathBlessPointsLeft(this.state.pathS, this.nations[this.state.nationId].blessS);
-    const blessPointsLeftD = sorceryPathBlessPointsLeft(this.state.pathD, this.nations[this.state.nationId].blessD);
-    const blessPointsLeftN = sorceryPathBlessPointsLeft(this.state.pathN, this.nations[this.state.nationId].blessN);
-    const blessPointsLeftB = sorceryPathBlessPointsLeft(this.state.pathB, this.nations[this.state.nationId].blessB);
+    const blessBonuses = {
+      f: this.nations[this.state.nationId].blessF,
+      a: this.nations[this.state.nationId].blessA,
+      w: this.nations[this.state.nationId].blessW,
+      e: this.nations[this.state.nationId].blessE,
+      s: this.nations[this.state.nationId].blessS,
+      d: this.nations[this.state.nationId].blessD,
+      n: this.nations[this.state.nationId].blessN,
+      b: this.nations[this.state.nationId].blessB,
+    };
+
+    const blessPoints = totalBlessPoints(currentPaths, blessBonuses);
 
     return (
       <main>
@@ -243,14 +241,14 @@ class App extends Component {
           <header className="form__header">Bless Effects</header>
           <div className="form__body form__body--bless">
             <div className="form__section">
-              <div className="value-picker__label value-picker__label--magic value-picker__label--fire">F: {blessPointsLeftF}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--air">A: {blessPointsLeftA}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--water">W: {blessPointsLeftW}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--earth">E: {blessPointsLeftE}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--astral">S: {blessPointsLeftS}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--death">D: {blessPointsLeftD}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--nature">N: {blessPointsLeftN}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--blood">B: {blessPointsLeftB}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--fire">F: {blessPoints.f}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--air">A: {blessPoints.a}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--water">W: {blessPoints.w}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--earth">E: {blessPoints.e}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--astral">S: {blessPoints.s}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--death">D: {blessPoints.d}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--nature">N: {blessPoints.n}</div>
+              <div className="value-picker__label value-picker__label--magic value-picker__label--blood">B: {blessPoints.b}</div>
             </div>
           </div>
         </div>
