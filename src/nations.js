@@ -1,3 +1,6 @@
+import {getPretenders} from './pretenders';
+import {putPretendersToNations} from './nationsPretenders';
+
 export function getNations() {
   const nationsData = {
     0:   { era: null, label: "Any nation",

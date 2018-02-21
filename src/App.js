@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {getNations} from './nations';
 import {magicCost} from './magicCost';
 import {scalesCost} from './scalesCost';
-import {getPretenders} from './pretenders';
 import {totalBlessPoints} from './blessPoints';
 
 import './App.css';
