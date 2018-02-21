@@ -1,4 +1,7 @@
 function scaleCost(baseLevel, wantedLevel) {
+  if (baseLevel === null || baseLevel === undefined || baseLevel === "") {
+    baseLevel = 0;
+  }
   return ((wantedLevel - baseLevel) * 40);
 }
 
