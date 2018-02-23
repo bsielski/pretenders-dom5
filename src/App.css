@@ -11,32 +11,57 @@ body {
 
 .nation-picker__option {
     color: #eeeeee;
-
 }
 
 .nation-picker__option--era_ {
     background-color: #3f4142;
-
 }
 
 .nation-picker__option--era_0 {
     background-color: #eeeeee;
     color: #222222;
-
 }
 
 .nation-picker__option--era_1 {
     background-color: #888888;
     color: #eeeeee;
-
 }
 
 .nation-picker__option--era_2 {
     background-color: #111111;
     color: #bbbbbb;
-
 }
 
+.nation_info {
+  font-size: 11px;
+}
+.nation_info__blesses {
+
+}
+.nation_info__blesses--fire {
+  color: #d55a3b;
+}
+.nation_info__blesses--air {
+  color: #d3bec6;
+}
+.nation_info__blesses--water {
+  color: #806aff;
+}
+.nation_info__blesses--earth {
+  color: #b08130;
+}
+.nation_info__blesses--astral{
+  color: #b0dbd6;
+}
+.nation_info__blesses--death {
+  color: #a550a8;
+}
+.nation_info__blesses--nature {
+  color: #4d9533;
+}
+.nation_info__blesses--blood {
+  color: #bd4e49;
+}
 .form {
     border-color: #c1ab5d;
     border-width: 5px;
@@ -50,8 +75,8 @@ body {
 
 .form__header {
     color: #eeeeee;
-    text-align: center;
     font-size: 14px;
+    text-align: center;
     padding: 3px;
     background-color: #403838;
     width: 100%;
@@ -65,7 +90,9 @@ body {
     justify-content: center;
     padding: 3px;
 }
-
+.form__body--nation {
+    flex-flow: column;
+}
 .form__body--bless-effects {
     color: #dddddd;
     font-size: 11px;
