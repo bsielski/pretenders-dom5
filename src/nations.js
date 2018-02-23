@@ -1,5 +1,6 @@
 import {getPretenders} from './pretenders';
 import {putPretendersToNations} from './nationsPretenders';
+import {adjustPretenders} from './adjustPretenders';
 
 export function getNations() {
   const nationsData = {
@@ -388,7 +389,9 @@ export function getNations() {
   });
 
   putPretendersToNations(nationsData, getPretenders());
-
+  // console.log(nationsData[5].pretenders)
+  adjustPretenders(nationsData);
+  // console.log(nationsData[5].pretenders)
   return nationsData;
 
 };
