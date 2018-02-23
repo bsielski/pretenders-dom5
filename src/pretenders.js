@@ -15,14 +15,14 @@ export function getPretenders() {
       shapechange: 1027,
       startdom: 2
     },
-    1027: {
-      N: 1,
-      name: "Carrion Lord",
-      pathcost: 80,
-      pointcost: null,
-      shapechange: 1026,
-      startdom: 2
-    },
+    // 1027: {
+    //   N: 1,
+    //   name: "Carrion Lord",
+    //   pathcost: 80,
+    //   pointcost: null,
+    //   shapechange: 1026,
+    //   startdom: 2
+    // },
     109: {
       E: 2,
       W: 1,
@@ -298,7 +298,7 @@ export function getPretenders() {
       name: "Cyclops",
       pathcost: 60,
       pointcost: 280,
-      realm1: 3,
+      // realm1: 3,
       startdom: 3
     },
     1561: {
@@ -378,16 +378,16 @@ export function getPretenders() {
       shapechange: 1897,
       startdom: 1
     },
-    1897: {
-      A: 1,
-      N: 1,
-      S: 1,
-      name: "Feathered Serpent",
-      pathcost: 40,
-      pointcost: null,
-      shapechange: 1896,
-      startdom: 1
-    },
+    // 1897: {
+    //   A: 1,
+    //   N: 1,
+    //   S: 1,
+    //   name: "Feathered Serpent",
+    //   pathcost: 40,
+    //   pointcost: null,
+    //   shapechange: 1896,
+    //   startdom: 1
+    // },
     1898: {
       A: 1,
       name: "Fomorian Sorcerer",
@@ -503,15 +503,15 @@ export function getPretenders() {
       realm1: 1,
       startdom: 3
     },
-    226: {
-      F: 2,
-      name: "Arch Mage",
-      pathcost: 80,
-      pointcost: 90,
-      realm1: 10,
-      shapechange: 216,
-      startdom: 2
-    },
+    // 226: {
+    //   F: 2,
+    //   name: "Arch Mage",
+    //   pathcost: 80,
+    //   pointcost: 90,
+    //   realm1: 10,
+    //   shapechange: 216,
+    //   startdom: 2
+    // },
     2315: {
       B: 3,
       name: "Melqart",
@@ -528,14 +528,14 @@ export function getPretenders() {
       shapechange: 2317,
       startdom: 2
     },
-    2317: {
-      W: 2,
-      name: "Celestial Bureaucrat",
-      pathcost: 60,
-      pointcost: null,
-      shapechange: 2316,
-      startdom: 2
-    },
+    // 2317: {
+    //   W: 2,
+    //   name: "Celestial Bureaucrat",
+    //   pathcost: 60,
+    //   pointcost: null,
+    //   shapechange: 2316,
+    //   startdom: 2
+    // },
     2318: {
       A: 1,
       S: 1,
@@ -546,15 +546,15 @@ export function getPretenders() {
       shapechange: 2319,
       startdom: 2
     },
-    2319: {
-      A: 1,
-      S: 1,
-      name: "Celestial Bureaucrat",
-      pathcost: 60,
-      pointcost: null,
-      shapechange: 2318,
-      startdom: 2
-    },
+    // 2319: {
+    //   A: 1,
+    //   S: 1,
+    //   name: "Celestial Bureaucrat",
+    //   pathcost: 60,
+    //   pointcost: null,
+    //   shapechange: 2318,
+    //   startdom: 2
+    // },
     2426: {
       E: 1,
       name: "Bouda Father",
@@ -563,14 +563,14 @@ export function getPretenders() {
       shapechange: 2427,
       startdom: 1
     },
-    2427: {
-      E: 1,
-      name: "Werehyena",
-      pathcost: 20,
-      pointcost: null,
-      shapechange: 2426,
-      startdom: 1
-    },
+    // 2427: {
+    //   E: 1,
+    //   name: "Werehyena",
+    //   pathcost: 20,
+    //   pointcost: null,
+    //   shapechange: 2426,
+    //   startdom: 1
+    // },
     2431: {
       E: 1,
       name: "Titan of the Underworld",
@@ -641,14 +641,14 @@ export function getPretenders() {
       shapechange: 2441,
       startdom: 2
     },
-    2441: {
-      W: 2,
-      name: "Great Seer of the Deeps",
-      pathcost: 80,
-      pointcost: null,
-      shapechange: 2440,
-      startdom: 2
-    },
+    // 2441: {
+    //   W: 2,
+    //   name: "Great Seer of the Deeps",
+    //   pathcost: 80,
+    //   pointcost: null,
+    //   shapechange: 2440,
+    //   startdom: 2
+    // },
     2442: {
       B: 1,
       N: 1,
@@ -869,15 +869,15 @@ export function getPretenders() {
       shapechange: 2551,
       startdom: 2
     },
-    2551: {
-      B: 1,
-      N: 1,
-      name: "Manushya Raksharani",
-      pathcost: 40,
-      pointcost: null,
-      shapechange: 2550,
-      startdom: 2
-    },
+    // 2551: {
+    //   B: 1,
+    //   N: 1,
+    //   name: "Manushya Raksharani",
+    //   pathcost: 40,
+    //   pointcost: null,
+    //   shapechange: 2550,
+    //   startdom: 2
+    // },
     2552: {
       S: 3,
       name: "Ahura of Wisdom",
@@ -926,15 +926,24 @@ export function getPretenders() {
       pointcost: 210,
       startdom: 2
     },
-    2609: {
+    2608: {
       F: 1,
       D: 1,
-      name: "Great Warlock",
+      name: "Azi",
       pathcost: 80,
-      pointcost: null,
-      shapechange: 2608,
+      pointcost: 220,
+      shapechange: 2609,
       startdom: 2
     },
+    // 2609: {
+    //   F: 1,
+    //   D: 1,
+    //   name: "Great Warlock",
+    //   pathcost: 80,
+    //   pointcost: null,
+    //   shapechange: 2608,
+    //   startdom: 2
+    // },
     2610: {
       B: 1,
       name: "Angra Mainyu",
@@ -975,24 +984,24 @@ export function getPretenders() {
       shapechange: 268,
       startdom: 2
     },
-    267: {
-      W: 2,
-      name: "Frost Father",
-      pathcost: 80,
-      pointcost: null,
-      realm1: 10,
-      shapechange: 265,
-      startdom: 2
-    },
-    268: {
-      N: 2,
-      name: "Master Enchanter",
-      pathcost: 80,
-      pointcost: 100,
-      realm1: 10,
-      shapechange: 266,
-      startdom: 2
-    },
+    // 267: {
+    //   W: 2,
+    //   name: "Frost Father",
+    //   pathcost: 80,
+    //   pointcost: null,
+    //   realm1: 10,
+    //   shapechange: 265,
+    //   startdom: 2
+    // },
+    // 268: {
+    //   N: 2,
+    //   name: "Master Enchanter",
+    //   pathcost: 80,
+    //   pointcost: 100,
+    //   realm1: 10,
+    //   shapechange: 266,
+    //   startdom: 2
+    // },
     2685: {
       A: 1,
       W: 1,
@@ -1259,15 +1268,15 @@ export function getPretenders() {
       shapechange: 2803,
       startdom: 1
     },
-    2803: {
-      E: 1,
-      name: "Linnormr",
-      pathcost: 20,
-      pointcost: null,
-      realm1: 1,
-      shapechange: 2802,
-      startdom: 1
-    },
+    // 2803: {
+    //   E: 1,
+    //   name: "Linnormr",
+    //   pathcost: 20,
+    //   pointcost: null,
+    //   realm1: 1,
+    //   shapechange: 2802,
+    //   startdom: 1
+    // },
     2847: {
       W: 3,
       name: "Protogenos of the Sea",
@@ -1351,16 +1360,16 @@ export function getPretenders() {
       shapechange: 2882,
       startdom: 2
     },
-    2882: {
-      A: 1,
-      E: 1,
-      W: 1,
-      name: "Telkhine God-King",
-      pathcost: 40,
-      pointcost: null,
-      shapechange: 2881,
-      startdom: 2
-    },
+    // 2882: {
+    //   A: 1,
+    //   E: 1,
+    //   W: 1,
+    //   name: "Telkhine God-King",
+    //   pathcost: 40,
+    //   pointcost: null,
+    //   shapechange: 2881,
+    //   startdom: 2
+    // },
     2922: {
       A: 1,
       W: 1,
@@ -1670,13 +1679,13 @@ export function getPretenders() {
       shapechange: 402,
       startdom: 1
     },
-    402: {
-      N: 1,
-      name: "Crone",
-      pointcost: null,
-      shapechange: 401,
-      startdom: 1
-    },
+    // 402: {
+    //   N: 1,
+    //   name: "Crone",
+    //   pointcost: null,
+    //   shapechange: 401,
+    //   startdom: 1
+    // },
     472: {
       E: 1,
       S: 2,
@@ -1854,14 +1863,14 @@ export function getPretenders() {
       shapechange: 654,
       startdom: 1
     },
-    654: {
-      N: 1,
-      name: "Serpent King",
-      pointcost: null,
-      realm1: 7,
-      shapechange: 653,
-      startdom: 1
-    },
+    // 654: {
+    //   N: 1,
+    //   name: "Serpent King",
+    //   pointcost: null,
+    //   realm1: 7,
+    //   shapechange: 653,
+    //   startdom: 1
+    // },
     655: {
       E: 1,
       name: "Scorpion King",
@@ -1923,14 +1932,14 @@ export function getPretenders() {
       shapechange: 858,
       startdom: 1
     },
-    858: {
-      B: 1,
-      name: "Jaguar",
-      pathcost: 20,
-      pointcost: null,
-      shapechange: 857,
-      startdom: 1
-    },
+    // 858: {
+    //   B: 1,
+    //   name: "Jaguar",
+    //   pathcost: 20,
+    //   pointcost: null,
+    //   shapechange: 857,
+    //   startdom: 1
+    // },
     862: {
       B: 2,
       name: "Vampire Queen",
@@ -2036,7 +2045,27 @@ export function getPretenders() {
       pointcost: 190,
       realm1: 3,
       startdom: 2
-    }
+    },
+    3121: {
+      F: 1,
+      A: 1,
+      E: 1,
+      name: "Eldest Cyclops",
+      pathcost: 60,
+      pointcost: 240,
+      realm1: 3,
+      startdom: 2
+    },
+    3124: {
+      F: 1,
+      W: 1,
+      S: 1,
+      name: "Titan of Forethough",
+      pathcost: 60,
+      pointcost: 260,
+      realm1: 3,
+      startdom: 3
+    },
   }
   Object.keys(vanilla_pretenders_data).forEach(pretenderId => {
     if (!vanilla_pretenders_data[pretenderId].F) {
