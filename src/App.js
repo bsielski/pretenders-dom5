@@ -49,6 +49,7 @@ class Debug extends React.Component {
   render() {
     return (
       <div>
+        <section id="debugger">Number of Pretenders: {this.props.noOfPretenders}</section>
         <section id="debugger">Points left (without pretender): {this.props.points}</section>
         <section id="debugger">Selected nation is: {this.props.nation}</section>
         <section id="debugger">Imprisonment is: {this.props.imprisonment}</section>
@@ -213,6 +214,7 @@ class App extends Component {
     const blessPoints = totalBlessPoints(this.state.path, blessBonuses);
 
     const pretenderRows = this.nations[this.state.nationId].pretenders.map(pretenderId => {
+      // console.log(pretenderId);
       const pretender = this.pretenders[pretenderId];
       return (
         {
@@ -438,6 +440,7 @@ class App extends Component {
           growth={this.state.growth}
           fortune={this.state.fortune}
           magic={this.state.magic}
+          noOfPretenders={this.nations[this.state.nationId].pretenders.length}
         />
 
 
