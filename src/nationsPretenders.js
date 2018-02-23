@@ -1,3 +1,5 @@
+import {adjustPretenders} from './adjustPretenders';
+
 export function putPretendersToNations(nations, pretenders) {
 
   const realmsPretenders = {
@@ -35,4 +37,13 @@ export function putPretendersToNations(nations, pretenders) {
     });
     nations[nationId].pretenders = Array.from(new Set(nations[nationId].pretenders))
   });
+
+  console.log(nations[17].pretenders)
+  adjustPretenders(nations);
+  console.log(nations[17].pretenders)
+
+  Object.keys(nations).forEach(nationId => {
+    nations[nationId].pretenders = Array.from(new Set(nations[nationId].pretenders))
+  });
+
 }
