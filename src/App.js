@@ -52,8 +52,8 @@ class App extends Component {
       2: { points: 150,
           label: "Dormant (gain 150 points)",
         },
-      3: { points: 250,
-          label: "Imprisoned (gain 250 points)",
+      3: { points: 350,
+          label: "Imprisoned (gain 350 points)",
         },
     };
     this.pretenders = getPretenders();
