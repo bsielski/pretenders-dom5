@@ -5,9 +5,9 @@ function scaleCost(baseLevel, wantedLevel) {
 function heatCost(baseLevel, wantedLevel) {
   const cost = Math.abs(scaleCost(baseLevel, wantedLevel));
   if (cost > 120) {
-    return 120;
+    return -120;
   }
-  return cost;
+  return -cost;
 }
 
 export function scalesCost(nationStartLevels, wantedLevels) {
@@ -33,44 +33,44 @@ export function scalesCost(nationStartLevels, wantedLevels) {
 // console.log( "Should be 240: " +
 //   scaleCost(-3, 3)
 // );
-// console.log( "Should be 120: " +
+// console.log( "Should be -120: " +
 //   heatCost(0, -3)
 // );
-// console.log( "Should be 120: " +
+// console.log( "Should be -120: " +
 //   heatCost(0, 3)
 // );
-// console.log( "Should be 120: " +
+// console.log( "Should be -120: " +
 //   heatCost(3, -3)
 // );
-// console.log( "Should be 120: " +
+// console.log( "Should be -120: " +
 //   heatCost(-3, 3)
 // );
-// console.log( "Should be 120: " +
+// console.log( "Should be -120: " +
 //   heatCost(-1, 3)
 // );
-// console.log( "Should be 80: " +
+// console.log( "Should be -80: " +
 //   heatCost(1, -1)
 // );
-// console.log( "Should be 80: " +
+// console.log( "Should be -80: " +
 //   heatCost(-1, 1)
 // );
-
-// console.log( "Should be 40: " +
+//
+// console.log( "Should be -40: " +
 //   scalesCost( {order: 0, productivity: 0, heat: 1, growth: 0, fortune: 0, magic: 0},
 //               {order: 0, productivity: 0, heat: 0, growth: 0, fortune: 0, magic: 0}
 //            )
 // );
-// console.log( "Should be 80: " +
+// console.log( "Should be 0: " +
 //   scalesCost( {order: 0, productivity: 0, heat: -1, growth: 0, fortune: 0, magic: 0},
 //               {order: 0, productivity: 0, heat:  0, growth: 0, fortune: 1, magic: 0}
 //            )
 // );
-// console.log( "Should be 0: " +
+// console.log( "Should be -120: " +
 //   scalesCost( {order: 0, productivity: 0, heat: -1, growth: 0, fortune: 0, magic: 0},
 //               {order: -2, productivity: 0, heat:  0, growth: 0, fortune: 1, magic: 0}
 //            )
 // );
-// console.log( "Should be -80: " +
+// console.log( "Should be -160: " +
 //   scalesCost( {order:  0, productivity:  0, heat: -1, growth: 0, fortune: 0, magic:  0},
 //               {order: -2, productivity: -1, heat:  0, growth: 0, fortune: 1, magic: -1}
 //            )
