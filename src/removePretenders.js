@@ -216,4 +216,21 @@ export const removePretenders = [
     [294,	107],
     [2847,	107],
     [138,	108],
+
+    // BUGGED inspector fixes
+// delete Father of the sea from EA, MA, LA Ulm
+    [2848, 7],
+    [2848, 39],
+    [2848, 64],
+// delete Father of the sea from, MA, LA Man
+    [2848, 37],
+    [2848, 63],
+// delete Father of the sea from EA Marverni, MA, LA Marignon
+    [2848, 8],
+    [2848, 40],
+    [2848, 65],
+// delete Father of the sea from Fomoria, TNN, Eriu
+    [2848, 18],
+    [2848, 19],
+    [2848, 38],
 ]
