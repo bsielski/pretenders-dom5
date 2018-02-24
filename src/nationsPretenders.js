@@ -14,20 +14,20 @@ export function putPretendersToNations(nations, pretenders) {
     if (pretenders[pretenderId]["realm2"]) pretenderRealms.push(pretenders[pretenderId]["realm2"]);
     if (pretenders[pretenderId]["realm3"]) pretenderRealms.push(pretenders[pretenderId]["realm3"]);
     pretenderRealms.forEach(realm => {
-      if (realm === 10) {
-  		  realmsPretenders[1].push(pretenderId);
-  		  realmsPretenders[2].push(pretenderId);
-  		  realmsPretenders[3].push(pretenderId);
-  		  realmsPretenders[4].push(pretenderId);
-  		  realmsPretenders[5].push(pretenderId);
-  		  realmsPretenders[6].push(pretenderId);
-  		  realmsPretenders[7].push(pretenderId);
-  		  realmsPretenders[8].push(pretenderId);
-  		  realmsPretenders[10].push(pretenderId);
-  		}
-      else {
+      // if (realm === 10) {
+  		//   realmsPretenders[1].push(pretenderId);
+  		//   realmsPretenders[2].push(pretenderId);
+  		//   realmsPretenders[3].push(pretenderId);
+  		//   realmsPretenders[4].push(pretenderId);
+  		//   realmsPretenders[5].push(pretenderId);
+  		//   realmsPretenders[6].push(pretenderId);
+  		//   realmsPretenders[7].push(pretenderId);
+  		//   realmsPretenders[8].push(pretenderId);
+  		//   realmsPretenders[10].push(pretenderId);
+  		// }
+      // else {
         realmsPretenders[realm].push(pretenderId);
-  		}
+  		// }
     });
   });
 
