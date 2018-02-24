@@ -77,7 +77,7 @@ export function getNations() {
       cheapgods40: []},
     20:  { era: 0, label: "EA Vanheim - Age of Vanir", heat: -1,
       realms: [1],
-      cheapgods20: [],
+      cheapgods20: [1098/*Asynja*/,501/*Allfather*/,2206/*Eldest Dwarf*/,],
       cheapgods40: []},
     21:  { era: 0, label: "EA Helheim - Dusk and Death", heat: -1,
       realms: [1],
