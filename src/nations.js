@@ -119,7 +119,7 @@ export function getNations() {
       realms: [6],
       cheapgods20: [],
       cheapgods40: []},
-    32:  { era: 0, label: "EA Mekone - Brazen Giants", heat: 1,
+    32:  { era: 0, label: "EA Mekone - Brazen Giants",
       realms: [3],
       cheapgods20: [2463/*Statue of War*/,3124/*Titan of Forethough*/,3121/*Eldest Cyclops*/,],
       cheapgods40: []},
