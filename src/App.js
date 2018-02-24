@@ -226,7 +226,9 @@ class App extends Component {
                           },
                           pretender.pathcost,
                           this.state.path
-                        ) - pretender.pointcost - dominionCost(pretender.startdom, this.state.dominion),
+                        ) - pretender.pointcost - dominionCost(pretender.startdom, this.state.dominion)
+                        + (this.nations[this.state.nationId].cheapgods20.includes(pretenderId) ? 20 : 0)
+                        + (this.nations[this.state.nationId].cheapgods40.includes(pretenderId) ? 40 : 0),
           dominion: pretender.startdom > this.state.dominion ? pretender.startdom : this.state.dominion,
           f: pretender.F > this.state.path.f ? pretender.F : this.state.path.f,
           a: pretender.A > this.state.path.a ? pretender.A : this.state.path.a,
