@@ -28,7 +28,7 @@ export function getNations() {
       cheapgods40: []},
     9:   { era: 0, label: "EA Sauromatia - Amazon Queens",
       realms: [3],
-      cheapgods20: [],
+      cheapgods20: [157/*Mother of Monsters*/,266/*Dragon(N)*/,],
       cheapgods40: []},
     10:  { era: 0, label: "EA T’ien Ch’i - Spring and Autumn",
       realms: [4],
