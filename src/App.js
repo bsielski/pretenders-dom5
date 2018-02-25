@@ -5,6 +5,8 @@ import {magicCost} from './magicCost';
 import {scalesCost} from './scalesCost';
 import {dominionCost} from './dominionCost';
 import {totalBlessPoints} from './blessPoints';
+import {blessEffects} from './blessEffects';
+import {BlessEffectsWindow} from './blessEffectsWindow';
 
 import './App.css';
 
@@ -53,14 +55,7 @@ class Debug extends React.Component {
         <section id="debugger">Points left (without pretender): {this.props.points}</section>
         <section id="debugger">Selected nation is: {this.props.nation}</section>
         <section id="debugger">Imprisonment is: {this.props.imprisonment}</section>
-        <section id="debugger">Magic path F is: {this.props.pathF}</section>
-        <section id="debugger">Magic path A is: {this.props.pathA}</section>
-        <section id="debugger">Magic path W is: {this.props.pathW}</section>
-        <section id="debugger">Magic path E is: {this.props.pathE}</section>
-        <section id="debugger">Magic path S is: {this.props.pathS}</section>
-        <section id="debugger">Magic path D is: {this.props.pathD}</section>
-        <section id="debugger">Magic path N is: {this.props.pathN}</section>
-        <section id="debugger">Magic path B is: {this.props.pathB}</section>
+        <section id="debugger">isBlessEffectsWindowOpen is: {this.props.isBlessEffectsWindowOpen}</section>
         <section id="debugger">Dominion is: {this.props.dominion}</section>
         <section id="debugger">Order is: {this.props.order}</section>
         <section id="debugger">Productivity is: {this.props.productivity}</section>
@@ -96,6 +91,7 @@ class App extends Component {
     };
     this.pretenders = getPretenders();
     this.nations = getNations();
+    this.blessEffects = blessEffects;
     this.state = {
       nationId: 0,
       path: {
@@ -116,12 +112,15 @@ class App extends Component {
       fortune: 0,
       magic: 0,
       imprisonment: 1,
+      isBlessEffectsWindowOpen: false,
     };
 
     this.changeNumber = this.changeNumber.bind(this);
     this.changePathLevel = this.changePathLevel.bind(this);
     this.changeOption = this.changeOption.bind(this);
     this.changeRadio = this.changeRadio.bind(this);
+    this.openBlessEffectsWindow = this.openBlessEffectsWindow.bind(this);
+    this.closeBlessEffectsWindow = this.closeBlessEffectsWindow.bind(this);
 
   }
 
@@ -147,6 +146,23 @@ class App extends Component {
     this.setState({
       imprisonment: parseInt(target.value, 10)
     });
+  }
+
+  openBlessEffectsWindow() {
+    console.log("OPEN");
+    this.setState(
+      {
+        isBlessEffectsWindowOpen: true,
+      }
+    );
+  }
+
+  closeBlessEffectsWindow() {
+    this.setState(
+      {
+        isBlessEffectsWindowOpen: false,
+      }
+    );
   }
 
   render() {
@@ -341,16 +357,22 @@ class App extends Component {
 
         <div className="form">
           <header className="form__header">Bless Effects</header>
+<button className="bless_effects_open_button" onClick={this.openBlessEffectsWindow}>show bless list</button>
+          <BlessEffectsWindow
+            isOpen={this.state.isBlessEffectsWindowOpen}
+            onClose={this.closeBlessEffectsWindow}
+            blessEffects={this.blessEffects}
+          />
           <div className="form__body form__body--bless">
             <div className="form__section">
-              <div className="value-picker__label value-picker__label--magic value-picker__label--fire">F: {blessPoints.f}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--air">A: {blessPoints.a}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--water">W: {blessPoints.w}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--earth">E: {blessPoints.e}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--astral">S: {blessPoints.s}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--death">D: {blessPoints.d}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--nature">N: {blessPoints.n}</div>
-              <div className="value-picker__label value-picker__label--magic value-picker__label--blood">B: {blessPoints.b}</div>
+              <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--fire">F{blessPoints.f}</div>
+              <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--air">A{blessPoints.a}</div>
+              <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--water">W{blessPoints.w}</div>
+              <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--earth">E{blessPoints.e}</div>
+              <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--astral">S{blessPoints.s}</div>
+              <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--death">D{blessPoints.d}</div>
+              <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--nature">N{blessPoints.n}</div>
+              <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--blood">B{blessPoints.b}</div>
             </div>
           </div>
         </div>
@@ -427,14 +449,6 @@ class App extends Component {
           nation={this.nations[this.state.nationId].label}
           imprisonment={this.imprisonmentOptions[this.state.imprisonment].label}
           points={pointsLeftWithoutPretenders}
-          pathF={this.state.path.f}
-          pathA={this.state.path.a}
-          pathW={this.state.path.w}
-          pathE={this.state.path.e}
-          pathS={this.state.path.s}
-          pathD={this.state.path.d}
-          pathN={this.state.path.n}
-          pathB={this.state.path.b}
           dominion={this.state.dominion}
           order={this.state.order}
           productivity={this.state.productivity}
@@ -443,6 +457,7 @@ class App extends Component {
           fortune={this.state.fortune}
           magic={this.state.magic}
           noOfPretenders={this.nations[this.state.nationId].pretenders.length}
+          isBlessEffectsWindowOpen={this.state.isBlessEffectsWindowOpen}
         />
 
 

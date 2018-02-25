@@ -9,6 +9,15 @@ body {
     align-items: center;
 }
 
+.bless_effects_open_button {
+  border-width: 0;
+  padding: 0 5px;
+  background-color: inherit;
+  font-family: 'SeshatRegular', serif;
+  font-size: 11px;
+  text-decoration: underline;
+}
+
 .nation-picker__option {
     color: #eeeeee;
 }
@@ -154,7 +163,6 @@ body {
     align-items: center;
     margin: 2px 2px;
 }
-
 .value-picker--magic {
   flex-flow: column;
 }
@@ -169,6 +177,9 @@ body {
     padding: 2px 6px;
     font-family: monospace;;
     display: block;
+}
+.value-picker__label--bless_point {
+  margin: 2px 2px;
 }
 
 .value-picker__label--magic {
@@ -376,4 +387,55 @@ body {
 }
 .pretenders-table__cell--blood::before {
     content: 'B';
+}
+
+.modal_window {
+  border-color: #c1ab5d;
+  border-width: 5px;
+  border-style: solid;
+  margin: 10px;
+  border-radius: 16px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: #3f4142;
+  display:flex;
+  flex-direction: column;
+}
+
+.modal_window__header {
+  margin: 0;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: #d9af8b;
+}
+
+.modal_window__close_button {
+  height: 20px;
+  margin: 5px 10px;
+}
+
+.modal_window__body {
+  overflow-y: scroll;
+}
+
+.modal_window__list {
+  margin: 5px 10px;
+  font-size: 11px;
+
+}
+
+.modal_shroud {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 9998;
+  background: rgba(64, 56, 56, 0.8);
 }
