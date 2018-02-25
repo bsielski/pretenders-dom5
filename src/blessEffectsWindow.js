@@ -78,6 +78,7 @@ export class BlessEffectsWindow extends React.Component {
             }
           </td>
           <td className="pretenders-table__cell pretenders-table__cell--name">{effect.name}</td>
+          <td className="pretenders-table__cell pretenders-table__cell--name">{effect.shortDescription}</td>
           <td className="pretenders-table__cell pretenders-table__cell--name">{effect.incarnate ? "Incarnate only" : ""}</td>
         </tr>
       );
@@ -97,6 +98,7 @@ export class BlessEffectsWindow extends React.Component {
                   <th className="pretenders-table__header">Bless Points</th>
                   <th className="pretenders-table__header">Scales</th>
                   <th className="pretenders-table__header">Name</th>
+                  <th className="pretenders-table__header">Short description</th>
                   <th className="pretenders-table__header">Incarnation</th>
                 </tr>
               </thead>
