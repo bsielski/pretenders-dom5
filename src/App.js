@@ -5,8 +5,10 @@ import {magicCost} from './magicCost';
 import {scalesCost} from './scalesCost';
 import {dominionCost} from './dominionCost';
 import {totalBlessPoints} from './blessPoints';
-import {blessEffects} from './blessEffects';
+import {getBlessEffects} from './blessEffects';
+import {filterBlessEffects} from './filterBlessEffects';
 import {BlessEffectsWindow} from './blessEffectsWindow';
+import {BlessEffectRows} from './blessEffectsWindow';
 
 import './App.css';
 
@@ -91,7 +93,7 @@ class App extends Component {
     };
     this.pretenders = getPretenders();
     this.nations = getNations();
-    this.blessEffects = blessEffects;
+    this.blessEffects = getBlessEffects();
     this.state = {
       nationId: 0,
       path: {
@@ -342,28 +344,16 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <div className="form__body form__body--bless-effects">
-          <p id="bless-effects-morale" className="bless-effects bless-effects--visible bless-effects-morale">Morale + 1</p>
-          <p id="bless-effects-fire" className="bless-effects bless-effects--fire"></p>
-          <p id="bless-effects-air" className="bless-effects bless-effects--air"></p>
-          <p id="bless-effects-water" className="bless-effects bless-effects--water"></p>
-          <p id="bless-effects-earth" className="bless-effects bless-effects--earth"></p>
-          <p id="bless-effects-astral" className="bless-effects bless-effects--astral"></p>
-          <p id="bless-effects-death" className="bless-effects bless-effects--death"></p>
-          <p id="bless-effects-nature" className="bless-effects bless-effects--nature"></p>
-          <p id="bless-effects-blood" className="bless-effects bless-effects--blood"></p>
-          </div>
         </div>
 
         <div className="form">
           <header className="form__header">Bless Effects</header>
-<button className="bless_effects_open_button" onClick={this.openBlessEffectsWindow}>show bless list</button>
           <BlessEffectsWindow
             isOpen={this.state.isBlessEffectsWindowOpen}
             onClose={this.closeBlessEffectsWindow}
             blessEffects={this.blessEffects}
           />
-          <div className="form__body form__body--bless">
+          <div className="form__body form__body--bless_effects">
             <div className="form__section">
               <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--fire">F{blessPoints.f}</div>
               <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--air">A{blessPoints.a}</div>
@@ -374,6 +364,29 @@ class App extends Component {
               <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--nature">N{blessPoints.n}</div>
               <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--blood">B{blessPoints.b}</div>
             </div>
+
+            <p>
+            Available Blesses
+            <button className="bless_effects_open_button" onClick={this.openBlessEffectsWindow}>
+              Show all bless list
+            </button>
+            </p>
+
+            <div className="form__section">
+              <table className="pretenders-table" id="pretenders-table">
+                <thead className="pretenders-table__head" id="pretenders-table__head">
+                  <tr className="pretenders-table__row">
+                    <th className="pretenders-table__header">Bless Points</th>
+                    <th className="pretenders-table__header">Scales</th>
+                    <th className="pretenders-table__header">Name</th>
+                    <th className="pretenders-table__header">Short description</th>
+                    <th className="pretenders-table__header">Incarnation</th>
+                  </tr>
+                </thead>
+                <BlessEffectRows effects={filterBlessEffects(this.blessEffects, blessPoints)} />
+              </table>
+            </div>
+
           </div>
         </div>
 

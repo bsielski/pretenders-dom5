@@ -46,6 +46,32 @@ function BlessPointsCell(props) {
   );
 }
 
+export function BlessEffectRows(props) {
+  const rows = props.effects.map(effect => {
+    return (
+      <tr key={effect.id} className="pretenders-table__row">
+        <BlessPointsCell effect={effect}/>
+        <td className="pretenders-table__cell pretenders-table__cell--left">
+          {
+            (effect.scales.heat    ? ("Heat: " + effect.scales.heat + " "      ) : "")
+            + (effect.scales.growth  ? ("Growth: " + effect.scales.growth + " "  ) : "")
+            + (effect.scales.fortune ? ("Fortune: " + effect.scales.fortune + " ") : "")
+            + (effect.scales.magic   ? ("Magic: " + effect.scales.magic + " "    ) : "")
+          }
+        </td>
+        <td className="pretenders-table__cell pretenders-table__cell--name">{effect.name}</td>
+        <td className="pretenders-table__cell pretenders-table__cell--name">{effect.shortDescription}</td>
+        <td className="pretenders-table__cell pretenders-table__cell--name">{effect.incarnate ? "Incarnate only" : ""}</td>
+      </tr>
+    );
+  });
+  return (
+    <tbody className="pretenders-table__body" id="pretenders-table__body">
+      {rows}
+    </tbody>
+  );
+}
+
 export class BlessEffectsWindow extends React.Component {
   constructor(props) {
     super(props);
@@ -63,27 +89,6 @@ export class BlessEffectsWindow extends React.Component {
     if (this.props.isOpen === false) {
       return null;
     }
-    const effectRows = this.props.blessEffects.map(effect => {
-      console.log(effect);
-      return (
-        <tr key={effect.id} className="pretenders-table__row">
-          <BlessPointsCell effect={effect}/>
-          <td className="pretenders-table__cell pretenders-table__cell--left">
-            {
-              (effect.scales.heat    ? ("Heat: " + effect.scales.heat + " "      ) : "")
-              + (effect.scales.growth  ? ("Growth: " + effect.scales.growth + " "  ) : "")
-              + (effect.scales.fortune ? ("Fortune: " + effect.scales.fortune + " ") : "")
-              + (effect.scales.magic   ? ("Magic: " + effect.scales.magic + " "    ) : "")
-
-            }
-          </td>
-          <td className="pretenders-table__cell pretenders-table__cell--name">{effect.name}</td>
-          <td className="pretenders-table__cell pretenders-table__cell--name">{effect.shortDescription}</td>
-          <td className="pretenders-table__cell pretenders-table__cell--name">{effect.incarnate ? "Incarnate only" : ""}</td>
-        </tr>
-      );
-    });
-
 
     return (
       <div>
@@ -102,9 +107,7 @@ export class BlessEffectsWindow extends React.Component {
                   <th className="pretenders-table__header">Incarnation</th>
                 </tr>
               </thead>
-              <tbody className="pretenders-table__body" id="pretenders-table__body">
-                {effectRows}
-              </tbody>
+              <BlessEffectRows effects={this.props.blessEffects} />
             </table>
           </div>
           <p className="modal_window__close_button">
@@ -117,6 +120,5 @@ export class BlessEffectsWindow extends React.Component {
       </div>
     )
   }
-
 
 }

@@ -102,10 +102,9 @@ body {
 .form__body--nation {
     flex-flow: column;
 }
-.form__body--bless-effects {
+.form__body--bless_effects {
     color: #dddddd;
     font-size: 11px;
-    align-self: flex-start;
     flex-flow: column;
     padding: 3px 10px;
 }
