@@ -220,17 +220,22 @@ export const removePretenders = [
     // BUGGED inspector fixes
 // delete Father of the sea from EA, MA, LA Ulm
     [2848, 7],
-    [2848, 39],
-    [2848, 64],
+    [2848, 49],
+    [2848, 84],
 // delete Father of the sea from, MA, LA Man
-    [2848, 37],
-    [2848, 63],
+    [2848, 47],
+    [2848, 83],
 // delete Father of the sea from EA Marverni, MA, LA Marignon
     [2848, 8],
     [2848, 40],
-    [2848, 65],
+    [2848, 85],
+// delete Ghost King, Master Lich, Demilich, Father of the Sea from MA Marignon
+    [872, 50],
+    [179, 50],
+    [180, 50],
+    [2848, 50],
 // delete Father of the sea from Fomoria, TNN, Eriu
     [2848, 18],
     [2848, 19],
-    [2848, 38],
+    [2848, 48],
 ]
