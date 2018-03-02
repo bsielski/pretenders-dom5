@@ -243,4 +243,11 @@ export const removePretenders = [
     [2848, 18],
     [2848, 19],
     [2848, 48],
+// delete Hun Came, Demilich, Teotl of the Underworld, Ghost King, Master Lich, Bolon-ti-ku, from LA Marignon
+    [2755, 85],
+    [180, 85],
+    [2444, 85],
+    [872, 85],
+    [179, 85],
+    [2756, 85],
 ]
