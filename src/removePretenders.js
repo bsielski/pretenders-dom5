@@ -250,4 +250,6 @@ export const removePretenders = [
     [872, 85],
     [179, 85],
     [2756, 85],
+// delete Monolith from LA Bogarus    
+    [657, 97],
 ]
