@@ -1341,7 +1341,8 @@ export function getPretenders() {
       name: "Uttervast",
       pathcost: 80,
       pointcost: 340,
-      startdom: 3
+      startdom: 3,
+      cantbeawake: true,
     },
     3053: {
       S: 1,
@@ -1955,6 +1956,9 @@ export function getPretenders() {
     }
     if (!vanilla_pretenders_data[pretenderId].pathcost) {
       vanilla_pretenders_data[pretenderId].pathcost = 10;
+    }
+    if (!vanilla_pretenders_data[pretenderId].cantbeawake) {
+      vanilla_pretenders_data[pretenderId].cantbeawake = false;
     }
   });
 
