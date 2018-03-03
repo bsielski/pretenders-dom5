@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {getPretenders} from './pretenders';
+import {filterPretendersByImprisonment} from './filterPretendersByImprisonment';
 import {getNations} from './nations';
 import {magicCost} from './magicCost';
 import {scalesCost} from './scalesCost';
@@ -231,7 +232,8 @@ class App extends Component {
 
     const blessPoints = totalBlessPoints(this.state.path, blessBonuses);
 
-    const pretenderRows = this.nations[this.state.nationId].pretenders.map(pretenderId => {
+    const filteredPretenderByImprisonment = filterPretendersByImprisonment(this.pretenders, this.nations[this.state.nationId].pretenders, this.state.imprisonment);
+    const pretenderRows = filteredPretenderByImprisonment.map(pretenderId => {
       // console.log(pretenderId);
       const pretender = this.pretenders[pretenderId];
       return (
@@ -469,7 +471,7 @@ class App extends Component {
           growth={this.state.growth}
           fortune={this.state.fortune}
           magic={this.state.magic}
-          noOfPretenders={this.nations[this.state.nationId].pretenders.length}
+          noOfPretenders={filteredPretenderByImprisonment.length}
           isBlessEffectsWindowOpen={this.state.isBlessEffectsWindowOpen}
         />
 
