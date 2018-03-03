@@ -250,6 +250,16 @@ export const removePretenders = [
     [872, 85],
     [179, 85],
     [2756, 85],
-// delete Monolith from LA Bogarus    
+// delete Monolith from LA Bogarus
     [657, 97],
+// delete Arch Mage, Protogenos of the Sea, Nerid, Floating Mind, Sea Dragon, Ancient Kraken from LA Erythrea
+    [248, 108],
+    [2847, 108],
+    [294, 108],
+
+    [2855, 108],
+    [2440, 108],
+    [973, 108],
+
+
 ]
