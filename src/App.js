@@ -10,6 +10,7 @@ import {getBlessEffects} from './blessEffects';
 import {filterBlessEffects} from './filterBlessEffects';
 import {BlessEffectsWindow} from './blessEffectsWindow';
 import {BlessEffectRows} from './blessEffectsWindow';
+import {VERSION} from './version';
 
 import './App.css';
 
@@ -66,6 +67,7 @@ class Debug extends React.Component {
         <section id="debugger">Growth is: {this.props.growth}</section>
         <section id="debugger">Fortune is: {this.props.fortune}</section>
         <section id="debugger">Magic is: {this.props.magic}</section>
+        <section id="debugger">Version is: {VERSION}</section>
       </div>
     );
   }
