@@ -9,6 +9,15 @@ body {
     align-items: center;
 }
 
+.columns_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.column {
+
+}
+
 .bless_effects_open_button {
   border-width: 0;
   padding: 0 5px;
