@@ -273,7 +273,9 @@ class App extends Component {
     }).map(data => {
       return (
         <tr key={data.pretenderId} className="pretenders-table__row">
-          <td className="pretenders-table__cell pretenders-table__cell--name">{data.name + " (id: " + data.pretenderId + ")"}</td>
+          <td className="pretenders-table__cell pretenders-table__cell--name">{data.name + " "}
+	    <span className="pretenders-table__cell--id">{"(id: " + data.pretenderId + ")"}</span>
+	  </td>
           <td className="pretenders-table__cell pretenders-table__cell--left">{data.pointsLeft}</td>
           <td className="pretenders-table__cell pretenders-table__cell--dominion">{data.dominion}</td>
           <td className={"pretenders-table__cell" + (data.f > 0 ? " pretenders-table__cell--fire" : ""  ) }>{data.f > 0 ? data.f : ""}</td>

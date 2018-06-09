@@ -320,6 +320,10 @@ body {
     text-align: left;
 }
 
+.pretenders-table__cell--id {
+    font-size: 8px;
+}
+
 .pretenders-table__text--magic {
     color: #eeeeee;
     font-size: 11px;
