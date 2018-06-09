@@ -56,7 +56,7 @@ class Debug extends React.Component {
     return (
       <div>
         <section id="debugger">Number of Pretenders: {this.props.noOfPretenders}</section>
-        <section id="debugger">Points left (without pretender): {this.props.points}</section>
+        {/*<section id="debugger">Points left (without pretender): {this.props.points}</section>
         <section id="debugger">Selected nation is: {this.props.nation}</section>
         <section id="debugger">Imprisonment is: {this.props.imprisonment}</section>
         <section id="debugger">isBlessEffectsWindowOpen is: {this.props.isBlessEffectsWindowOpen}</section>
@@ -67,7 +67,7 @@ class Debug extends React.Component {
         <section id="debugger">Growth is: {this.props.growth}</section>
         <section id="debugger">Fortune is: {this.props.fortune}</section>
         <section id="debugger">Magic is: {this.props.magic}</section>
-        <section id="debugger">Version is: {VERSION}</section>
+       */} <section id="debugger">Version is: {VERSION}</section>
       </div>
     );
   }
