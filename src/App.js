@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {DebugBar} from './DebugBar';
 import {Footer} from './Footer';
-import {NationInfo} from './NationInfo';
+import {Nation} from './Nation';
 import {getPretenders} from './pretenders';
 import {filterPretendersByImprisonment} from './filterPretendersByImprisonment';
 import {getNations} from './nations';
@@ -115,14 +115,6 @@ class App extends Component {
     }
 
     render() {
-
-	const nationOptions = Object.keys(this.nations).map(nationId => {
-	    return (
-		<option key={nationId} value={nationId} className={"nation-picker__option nation-picker__option--era_" + this.nations[nationId].era}>
-		  {this.nations[nationId].label}
-		</option>
-	    );
-	});
 
 	const isImprosonmentChecked = (value) => {
 	    return this.state.imprisonment === parseInt(value, 10);
@@ -242,24 +234,12 @@ class App extends Component {
 
 		  <div className="column">
 		    
-		    <div className="form">
-		      <header className="form__header">Nation</header>
-		      <div className="form__body form__body--nation">
-			<select name="nationId" value={this.state.nationId} onChange={this.changeOption}
-				className="nation-picker__select" id="nation-picker__select"
-				>
-			  {nationOptions}
-			</select>
-			<NationInfo f={this.nations[this.state.nationId].blessF}
-				    a={this.nations[this.state.nationId].blessA} w={this.nations[this.state.nationId].blessW}
-				    e={this.nations[this.state.nationId].blessE} s={this.nations[this.state.nationId].blessS}
-				    d={this.nations[this.state.nationId].blessD} n={this.nations[this.state.nationId].blessN}
-				    b={this.nations[this.state.nationId].blessB} heat={this.nations[this.state.nationId].heat}
-				    growth={this.nations[this.state.nationId].growth}
-				    />
-		      </div>
-		    </div>
-		    
+		    <Nation
+		      nations={this.nations}
+		      nationId={this.state.nationId}
+		      changeOption={this.changeOption}
+		      />
+    
 		    <div className="form">
 		      <header className="form__header">Magic</header>
 		      <div className="form__body">

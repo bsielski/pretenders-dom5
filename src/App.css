@@ -30,29 +30,6 @@ body {
   text-decoration: underline;
 }
 
-.nation-picker__option {
-    color: #eeeeee;
-}
-
-.nation-picker__option--era_ {
-    background-color: #3f4142;
-}
-
-.nation-picker__option--era_0 {
-    background-color: #eeeeee;
-    color: #222222;
-}
-
-.nation-picker__option--era_1 {
-    background-color: #888888;
-    color: #eeeeee;
-}
-
-.nation-picker__option--era_2 {
-    background-color: #111111;
-    color: #bbbbbb;
-}
-
 .form {
     border-color: #c1ab5d;
     border-width: 5px;
