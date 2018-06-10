@@ -1,5 +1,7 @@
 # Pretenders Calculator for Dominions 5
 
+Deployed application: http://pretenders5.testingmagic.ovh/
+
 ## Description
 
 A calculator for [Dominions 5](http://www.illwinter.com/dom5/). It allows to pick magic, dominion scale etc. first and then it shows what chassis for Pretenders are the cheapest.﻿
