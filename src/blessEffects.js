@@ -1,246 +1,60 @@
-export function getBlessEffects() {
-  const blessData = [
-    {id: 1   , f: 1, scales:{}, name: "Superior Morale (*)",
-      shortDescription: "+1 morale",
-    },
-    {id: 2   , f: 2, scales:{}, name: "Minor Fire Resistance",
-      shortDescription: "Fire resistance 5",
-    },
-    {id: 3   , f: 3, scales:{}, name: "Major Fire Resistance",
-      shortDescription: "Fire resistance 10",
-    },
-    {id: 4   , f: 1, d: 1, scales:{}, name: "Wasteland Survival",
-      shortDescription: "Wasteland survival trait",
-    },
-    {id: 5   , f: 3, scales:{}, name: "Attack Skill (*)",
-      shortDescription: "+2 attack skill",
-    },
-    {id: 6   , f: 4, scales:{}, name: "Inspirational Presence (*)",
-      shortDescription: "+1 inspirational, +30 leadership",
-    },
-    {id: 7   , f: 5, scales:{}, name: "Death Explosion", incarnate: true,
-      shortDescription: "10 AP damage, 5 AoE",
-    },
-    {id: 8   , f: 5, scales:{}, name: "Heat Aura", incarnate: true,
-      shortDescription: "Heat 3, fire resistance 5",
-    },
-    {id: 9   , f: 6, scales:{}, name: "Fire Shield", incarnate: true,
-      shortDescription: "Fire shield (6 AP dmg)",
-    },
-    {id: 10  , f: 6, scales:{}, name: "Flaming Weapons", incarnate: true,
-      shortDescription: "Fire damage (6 AP dmg) except natural ranged weapon",
-    },
-    {id: 11  , f: 7, scales:{}, name: "Awe", incarnate: true,
-      shortDescription: "Awe +1",
-    },
-    {id: 12  , a: 1, scales:{}, name: "Minor Shock Resistance",
-      shortDescription: "Shock resistance 5",
-    },
-    {id: 13  , a: 1, scales:{}, name: "Precision (*)",
-      shortDescription: "+1 precision",
-    },
-    {id: 14  , a: 2, scales:{}, name: "Farshot (*)",
-      shortDescription: "Weapon range (no spells, no natural weapon) + 30%",
-    },
-    {id: 15  , a: 2, scales:{}, name: "Swiftness (*)",
-      shortDescription: "Movement +30%",
-    },
-    {id: 16  , a: 3, scales:{}, name: "Major Shock Resistance",
-      shortDescription: "Shock resistance 10",
-    },
-    {id: 17  , a: 4, scales:{}, name: "Charged Bodies",
-      shortDescription: "10 AN shock damage",
-    },
-    {id: 18  , a: 5, scales:{}, name: "Wind Walker", incarnate: true,
-      shortDescription: "Map Move +6",
-    },
-    {id: 19  , a: 6, scales:{}, name: "Air Shield", incarnate: true,
-      shortDescription: "80%",
-    },
-    {id: 20  , a: 7, scales:{}, name: "Thunder Weapons", incarnate: true,
-      shortDescription: "Shock dmg effect (1 AN capped dmg + 3 AN fatigue dmg) except natural ranged weapon",
-    },
-    {id: 21  , w: 1, scales:{}, name: "Minor Cold Resistance",
-      shortDescription: "Cold resistance 5",
-    },
-    {id: 22  , w: 1, scales: {heat: -1}, name: "Winter’s Gift",
-      shortDescription: "No movement penalties from cold climate",
-    },
-    {id: 23  , w: 1, n: 1, scales:{}, name: "Swamp Survival",
-      shortDescription: "Swamp Survival trait",
-    },
-    {id: 24  , w: 2, scales:{}, name: "Water Walking",
-      shortDescription: "Able to cross rivers",
-    },
-    {id: 25  , w: 3, scales:{}, name: "Major Cold Resistance",
-      shortDescription: "Cold resistance 10",
-    },
-    {id: 26  , w: 3, scales:{}, name: "Defense Skill (*)",
-      shortDescription: "+2 defence",
-    },
-    {id: 27  , w: 5, scales: {heat: -1}, name: "Frost Weapons", incarnate: true,
-      shortDescription: "Cold damage (8 dmg) except natural ranged weapon",
-    },
-    {id: 28  , w: 5, scales:{}, name: "Chill Aura", incarnate: true,
-      shortDescription: "Cold resistance +5, Chiil Aura 3",
-    },
-    {id: 29  , w: 7, scales:{}, name: "Water Breathing", incarnate: true,
-      shortDescription: "Water Breathing trait",
-    },
-    {id: 30  , w: 10, scales:{}, name: "Quickness", incarnate: true,
-      shortDescription: "number of melee attacks *2, combat speed *2, attack +2, defense +2",
-    },
-    {id: 31  , e: 1, scales:{}, name: "Mountain Survival",
-      shortDescription: "Mountain Survival trait",
-    },
-    {id: 32  , e: 2, scales:{}, name: "Reinvigoration (*)",
-      shortDescription: "+1 reinvigoration",
-    },
-    {id: 33  , e: 2, scales:{}, name: "Reconstruction",
-      shortDescription: "inanimates don't have Never Heals trait",
-    },
-    {id: 34  , e: 3, scales:{}, name: "Strength of the Earth (*)",
-      shortDescription: "+2 strength",
-    },
-    {id: 35  , e: 4, scales:{}, name: "Unbreakable",
-      shortDescription: "75% protection from afflictions",
-    },
-    {id: 36  , e: 5, scales:{}, name: "Fire & Shock Resistance", incarnate: true,
-      shortDescription: "Shock and fire resistance 10",
-    },
-    {id: 37  , e: 5, n: 3, scales:{}, name: "Larger", incarnate: true,
-      shortDescription: "+1 size, + 30% HP, +3 strength, -1 defense, +2 map move",
-    },
-    {id: 38  , e: 6, scales:{}, name: "Hard Skin", incarnate: true,
-      shortDescription: "+5 natural protection",
-    },
-    {id: 39  , e: 7, scales:{}, name: "Fortitude", incarnate: true,
-      shortDescription: "half damage from pierce, slash and blunt weapons",
-    },
-    {id: 40  , s: 1, scales:{}, name: "Minor Magic Resistance",
-      shortDescription: "+1 Magic Resistance",
-    },
-    {id: 41  , s: 1, scales:{}, name: "Arcane Command (*)",
-      shortDescription: "+10 magic leadership",
-    },
-    {id: 42  , s: 1, d: 1, scales:{}, name: "Spirit Sight",
-      shortDescription: "Spirit Sight trait",
-    },
-    {id: 43  , s: 2, scales:{}, name: "Magic Weapons",
-      shortDescription: "Magic damage except natural ranged weapon",
-    },
-    {id: 44  , s: 3, scales:{}, name: "Major Magic Resistance",
-      shortDescription: "+2 Magic Resistance",
-    },
-    {id: 45  , s: 3, f: 1, scales:{}, name: "Solar Weapons",
-      shortDescription: "Additional 3 AP dmg, 9 AP dmg vs undead, except natural ranged weapon",
-    },
-    {id: 46  , s: 4, scales:{}, name: "Far Caster",
-      shortDescription: "+50% combat spell range",
-    },
-    {id: 47  , s: 4, scales:{}, name: "Arcane Finesse",
-      shortDescription: "+1 penetration",
-    },
-    {id: 48  , s: 6, scales:{}, name: "Twist Fate", incarnate: true,
-      shortDescription: "negates first successful attack",
-    },
-    {id: 49  , s: 7, scales: {fortune: -1},name: "Fateweaving", incarnate: true,
-      shortDescription: "attacker can get Cursed Luck (12 vs MR) after striking this unit",
-    },
-    {id: 50  , s: 8, scales: {fortune: 1},name: "Luck", incarnate: true,
-      shortDescription: "75% to avoiding the last fatal blow",
-    },
-    {id: 51  , s: 10, scales: {magic: 1},name: "Etherealness", incarnate: true,
-      shortDescription: "Ethereal trait (75% chance to negate non-magical damage)",
-    },
-    {id: 52  , d: 1, scales:{}, name: "Undying (*)",
-      shortDescription: "+2 undying HP",
-    },
-    {id: 53  , d: 1, scales:{}, name: "Undead Command (*)",
-      shortDescription: "+20 undead leadership",
-    },
-    {id: 54  , d: 2, scales: {growth: -2}, name: "Half Dead",
-      shortDescription: "semi-undead status (don't need to eat, resistance to diseases)",
-    },
-    {id: 55  , d: 4, scales:{}, name: "Withering Weapons",
-      shortDescription: "withering weapons, except natural ranged weapon",
-    },
-    {id: 56  , d: 5, scales:{}, name: "Stygian Flesh", incarnate: true,
-      shortDescription: "10 invulnerability",
-    },
-    {id: 57  , d: 7, scales:{}, name: "Reanimators", incarnate: true,
-      shortDescription: "reanimation chance 50%",
-    },
-    {id: 58  , d: 7, scales:{}, name: "Reforming Flesh", incarnate: true,
-      shortDescription: "+10% regeneration to undead",
-    },
-    {id: 59  , d: 8, scales:{}, name: "Death Weapons", incarnate: true,
-      shortDescription: "additional death damage +2 and disease, both individually negated by MR, except natural ranged weapon",
-    },
-    {id: 60  , d: 10, scales:{}, name: "Fear", incarnate: true,
-      shortDescription: "Fear 5",
-    },
-    {id: 61  , n: 1, scales:{}, name: "Resilient (*)",
-      shortDescription: "+1 HP",
-    },
-    {id: 62  , n: 1, scales:{}, name: "Low Light Vision",
-      shortDescription: "Darkvision 50",
-    },
-    {id: 63  , n: 1, scales:{}, name: "Minor Poison Resistance",
-      shortDescription: "Poison resistance 5",
-    },
-    {id: 64  , n: 2, scales:{}, name: "Major Poison Resistance",
-      shortDescription: "Poison resistance 10",
-    },
-    {id: 65  , n: 2, scales:{}, name: "Forest Survival",
-      shortDescription: "Forest Survival trait",
-    },
-    {id: 66  , n: 3, scales: {magic: 1}, name: "Unaging",
-      shortDescription: "aging 4 times slower",
-    },
-    {id: 67  , n: 4, scales: {growth: -1}, name: "Poison Weapons",
-      shortDescription: "additional poison damage (5 dmg), except natural ranged weapon",
-    },
-    {id: 68  , n: 5, scales:{}, name: "Recuperation", incarnate: true,
-      shortDescription: "heal battle affliction over time",
-    },
-    {id: 69  , n: 5, scales:{}, name: "Berserker", incarnate: true,
-      shortDescription: "Berserker +2",
-    },
-    {id: 70  , n: 6, scales:{}, name: "Barkskin", incarnate: true,
-      shortDescription: "natural protection 10, susceptible to fire 5",
-    },
-    {id: 71  , n: 7, scales:{}, name: "Regeneration", incarnate: true,
-      shortDescription: "regeneration ",
-    },
-    {id: 72  , b: 1, scales:{}, name: "Strong Vitae (*)",
-      shortDescription: "+1 HP",
-    },
-    {id: 73  , b: 3, scales:{}, name: "Strength of the Flesh (*)",
-      shortDescription: "+2 strength",
-    },
-    {id: 74  , b: 4, scales:{}, name: "Blood Surge",
-      shortDescription: "+3 attack, +3 strength, +1 defense, +1 reinvigoration after kill",
-    },
-    {id: 75  , b: 5, scales:{}, name: "Blood Bond", incarnate: true,
-      shortDescription: "half damage to other blessed friendly units (range 5)",
-    },
-    {id: 76  , b: 6, scales:{}, name: "Unholy Weapons", incarnate: true,
-      shortDescription: "additional unholy damage (10 AP dmg), except natural ranged weapon",
-    },
-    {id: 77  , b: 8, scales:{}, name: "Blood Vengeance", incarnate: true,
-      shortDescription: "the attacker must roll MR or get an equal amount of damage",
-    },
-  ]
-  blessData.forEach(effect => {
-    if (!effect.f) {effect.f = 0}
-    if (!effect.a) {effect.a = 0}
-    if (!effect.w) {effect.w = 0}
-    if (!effect.e) {effect.e = 0}
-    if (!effect.s) {effect.s = 0}
-    if (!effect.d) {effect.d = 0}
-    if (!effect.n) {effect.n = 0}
-    if (!effect.b) {effect.b = 0}
-  });
-  return blessData;
+import React from 'react';
+import {BlessEffectsWindow} from './blessEffectsWindow';
+import {BlessEffectRows} from './blessEffectsWindow';
+import {filterBlessEffects} from './filterBlessEffects';
+
+import './App.css';
+import './BlessEffects.css';
+
+export class BlessEffects extends React.Component {
+    render() {
+	
+	return (
+	    <div className="form">
+	      <header className="form__header">Bless Effects</header>
+	      <BlessEffectsWindow
+		isOpen={this.props.isBlessEffectsWindowOpen}
+		onClose={this.props.closeBlessEffectsWindow}
+		blessEffects={this.props.blessEffects}
+		/>
+	      <div className="form__body form__body--bless_effects">
+		<div className="form__section">
+		  <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--fire">F{this.props.blessPoints.f}</div>
+		  <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--air">A{this.props.blessPoints.a}</div>
+		  <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--water">W{this.props.blessPoints.w}</div>
+		  <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--earth">E{this.props.blessPoints.e}</div>
+		  <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--astral">S{this.props.blessPoints.s}</div>
+		  <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--death">D{this.props.blessPoints.d}</div>
+		  <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--nature">N{this.props.blessPoints.n}</div>
+		  <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--blood">B{this.props.blessPoints.b}</div>
+		</div>
+		
+		<p>
+		  Available Blesses
+		  <button className="bless_effects_open_button" onClick={this.props.openBlessEffectsWindow}>
+		    Show all bless list
+		  </button>
+		</p>
+		
+		<div className="form__section">
+		  <table className="pretenders-table" id="pretenders-table">
+		    <thead className="pretenders-table__head" id="pretenders-table__head">
+		      <tr className="pretenders-table__row">
+			<th className="pretenders-table__header">Bless Points</th>
+			<th className="pretenders-table__header">Scales</th>
+			<th className="pretenders-table__header">Name</th>
+			<th className="pretenders-table__header">Short description</th>
+			<th className="pretenders-table__header">Incarnation</th>
+		      </tr>
+		    </thead>
+		    <BlessEffectRows effects={filterBlessEffects(this.props.blessEffects, this.props.blessPoints)} />
+		  </table>
+		</div>
+		
+	      </div>
+	    </div>
+
+	);
+    }
 }
+

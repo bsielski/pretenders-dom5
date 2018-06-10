@@ -1,0 +1,53 @@
+.bless-effects {
+    margin: 0;
+    display: none;
+}
+
+.bless-effects--visible {
+    display: block;
+}
+
+.bless-effects--morale {
+    color: #eeeedd;
+}
+
+.bless-effects--fire {
+    color: #d55a3b;
+}
+
+.bless-effects--air {
+    color: #d3bec6;
+}
+
+.bless-effects--water {
+    color: #806aff;
+}
+
+.bless-effects--earth {
+    color: #b08130;
+}
+
+.bless-effects--astral {
+    color: #b0dbd6;
+}
+
+.bless-effects--death {
+    color: #a550a8;
+}
+
+.bless-effects--nature {
+    color: #4d9533;
+}
+
+.bless-effects--blood {
+    color: #bd4e49;
+}
+
+.bless_effects_open_button {
+  border-width: 0;
+  padding: 0 5px;
+  background-color: inherit;
+  font-family: 'SeshatRegular', serif;
+  font-size: 11px;
+  text-decoration: underline;
+}
