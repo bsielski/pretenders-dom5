@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {DebugBar} from './DebugBar';
 import {getPretenders} from './pretenders';
 import {filterPretendersByImprisonment} from './filterPretendersByImprisonment';
 import {getNations} from './nations';
@@ -46,28 +47,6 @@ class NationInfo extends React.Component {
           {growth}
         </p>
 
-      </div>
-    );
-  }
-}
-
-class Debug extends React.Component {
-  render() {
-    return (
-      <div>
-        <section id="debugger">Number of Pretenders: {this.props.noOfPretenders}</section>
-        {/*<section id="debugger">Points left (without pretender): {this.props.points}</section>
-        <section id="debugger">Selected nation is: {this.props.nation}</section>
-        <section id="debugger">Imprisonment is: {this.props.imprisonment}</section>
-        <section id="debugger">isBlessEffectsWindowOpen is: {this.props.isBlessEffectsWindowOpen}</section>
-        <section id="debugger">Dominion is: {this.props.dominion}</section>
-        <section id="debugger">Order is: {this.props.order}</section>
-        <section id="debugger">Productivity is: {this.props.productivity}</section>
-        <section id="debugger">Heat is: {this.props.heat}</section>
-        <section id="debugger">Growth is: {this.props.growth}</section>
-        <section id="debugger">Fortune is: {this.props.fortune}</section>
-        <section id="debugger">Magic is: {this.props.magic}</section>
-       */} <section id="debugger">Version is: {VERSION}</section>
       </div>
     );
   }
@@ -475,8 +454,7 @@ class App extends Component {
 	  </div>
         </div>
 
-
-        <Debug
+        <DebugBar
           nation={this.nations[this.state.nationId].label}
           imprisonment={this.imprisonmentOptions[this.state.imprisonment].label}
           points={pointsLeftWithoutPretenders}
@@ -489,8 +467,8 @@ class App extends Component {
           magic={this.state.magic}
           noOfPretenders={filteredPretenderByImprisonment.length}
           isBlessEffectsWindowOpen={this.state.isBlessEffectsWindowOpen}
+	  version={VERSION}
         />
-
 
       </main>
     );
