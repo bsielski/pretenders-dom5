@@ -1,4 +1,4 @@
-import {getPretenders} from './pretenders';
+import {getPretenders} from './getPretenders';
 import {putPretendersToNations} from './nationsPretenders';
 
 export function getNations() {
