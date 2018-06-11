@@ -37,14 +37,14 @@ export class BlessEffects extends React.Component {
 		</p>
 		
 		<div className="form__section">
-		  <table className="pretenders-table" id="pretenders-table">
-		    <thead className="pretenders-table__head" id="pretenders-table__head">
+		  <table className="bless_effects__table">
+		    <thead className="pretenders-table__head">
 		      <tr className="pretenders-table__row">
 			<th className="pretenders-table__header">Bless Points</th>
-			<th className="pretenders-table__header">Scales</th>
-			<th className="pretenders-table__header">Name</th>
-			<th className="pretenders-table__header">Short description</th>
-			<th className="pretenders-table__header">Incarnation</th>
+			<th className="bless_effects__table_header">Scales</th>
+			<th className="bless_effects__table_header">Name</th>
+			<th className="bless_effects__table_header">Short description</th>
+			<th className="bless_effects__table_header">Incarnate only?</th>
 		      </tr>
 		    </thead>
 		    <BlessEffectRows effects={filterBlessEffects(this.props.blessEffects, this.props.blessPoints)} />

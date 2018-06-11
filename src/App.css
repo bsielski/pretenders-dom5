@@ -18,15 +18,18 @@ body {
     justify-content: center;
 }
 .column {
-
+    max-width: 755px;
 }
 
 .form {
     border-color: #c1ab5d;
-    border-width: 5px;
+    border-width: 4px;
     border-style: solid;
-    margin: 10px;
-    border-radius: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +60,8 @@ body {
     color: #dddddd;
     font-size: 11px;
     flex-flow: column;
-    padding: 3px 10px;
+    padding: 3px 0;
+    
 }
 
 

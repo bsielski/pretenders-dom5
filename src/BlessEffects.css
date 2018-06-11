@@ -51,3 +51,13 @@
   font-size: 11px;
   text-decoration: underline;
 }
+
+.bless_effects__table {
+    table-layout: auto;
+    /* width: 560px; */
+    color: #cccccc;
+}
+
+.pretenders-table__header {
+    font-size: 11px;
+}
