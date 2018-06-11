@@ -19,7 +19,7 @@ export class DebugBar extends React.Component {
         <section className="debug_bar__row">Growth is: {this.props.growth}</section>
         <section className="debug_bar__row">Fortune is: {this.props.fortune}</section>
         <section className="debug_bar__row">Magic is: {this.props.magic}</section>
-       */} <section className="debug_bar__row">Version is: {this.props.version}</section>
+       */}
       </div>
     );
   }
