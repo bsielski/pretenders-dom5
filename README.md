@@ -11,6 +11,7 @@ It is writen in [React](https://reactjs.org/) framework.
 
 ## Changelog
 
+- Version 1.7.0: Stable two columns layout on wide screens.
 - Version 1.6.0: Footer with some informations.
 - Version 1.5.0: Two columns layout for wide screens.
 - Version 1.4.0: Selectable path letters in the pretenders table.

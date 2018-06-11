@@ -5,11 +5,12 @@
 }
 
 .pretenders-table__header {
-    padding-left: 6px;
+    font-size: 10px;
 }
 
 .pretenders-table__cell {
     padding: 1px;
+    font-size: 11px;
     text-align: center;
     background: linear-gradient(#3f4142, #3d3940);
 }

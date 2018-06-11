@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './BlessEffectRows.css';
+
 function BlessPointsCell(props) {
   let points = [];
   if (props.effect.f) {
@@ -40,7 +42,7 @@ function BlessPointsCell(props) {
     // }
   });
   return (
-    <td className="pretenders-table__cell">
+    <td className="bless_effects__points_cell">
       {points}
     </td>
   );
@@ -49,9 +51,9 @@ function BlessPointsCell(props) {
 export function BlessEffectRows(props) {
   const rows = props.effects.map(effect => {
     return (
-      <tr key={effect.id} className="pretenders-table__row">
+      <tr key={effect.id} className="bless_effects__row">
         <BlessPointsCell effect={effect}/>
-        <td className="pretenders-table__cell pretenders-table__cell--left">
+        <td className="bless_effects__scales_cell">
           {
             (effect.scales.heat    ? ("Heat: " + effect.scales.heat + " "      ) : "")
             + (effect.scales.growth  ? ("Growth: " + effect.scales.growth + " "  ) : "")
@@ -59,14 +61,14 @@ export function BlessEffectRows(props) {
             + (effect.scales.magic   ? ("Magic: " + effect.scales.magic + " "    ) : "")
           }
         </td>
-        <td className="pretenders-table__cell pretenders-table__cell--name">{effect.name}</td>
-        <td className="pretenders-table__cell pretenders-table__cell--name">{effect.shortDescription}</td>
-        <td className="pretenders-table__cell pretenders-table__cell--name">{effect.incarnate ? "Incarnate only" : ""}</td>
+        <td className="bless_effects__name_cell">{effect.name}</td>
+        <td className="bless_effects__description_cell">{effect.shortDescription}</td>
+        <td className="bless_effects__incarnate_cell">{effect.incarnate ? "yes" : ""}</td>
       </tr>
     );
   });
   return (
-    <tbody className="pretenders-table__body" id="pretenders-table__body">
+    <tbody className="bless_effects__table_body">
       {rows}
     </tbody>
   );
@@ -97,7 +99,7 @@ export class BlessEffectsWindow extends React.Component {
             Bless Effects:
           </h1>
           <div className="modal_window__body">
-            <table className="pretenders-table" id="pretenders-table">
+            <table className="pretenders-table">
               <thead className="pretenders-table__head" id="pretenders-table__head">
                 <tr className="pretenders-table__row">
                   <th className="pretenders-table__header">Bless Points</th>
