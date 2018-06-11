@@ -4,6 +4,7 @@ import {Footer} from './Footer';
 import {Nation} from './Nation';
 import {Pretenders} from './Pretenders';
 import {BlessEffects} from './BlessEffects';
+import {Imprisonment} from './Imprisonment';
 import {getPretenders} from './getPretenders';
 import {filterPretendersByImprisonment} from './filterPretendersByImprisonment';
 import {getNations} from './nations';
@@ -113,25 +114,6 @@ class App extends Component {
 
     render() {
 
-	const isImprosonmentChecked = (value) => {
-	    return this.state.imprisonment === parseInt(value, 10);
-	};
-
-	const imprisonmentOptions = Object.keys(this.imprisonmentOptions).map(imprisonmentLevel => {
-	    return (
-		<div key={imprisonmentLevel} className="value-picker value-picker--imprisonment value-picker--imprisonment-checked">
-		  <input type="radio" id={"imprisonment_"+imprisonmentLevel.toString()+"_picker__input"}
-			 onChange={this.changeRadio} checked={isImprosonmentChecked(imprisonmentLevel)}
-			 name="imprisonment" value={imprisonmentLevel} className="value-picker__input value-picker__input--imprisonment"
-			 />
-		  <label className="value-picker__label value-picker__label--imprisonment"
-			 htmlFor={"imprisonment_"+imprisonmentLevel.toString()+"_picker__input"}
-			 >
-		    {this.imprisonmentOptions[imprisonmentLevel].label}
-		  </label>
-		</div>
-	    );
-	});
 
 
 	const pointsLeftWithoutPretenders = this.points
@@ -274,14 +256,12 @@ class App extends Component {
 			</div>
 		      </div>
 		    </div>
-		    
-		    <div className="form">
-		      <header className="form__header">Imprisonment</header>
-		      <div className="form__body form__body--imprisonment">
-			{imprisonmentOptions}
-			
-		      </div>
-		    </div>
+		
+	    	    <Imprisonment
+		      imprisonmentOptions={this.imprisonmentOptions}
+		      imprisonment={this.state.imprisonment}
+		      changeRadio={this.changeRadio}
+		      />
 
 		  </div>
 
