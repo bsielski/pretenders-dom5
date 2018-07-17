@@ -11,7 +11,7 @@ It is writen in [React](https://reactjs.org/) framework.
 
 ## Changelog
 
-- Version 1.8.0: Remove Smoking Mirror from Xibalba. New Pretenders: Bone Mother, Enkidu Great Sage for Ur, Great Camazotz for Xibalba.
+- Version 1.8.0: Remove Smoking Mirror from Xibalba. New Pretenders: Bone Mother, Enkidu Great Sage for Ur, Great Camazotz for Xibalba,  Titan of the Spring, Titan of Growth, Titan of the Hunt, Titan of the Crossroads, Grey Ones for Mediterranean realm.
 - Version 1.7.0: Stable two columns layout on wide screens.
 - Version 1.6.0: Footer with some informations.
 - Version 1.5.0: Two columns layout for wide screens.
