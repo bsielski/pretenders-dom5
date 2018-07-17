@@ -221,8 +221,17 @@ export const removePretenders = [
     [294,	107],
     [2847,	107],
     [138,	108],
-
-    
+    // remove new greek pretenders from mekone
+    [3203, 32],
+    [3204, 32],
+    [3205, 32],
+    [3208, 32],
+    [3209, 32],
+    [3203, 69],
+    [3204, 69],
+    [3205, 69],
+    [3208, 69],
+    [3209, 69],
     // BUGGED inspector fixes
 // delete Father of the sea from EA, MA, LA Ulm
     [2848, 7],
