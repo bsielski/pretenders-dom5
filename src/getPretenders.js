@@ -1928,6 +1928,31 @@ export function getPretenders() {
       realm1: 3,
       startdom: 3
     },
+
+    3190: {
+      D: 1,
+      name: "Bone Mother",
+      pathcost: 10,
+      pointcost: 110,
+      startdom: 1
+    },
+    3191: {
+      S: 1,
+      name: "Enkidu Great Sage",
+      pathcost: 10,
+      pointcost: 130,
+      startdom: 1
+    },
+    3192: {
+      D: 1,
+      B: 1,
+      name: "Great Camazotz",
+      pathcost: 10,
+      pointcost: 100,
+      startdom: 1
+    },
+
+      
   }
   Object.keys(vanilla_pretenders_data).forEach(pretenderId => {
     if (!vanilla_pretenders_data[pretenderId].F) {

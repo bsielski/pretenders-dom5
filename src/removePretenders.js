@@ -222,6 +222,7 @@ export const removePretenders = [
     [2847,	107],
     [138,	108],
 
+    
     // BUGGED inspector fixes
 // delete Father of the sea from EA, MA, LA Ulm
     [2848, 7],

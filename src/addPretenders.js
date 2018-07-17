@@ -195,7 +195,6 @@ export const addPretenders = [
     [606, 31],
     [653, 31],
     [657, 31],
-    [857, 31],
     [158, 32],
     [180, 32],
     [606, 32],
@@ -480,7 +479,6 @@ export const addPretenders = [
     [606, 68],
     [653, 68],
     [657, 68],
-    [857, 68],
     [2853, 68],
     [158, 69],
     [180, 69],
@@ -763,7 +761,6 @@ export const addPretenders = [
     [606, 101],
     [653, 101],
     [657, 101],
-    [857, 101],
     [2853, 101],
     [109, 106],
     [250, 106],
@@ -800,5 +797,14 @@ export const addPretenders = [
     [3054, 107],
     [250, 108],
     [2881, 108],
-    [3053, 108]
+    [3053, 108],
+    
+    [3190, 29], //bone mother - ea ur
+    [3190, 66], //bone mother - ma ur
+
+    [3191, 29], //Enkidu Great Sage - ea ur
+    [3191, 66], //Enkidu Great Sage - ma u
+    [3192, 31], //Great Camazotz - ea Xibalba
+    [3192, 68], //Great Camazotz - ea Xibalba 
+    [3192, 101], //Great Camazotz - ea Xibalba
 ]
