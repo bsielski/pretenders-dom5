@@ -1176,6 +1176,7 @@ export function getPretenders() {
 	},
 	2801: {
 	    W: 1,
+	    D: 1,
 	    name: "Linnormr",
 	    pathcost: 80,
 	    pointcost: 210,
@@ -1184,6 +1185,7 @@ export function getPretenders() {
 	},
 	2802: {
 	    E: 1,
+	    D: 1,
 	    name: "Svartalf Mastersmith",
 	    pathcost: 20,
 	    pointcost: 200,
