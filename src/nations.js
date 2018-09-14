@@ -167,7 +167,7 @@ export function getNations() {
       realms: [10,2, 3],
       cheapgods20: [607/*Baphomet*/,3080/*Duiu of Farming*/,3079/*Duiu of Thunder*/,215/*Virtue*/,2787/*Celestial Lion*/,216/*Dragon(F)*/,],
       cheapgods40: []},
-    51:  { era: 1, label: "MA Mictlan - Reign of the Lawgiver", heat: 1, blessA: 1, blessN: 2,
+    51:  { era: 1, label: "MA Mictlan - Reign of the Lawgiver", heat: 1, blessA: 2, blessN: 1,
       realms: [10,6],
       cheapgods20: [2443/*Teotl of the Sky*/,1896/*Lawgiver*/,],
       cheapgods40: []},
