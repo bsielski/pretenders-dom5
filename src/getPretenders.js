@@ -26,6 +26,7 @@ export function getPretenders() {
 	},
 	1096: {
 	    A: 2,
+	    D: 1,
 	    name: "Destroyer of Worlds",
 	    pathcost: 60,
 	    pointcost: 240,
@@ -68,16 +69,18 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	1230: {
+	    F: 1,
 	    E: 2,
-	    name: "Forge Lord",
+	    name: "Titan of the Forge",
 	    pathcost: 60,
 	    pointcost: 240,
 	    realm1: 3,
 	    startdom: 3
 	},
 	1231: {
-	    N: 1,
 	    W: 1,
+	    D: 1,
+	    N: 1,
 	    name: "Drakaina",
 	    pathcost: 60,
 	    pointcost: 260,
@@ -113,6 +116,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	1340: {
+	    F: 1,
 	    A: 1,
 	    E: 1,
 	    name: "Tiwaz of War",
@@ -175,6 +179,7 @@ export function getPretenders() {
 	    startdom: 4
 	},
 	1348: {
+	    D: 1,
 	    N: 2,
 	    name: "Titan of Serpents and Medicine",
 	    pathcost: 60,
@@ -199,6 +204,7 @@ export function getPretenders() {
 	},
 	1371: {
 	    E: 1,
+	    D: 1,
 	    N: 1,
 	    name: "Titan of Death and Rebirth",
 	    pathcost: 60,
@@ -302,8 +308,9 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	157: {
-	    B: 1,
+	    D: 1,
 	    N: 1,
+	    B: 1,
 	    name: "Mother of Monsters",
 	    pathcost: 60,
 	    pointcost: 220,
@@ -378,6 +385,7 @@ export function getPretenders() {
 	},
 	1899: {
 	    W: 1,
+	    D: 2,
 	    name: "Fomorian God King",
 	    pathcost: 60,
 	    pointcost: 290,
@@ -440,7 +448,9 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2203: {
+	    F: 1,
 	    E: 1,
+	    D: 1,
 	    name: "Oni Kunshu",
 	    pathcost: 60,
 	    pointcost: 250,
@@ -520,6 +530,7 @@ export function getPretenders() {
 	},
 	2431: {
 	    E: 1,
+	    D: 2,
 	    name: "Titan of the Underworld",
 	    pathcost: 60,
 	    pointcost: 240,
@@ -589,6 +600,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2442: {
+	    F: 1,
 	    B: 1,
 	    N: 1,
 	    name: "Teotl of War",
@@ -598,6 +610,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	2443: {
+	    F: 1,
 	    A: 1,
 	    N: 1,
 	    name: "Teotl of the Sky",
@@ -608,6 +621,7 @@ export function getPretenders() {
 	},
 	2444: {
 	    S: 1,
+	    D: 2,
 	    name: "Teotl of the Underworld",
 	    pathcost: 60,
 	    pointcost: 250,
@@ -623,8 +637,9 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	2446: {
-	    S: 1,
+	    F: 1,
 	    W: 1,
+	    S: 1,
 	    name: "Neter of Kings",
 	    pathcost: 60,
 	    pointcost: 240,
@@ -632,6 +647,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	2447: {
+	    F: 1,
 	    A: 1,
 	    N: 1,
 	    name: "Idol of Men",
@@ -866,6 +882,8 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2610: {
+	    F: 1,
+	    D: 1,
 	    B: 1,
 	    name: "Angra Mainyu",
 	    pathcost: 60,
@@ -906,6 +924,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2685: {
+	    F: 1,
 	    A: 1,
 	    W: 1,
 	    name: "Viracocha",
@@ -982,6 +1001,7 @@ export function getPretenders() {
 	},
 	2755: {
 	    E: 1,
+	    D: 2,
 	    name: "Hun Came",
 	    pathcost: 60,
 	    pointcost: 290,
@@ -1188,7 +1208,9 @@ export function getPretenders() {
 	    startdom: 4
 	},
 	2849: {
+	    F: 1,
 	    W: 1,
+	    D: 1,
 	    name: "Father of Monsters",
 	    pathcost: 60,
 	    pointcost: 250,
@@ -1238,6 +1260,7 @@ export function getPretenders() {
 	2856: {
 	    A: 1,
 	    W: 1,
+	    D: 1,
 	    name: "Son of the Sea",
 	    pathcost: 60,
 	    pointcost: 280,
@@ -1396,6 +1419,7 @@ export function getPretenders() {
 	    startdom: 1
 	},
 	3072: {
+	    F: 2,
 	    S: 1,
 	    name: "Kami of the Sun",
 	    pathcost: 60,
@@ -1405,6 +1429,7 @@ export function getPretenders() {
 	},
 	3073: {
 	    S: 2,
+	    D: 1,
 	    name: "Kami of the Moon",
 	    pathcost: 60,
 	    pointcost: 260,
@@ -1423,6 +1448,7 @@ export function getPretenders() {
 	3076: {
 	    A: 1,
 	    S: 1,
+	    D: 1,
 	    name: "Morrigna",
 	    pathcost: 60,
 	    pointcost: 380,
@@ -1430,6 +1456,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	3079: {
+	    F: 1,
 	    A: 1,
 	    W: 1,
 	    name: "Duiu of Thunder",
@@ -1448,6 +1475,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	3081: {
+	    F: 1,
 	    B: 1,
 	    N: 1,
 	    name: "Duiu of War",
@@ -1467,6 +1495,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	3086: {
+	    F: 2,
 	    N: 1,
 	    name: "Deives of the Sun",
 	    pathcost: 60,
@@ -1525,6 +1554,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	386: {
+	    F: 2,
 	    S: 1,
 	    name: "Neter of the Sun",
 	    pathcost: 60,
@@ -1541,7 +1571,9 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	388: {
+	    F: 1
 	    A: 1,
+	    D: 1,
 	    name: "Neter of Chaos",
 	    pathcost: 60,
 	    pointcost: 230,
@@ -1588,6 +1620,7 @@ export function getPretenders() {
 	    startdom: 1
 	},
 	499: {
+	    F: 1,
 	    E: 1,
 	    S: 1,
 	    name: "Nataraja",
@@ -1606,6 +1639,7 @@ export function getPretenders() {
 	501: {
 	    A: 1,
 	    S: 1,
+	    D: 1,
 	    name: "Allfather",
 	    pathcost: 40,
 	    pointcost: 280,
@@ -1671,6 +1705,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	604: {
+	    D: 1,
 	    B: 2,
 	    name: "Teotl of the Night",
 	    pathcost: 60,
@@ -1680,6 +1715,7 @@ export function getPretenders() {
 	},
 	605: {
 	    W: 2,
+	    D: 1,
 	    name: "Son of Niefel",
 	    pathcost: 60,
 	    pointcost: 260,
@@ -1848,6 +1884,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	957: {
+	    F: 2,
 	    N: 1,
 	    name: "Lord of The Desert Sun",
 	    pathcost: 60,
