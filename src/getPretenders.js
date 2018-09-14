@@ -1573,7 +1573,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	388: {
-	    F: 1
+	    F: 1,
 	    A: 1,
 	    D: 1,
 	    name: "Neter of Chaos",
