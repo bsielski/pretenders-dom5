@@ -8,6 +8,7 @@ export function getPretenders() {
 	    startdom: 4
 	},
 	1026: {
+	    D: 1,
 	    N: 1,
 	    name: "Carrion Dragon",
 	    pathcost: 80,
@@ -52,6 +53,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	120: {
+	    F: 2,
 	    B: 1,
 	    name: "Moloch",
 	    pathcost: 80,
@@ -189,6 +191,7 @@ export function getPretenders() {
 	},
 	1349: {
 	    E: 1,
+	    D: 1,
 	    name: "Devourer of Souls",
 	    pathcost: 80,
 	    pointcost: 140,
@@ -328,6 +331,7 @@ export function getPretenders() {
 	},
 	1581: {
 	    E: 1,
+	    D: 1,
 	    name: "Risen Oracle",
 	    pathcost: 60,
 	    pointcost: 240,
@@ -393,6 +397,7 @@ export function getPretenders() {
 	},
 	1905: {
 	    A: 1,
+	    D: 1,
 	    name: "Great Sorceress",
 	    pathcost: 10,
 	    pointcost: 110,
@@ -416,6 +421,7 @@ export function getPretenders() {
 	},
 	2138: {
 	    S: 1,
+	    D: 1,
 	    name: "Sphinx",
 	    pathcost: 60,
 	    pointcost: 190,
@@ -423,6 +429,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	215: {
+	    F: 1,
 	    A: 2,
 	    name: "Virtue",
 	    pathcost: 80,
@@ -521,7 +528,9 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2426: {
+	    F: 1,
 	    E: 1,
+	    D: 1,
 	    name: "Bouda Father",
 	    pathcost: 20,
 	    pointcost: 110,
@@ -832,6 +841,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	2553: {
+	    F: 2,
 	    S: 1,
 	    name: "Ahura of the Oath",
 	    pathcost: 80,
@@ -899,6 +909,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2627: {
+	    F: 2,
 	    B: 1,
 	    name: "Daeva of Wrath",
 	    pathcost: 80,
@@ -994,6 +1005,7 @@ export function getPretenders() {
 	},
 	2737: {
 	    E: 1,
+	    D: 2,
 	    name: "Immortal Coya",
 	    pathcost: 30,
 	    pointcost: 160,
@@ -1009,6 +1021,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	2756: {
+	    D: 2,
 	    B: 1,
 	    name: "Bolon-ti-ku",
 	    pathcost: 80,
@@ -1017,6 +1030,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2764: {
+	    F: 1,
 	    B: 1,
 	    name: "Hun Balam",
 	    pathcost: 80,
@@ -1025,6 +1039,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2777: {
+	    F: 1,
 	    S: 1,
 	    name: "Demon Macaw",
 	    pathcost: 80,
@@ -1051,6 +1066,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2785: {
+	    F: 1,
 	    A: 1,
 	    name: "Solar Eagle",
 	    pathcost: 80,
@@ -1067,6 +1083,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2787: {
+	    F: 1,
 	    S: 1,
 	    name: "Celestial Lion",
 	    pathcost: 80,
@@ -1092,6 +1109,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2790: {
+	    F: 1,
 	    E: 1,
 	    name: "Myrmecoleon",
 	    pathcost: 80,
@@ -1125,6 +1143,7 @@ export function getPretenders() {
 	},
 	2795: {
 	    W: 1,
+	    D: 1,
 	    name: "Dog of the Underworld",
 	    pathcost: 80,
 	    pointcost: 120,
@@ -1133,6 +1152,7 @@ export function getPretenders() {
 	},
 	2796: {
 	    E: 1,
+	    D: 1,
 	    name: "Hound of Hades",
 	    pathcost: 80,
 	    pointcost: 170,
@@ -1140,6 +1160,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2797: {
+	    F: 1,
 	    A: 1,
 	    name: "Hieracosphinx",
 	    pathcost: 80,
@@ -1238,6 +1259,7 @@ export function getPretenders() {
 	},
 	2852: {
 	    W: 1,
+	    D: 1,
 	    name: "King of Frozen Bones",
 	    pathcost: 20,
 	    pointcost: 140,
@@ -1314,6 +1336,7 @@ export function getPretenders() {
 	    startdom: 1
 	},
 	2958: {
+	    F: 1,
 	    N: 1,
 	    name: "Golden Lion",
 	    pathcost: 80,
@@ -1733,6 +1756,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	607: {
+	    F: 2,
 	    B: 1,
 	    S: 1,
 	    name: "Baphomet",
@@ -1741,6 +1765,7 @@ export function getPretenders() {
 	    startdom: 4
 	},
 	608: {
+	    F: 1,
 	    A: 1,
 	    name: "Phoenix",
 	    pathcost: 80,
@@ -1749,6 +1774,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	643: {
+	    D: 1,
 	    B: 1,
 	    name: "Bog Mummy",
 	    pathcost: 40,
@@ -1780,6 +1806,7 @@ export function getPretenders() {
 	    startdom: 1
 	},
 	655: {
+	    F: 1,
 	    E: 1,
 	    name: "Scorpion King",
 	    pathcost: 60,
@@ -1833,6 +1860,8 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	857: {
+	    F: 1,
+	    D: 1,
 	    B: 1,
 	    name: "Smoking Mirror",
 	    pathcost: 20,
@@ -1841,6 +1870,7 @@ export function getPretenders() {
 	    startdom: 1
 	},
 	862: {
+	    D: 1,
 	    B: 2,
 	    name: "Vampire Queen",
 	    pathcost: 40,

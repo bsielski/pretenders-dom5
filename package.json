@@ -1,6 +1,6 @@
 {
   "name": "pretenders-dom5",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
