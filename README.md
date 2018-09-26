@@ -10,7 +10,7 @@ It is writen in [React](https://reactjs.org/) framework.
 
 
 ## Changelog
-
+- Version 1.9.2: Fix missing paths for: Divine Glyph, Statue of War, Statue of War, Idol of Sorcery.
 - Version 1.9.1: Fix missing paths for: Great Sorceress, Phoenix, Smoking Mirror, Bouda Father, Vampire Queen, King of Frozen Bones, Baphomet, Celestial Lion, Solar Eagle, Virtue, Dog of the Underworld, Hound of Hades, Bog Mummy, Scorpion King, Myrmecoleon, Hieracosphinx, Golden Lion, Moloch, Sphinx, Risen Oracle, Ahura of the Oath, Daeva of Wrath, Immortal Coya, Bolon-ti-ku, Hun Balam, Demon Macaw, Carrion Dragon, Devourer of Souls.
 - Version 1.9.0: Add LA Phlegra nation.
 - Version 1.8.2: Fix MA Mictlan bless bunus points. Fix missing paths for some pretenders (mostly F and D paths for titans).

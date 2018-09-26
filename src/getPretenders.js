@@ -1,6 +1,7 @@
 export function getPretenders() {
     const vanilla_pretenders_data = {
 	1025: {
+	    F: 1,
 	    S: 2,
 	    name: "Divine Glyph",
 	    pathcost: 40,
@@ -675,6 +676,7 @@ export function getPretenders() {
 	    startdom: 4
 	},
 	2449: {
+	    D: 1,
 	    S: 2,
 	    name: "Idol of Sorcery",
 	    pathcost: 40,
@@ -741,6 +743,7 @@ export function getPretenders() {
 	    startdom: 4
 	},
 	2463: {
+	    F: 2,
 	    E: 1,
 	    name: "Statue of War",
 	    pathcost: 40,
@@ -757,6 +760,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	2465: {
+	    F: 2,
 	    E: 1,
 	    name: "Statue of War",
 	    pathcost: 40,
