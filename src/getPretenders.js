@@ -829,6 +829,7 @@ export function getPretenders() {
 	    startdom: 1
 	},
 	2550: {
+	    D: 1,
 	    B: 1,
 	    N: 1,
 	    name: "Raksharani",
@@ -971,6 +972,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	2695: {
+	    F: 1,
 	    A: 1,
 	    S: 1,
 	    name: "Sapa Inca",
@@ -994,6 +996,7 @@ export function getPretenders() {
 	    startdom: 3
 	},
 	2699: {
+	    F: 1,
 	    E: 2,
 	    name: "Ayar",
 	    pathcost: 80,
