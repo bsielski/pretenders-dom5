@@ -19,6 +19,7 @@
 /docker-development
 
 # misc
+.directory
 .DS_Store
 .env.local
 .env.development.local
