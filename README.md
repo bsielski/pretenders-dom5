@@ -10,6 +10,7 @@ It is writen in [React](https://reactjs.org/) framework.
 
 
 ## Changelog
+- Version 1.9.4: Upgrade node modules.
 - Version 1.9.3: Fix missing paths for: Raksharani, Sapa Inca, Ayar.
 - Version 1.9.2: Fix missing paths for: Divine Glyph, Statue of War, Statue of War, Idol of Sorcery.
 - Version 1.9.1: Fix missing paths for: Great Sorceress, Phoenix, Smoking Mirror, Bouda Father, Vampire Queen, King of Frozen Bones, Baphomet, Celestial Lion, Solar Eagle, Virtue, Dog of the Underworld, Hound of Hades, Bog Mummy, Scorpion King, Myrmecoleon, Hieracosphinx, Golden Lion, Moloch, Sphinx, Risen Oracle, Ahura of the Oath, Daeva of Wrath, Immortal Coya, Bolon-ti-ku, Hun Balam, Demon Macaw, Carrion Dragon, Devourer of Souls.
