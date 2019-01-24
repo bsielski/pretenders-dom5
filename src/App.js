@@ -70,7 +70,11 @@ class App extends Component {
 	this.changeRadio = this.changeRadio.bind(this);
 	this.openBlessEffectsWindow = this.openBlessEffectsWindow.bind(this);
 	this.closeBlessEffectsWindow = this.closeBlessEffectsWindow.bind(this);
+	this.resetNation = this.resetNation.bind(this);
+    }
 
+    resetNation(event) {
+	console.log("RESET NATION");
     }
 
     changeOption(event) {
@@ -165,7 +169,9 @@ class App extends Component {
 		    <Nation
 		      nations={this.nations}
 		      nationId={this.state.nationId}
-		      changeOption={this.changeOption}
+	    changeOption={this.changeOption}
+	    		      resetNation={this.resetNation}
+
 		      />
 		    
 		    <Magic

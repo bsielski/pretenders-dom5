@@ -1,5 +1,6 @@
 import React from 'react';
 import {NationInfo} from './NationInfo';
+import {ResetButton} from './ResetButton';
 
 import './App.css';
 import './Nation.css';
@@ -7,7 +8,12 @@ import './Nation.css';
 export class Nation extends React.Component {
     constructor(props) {
 	super(props);
+	this.handleReset = this.handleReset.bind(this);
 	this.handleSelection = this.handleSelection.bind(this);
+    }
+
+    handleReset(e) {
+	this.props.resetNation(e);
     }
 
     handleSelection(e) {
@@ -35,6 +41,9 @@ export class Nation extends React.Component {
 		  >
 		  {nationOptions}
 		</select>
+		<ResetButton
+		  onClick={this.handleReset}
+		  />		
 		< NationInfo
 		  f={this.props.nations[this.props.nationId].blessF}
 		  a={this.props.nations[this.props.nationId].blessA}
