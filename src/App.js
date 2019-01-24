@@ -74,7 +74,27 @@ class App extends Component {
     }
 
     resetNation(event) {
-	console.log("RESET NATION");
+	this.setState({
+	    path: {
+		f: 0,
+		a: 0,
+		w: 0,
+		e: 0,
+		s: 0,
+		d: 0,
+		n: 0,
+		b: 0,
+	    },
+	    dominion: 1,
+	    order: 0,
+	    productivity: 0,
+	    heat: this.nations[this.state.nationId].heat,
+	    growth: this.nations[this.state.nationId].growth,
+	    fortune: 0,
+	    magic: 0,
+	    imprisonment: 1,
+	});
+
     }
 
     changeOption(event) {
@@ -169,8 +189,8 @@ class App extends Component {
 		    <Nation
 		      nations={this.nations}
 		      nationId={this.state.nationId}
-	    changeOption={this.changeOption}
-	    		      resetNation={this.resetNation}
+		      changeOption={this.changeOption}
+	    	      resetNation={this.resetNation}
 
 		      />
 		    
