@@ -1,0 +1,27 @@
+.nation_bless_bonus_info {
+  font-size: 11px;
+}
+.nation_bless_bonus_info--fire {
+  color: #d55a3b;
+}
+.nation_bless_bonus_info--air {
+  color: #d3bec6;
+}
+.nation_bless_bonus_info--water {
+  color: #806aff;
+}
+.nation_bless_bonus_info--earth {
+  color: #b08130;
+}
+.nation_bless_bonus_info--astral{
+  color: #b0dbd6;
+}
+.nation_bless_bonus_info--death {
+  color: #a550a8;
+}
+.nation_bless_bonus_info--nature {
+  color: #4d9533;
+}
+.nation_bless_bonus_info--blood {
+  color: #bd4e49;
+}

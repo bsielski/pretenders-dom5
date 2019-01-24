@@ -175,6 +175,8 @@ class App extends Component {
 
 		    
 		    <BlessEffects
+		      nations={this.nations}
+		      nationId={this.state.nationId}
 		      blessPoints={blessPoints}
 		      isBlessEffectsWindowOpen={this.state.isBlessEffectsWindowOpen}
 		      blessEffects={this.blessEffects}

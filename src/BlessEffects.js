@@ -1,4 +1,6 @@
 import React from 'react';
+import {NationBlessBonusInfo} from './NationBlessBonusInfo';
+
 import {BlessEffectsWindow} from './blessEffectsWindow';
 import {BlessEffectRows} from './blessEffectsWindow';
 import {filterBlessEffects} from './filterBlessEffects';
@@ -16,6 +18,16 @@ export class BlessEffects extends React.Component {
 		isOpen={this.props.isBlessEffectsWindowOpen}
 		onClose={this.props.closeBlessEffectsWindow}
 		blessEffects={this.props.blessEffects}
+		/>
+	      <NationBlessBonusInfo
+		f={this.props.nations[this.props.nationId].blessF}
+		a={this.props.nations[this.props.nationId].blessA}
+		w={this.props.nations[this.props.nationId].blessW}
+		e={this.props.nations[this.props.nationId].blessE}
+		s={this.props.nations[this.props.nationId].blessS}
+		d={this.props.nations[this.props.nationId].blessD}
+		n={this.props.nations[this.props.nationId].blessN}
+		b={this.props.nations[this.props.nationId].blessB}
 		/>
 	      <div className="form__body form__body--bless_effects">
 		<div className="form__section">
