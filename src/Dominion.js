@@ -1,4 +1,5 @@
 import React from 'react';
+import {NationScalesInfo} from './NationScalesInfo';
 
 import './App.css';
 import './Dominion.css';
@@ -18,6 +19,10 @@ export class Dominion extends React.Component {
 	return (
 	    <div className="form">
 	      <header className="form__header">Dominion</header>
+	      < NationScalesInfo
+		heat={this.props.nations[this.props.nationId].heat}
+		growth={this.props.nations[this.props.nationId].growth}
+		/>
 	      <div className="form__body">
 		<div className="form__section">
 		  <div className="value-picker value-picker--dominion">
@@ -92,7 +97,6 @@ export class Dominion extends React.Component {
 		</div>
 	      </div>
 	    </div>
-
 	);
     }
 }

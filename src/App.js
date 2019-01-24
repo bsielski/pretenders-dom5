@@ -167,7 +167,7 @@ class App extends Component {
 		      nationId={this.state.nationId}
 		      changeOption={this.changeOption}
 		      />
-    
+		    
 		    <Magic
 		      changePathLevel={this.changePathLevel}
 		      path={this.state.path}
@@ -183,6 +183,8 @@ class App extends Component {
 		      />
 
 		    <Dominion
+		      nations={this.nations}
+		      nationId={this.state.nationId}
 		      changeNumber={this.changeNumber}
 		      dominion={this.state.dominion}
 		      order={this.state.order}
@@ -192,7 +194,7 @@ class App extends Component {
 		      fortune={this.state.fortune}
 		      magic={this.state.magic}
 		      />
-		    		
+		    
 	    	    <Imprisonment
 		      imprisonmentOptions={this.imprisonmentOptions}
 		      imprisonment={this.state.imprisonment}
