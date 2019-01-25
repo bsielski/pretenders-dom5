@@ -33,17 +33,19 @@ export class Nation extends React.Component {
 	    <div className="form">
 	      <header className="form__header">Nation</header>
 	      <div className="form__body form__body--nation">
-		<select
-		  name="nationId" value={this.props.nationId}
-		  onChange={this.handleSelection}
-		  className="nation-picker__select"
-		  id="nation-picker__select"
-		  >
-		  {nationOptions}
-		</select>
-		<ResetButton
-		  onClick={this.handleReset}
-		  />		
+		<div className="form__body">
+		  <select
+		    name="nationId" value={this.props.nationId}
+		    onChange={this.handleSelection}
+		    className="nation-picker__select"
+		    id="nation-picker__select"
+		    >
+		    {nationOptions}
+		  </select>
+		  <ResetButton
+		    onClick={this.handleReset}
+		    />
+		</div>
 		< NationInfo
 		  f={this.props.nations[this.props.nationId].blessF}
 		  a={this.props.nations[this.props.nationId].blessA}

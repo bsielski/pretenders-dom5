@@ -5,7 +5,7 @@ import './ResetButton.css';
 export function ResetButton(props) {
 
     return (
-	<div>
+	//<div>
   	  <button
 	    type="button"
             id="reset-button"
@@ -14,6 +14,6 @@ export function ResetButton(props) {
 	    >
             Reset points
 	  </button>
-	</div>
+	//</div>
     );
 }
