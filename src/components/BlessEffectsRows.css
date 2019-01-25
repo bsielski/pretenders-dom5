@@ -4,6 +4,8 @@
 }
 
 .bless_effects__points_cell {
+    font-size: 11px;
+    color: #cccccc;
     text-align: center;
     background: linear-gradient(#3f4142, #3d3940);
 }
