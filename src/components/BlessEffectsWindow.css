@@ -1,29 +1,92 @@
-.bless_effects_row {
+.bless_effects_window_table__row {
     background: linear-gradient(#3f4142, #3d3940);
 
 }
 
-.bless_effects__points_cell {
+.bless_effects_window_table__header {
+    font-size: 10px;
+    color: #cccccc;
+}
+
+.bless_effects_window_table__cell {
+    padding: 1px;
+    font-size: 11px;
     text-align: center;
     background: linear-gradient(#3f4142, #3d3940);
 }
 
+.bless_effects_window_table__cell--fire {
+    background-image: none;
+    background-color: #b03523;
+    color: #f6f6f6;
+}
+
+.bless_effects_window_table__cell--air {
+    background-image: none;
+    background-color: #a38e96;
+    color: #f6f6f6;
+}
+
+.bless_effects_window_table__cell--water {
+    background-image: none;
+    background-color: #331d98;
+    color: #f6f6f6;
+}
+
+.bless_effects_window_table__cell--earth {
+    background-image: none;
+    background-color: #b08130;
+    color: #f6f6f6;
+}
+
+.bless_effects_window_table__cell--astral {
+    background-image: none;
+    background-color: #709b96;
+    color: #f6f6f6;
+}
+
+.bless_effects_window_table__cell--death {
+    background-image: none;
+    background-color: #701b63;
+    color: #f6f6f6;
+}
+
+.bless_effects_window_table__cell--nature {
+    background-image: none;
+    background-color: #3d7523;
+    color: #f6f6f6;
+}
+
+.bless_effects_window_table__cell--blood {
+    background-image: none;
+    background-color: #7d1b16;
+    color: #f6f6f6;
+}
+
+
 .bless_effects__scales_cell {
+    font-size: 10px;
+    width: 55px;
     background: linear-gradient(#3f4142, #3d3940);
+    color: #cccccc;
 }
 
 .bless_effects__name_cell {
     font-size: 12px;
     background: linear-gradient(#3f4142, #3d3940);
+    color: #cccccc;
 }
 
 .bless_effects__description_cell {
     font-size: 10px;
     word-wrap: break-word;
     background: linear-gradient(#3f4142, #3d3940);
+    color: #cccccc;
 }
 
 .bless_effects__incarnate_cell {
+    font-size: 10px;
+    color: #cccccc;
     text-align: center;
     background: linear-gradient(#3f4142, #3d3940);
 }
