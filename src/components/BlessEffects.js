@@ -2,7 +2,7 @@ import React from 'react';
 import {NationBlessBonusInfo} from './NationBlessBonusInfo';
 
 import {BlessEffectsWindow} from './BlessEffectsWindow';
-import {BlessEffectRows} from './BlessEffectsWindow';
+import {BlessEffectsRows} from './BlessEffectsRows';
 import {filterBlessEffects} from '../filterBlessEffects';
 
 import './App.css';
@@ -59,7 +59,7 @@ export class BlessEffects extends React.Component {
 			<th className="bless_effects__table_header">Incarnate only?</th>
 		      </tr>
 		    </thead>
-		    <BlessEffectRows effects={filterBlessEffects(this.props.blessEffects, this.props.blessPoints)} />
+		    <BlessEffectsRows effects={filterBlessEffects(this.props.blessEffects, this.props.blessPoints)} />
 		  </table>
 		</div>
 		
