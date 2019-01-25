@@ -7,13 +7,13 @@ import {BlessEffects} from './BlessEffects';
 import {Imprisonment} from './Imprisonment';
 import {Magic} from './Magic';
 import {Dominion} from './Dominion';
-import {getPretenders} from './getPretenders';
-import {filterPretendersByImprisonment} from './filterPretendersByImprisonment';
-import {getNations} from './nations';
-import {scalesCost} from './scalesCost';
-import {totalBlessPoints} from './blessPoints';
-import {getBlessEffects} from './getBlessEffects';
-import {VERSION} from './version';
+import {getPretenders} from '../getPretenders';
+import {filterPretendersByImprisonment} from '../filterPretendersByImprisonment';
+import {getNations} from '../nations';
+import {scalesCost} from '../scalesCost';
+import {totalBlessPoints} from '../blessPoints';
+import {getBlessEffects} from '../getBlessEffects';
+import {VERSION} from '../version';
 
 import './App.css';
 

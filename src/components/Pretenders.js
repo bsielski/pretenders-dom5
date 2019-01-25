@@ -1,6 +1,6 @@
 import React from 'react';
-import {magicCost} from './magicCost';
-import {dominionCost} from './dominionCost';
+import {magicCost} from '../magicCost';
+import {dominionCost} from '../dominionCost';
 
 import './App.css';
 import './Pretenders.css';

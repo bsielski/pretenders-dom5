@@ -1,32 +1,32 @@
 import React from 'react';
 
-import './BlessEffectRows.css';
+//import './BlessEffectsWindow.css';
 
 function BlessPointsCell(props) {
   let points = [];
   if (props.effect.f) {
-    points.push(<span className="pretenders-table__cell pretenders-table__cell--fire">{props.effect.f}</span>)
+    points.push(<span className="bless_effects_window_table__cell bless_effects_window_table__cell--fire">{props.effect.f}</span>)
   }
   if (props.effect.a) {
-    points.push(<span className="pretenders-table__cell pretenders-table__cell--air">{props.effect.a}</span>)
+    points.push(<span className="bless_effects_window_table__cell bless_effects_window_table__cell--air">{props.effect.a}</span>)
   }
   if (props.effect.w) {
-    points.push(<span className="pretenders-table__cell pretenders-table__cell--water">{props.effect.w}</span>)
+    points.push(<span className="bless_effects_window_table__cell bless_effects_window_table__cell--water">{props.effect.w}</span>)
   }
   if (props.effect.e) {
-    points.push(<span className="pretenders-table__cell pretenders-table__cell--earth">{props.effect.e}</span>)
+    points.push(<span className="bless_effects_window_table__cell bless_effects_window_table__cell--earth">{props.effect.e}</span>)
   }
   if (props.effect.s) {
-    points.push(<span className="pretenders-table__cell pretenders-table__cell--astral">{props.effect.s}</span>)
+    points.push(<span className="bless_effects_window_table__cell bless_effects_window_table__cell--astral">{props.effect.s}</span>)
   }
   if (props.effect.d) {
-    points.push(<span className="pretenders-table__cell pretenders-table__cell--death">{props.effect.d}</span>)
+    points.push(<span className="bless_effects_window_table__cell bless_effects_window_table__cell--death">{props.effect.d}</span>)
   }
   if (props.effect.n) {
-    points.push(<span className="pretenders-table__cell pretenders-table__cell--nature">{props.effect.n}</span>)
+    points.push(<span className="bless_effects_window_table__cell bless_effects_window_table__cell--nature">{props.effect.n}</span>)
   }
   if (props.effect.b) {
-    points.push(<span className="pretenders-table__cell pretenders-table__cell--blood">{props.effect.b}</span>)
+    points.push(<span className="bless_effects_window_table__cell bless_effects_window_table__cell--blood">{props.effect.b}</span>)
   }
   // const howMany = points.length;
   points = points.map((bless, index) => {
@@ -99,14 +99,14 @@ export class BlessEffectsWindow extends React.Component {
             Bless Effects:
           </h1>
           <div className="modal_window__body">
-            <table className="pretenders-table">
-              <thead className="pretenders-table__head" id="pretenders-table__head">
-                <tr className="pretenders-table__row">
-                  <th className="pretenders-table__header">Bless Points</th>
-                  <th className="pretenders-table__header">Scales</th>
-                  <th className="pretenders-table__header">Name</th>
-                  <th className="pretenders-table__header">Short description</th>
-                  <th className="pretenders-table__header">Incarnation</th>
+            <table className="bless_effects_window_table">
+              <thead className="bless_effects_window_table__head" id="bless_effects_window_table__head">
+                <tr className="bless_effects_window_table__row">
+                  <th className="bless_effects_window_table__header">Bless Points</th>
+                  <th className="bless_effects_window_table__header">Scales</th>
+                  <th className="bless_effects_window_table__header">Name</th>
+                  <th className="bless_effects_window_table__header">Short description</th>
+                  <th className="bless_effects_window_table__header">Incarnation</th>
                 </tr>
               </thead>
               <BlessEffectRows effects={this.props.blessEffects} />

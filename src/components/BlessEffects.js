@@ -1,9 +1,9 @@
 import React from 'react';
 import {NationBlessBonusInfo} from './NationBlessBonusInfo';
 
-import {BlessEffectsWindow} from './blessEffectsWindow';
-import {BlessEffectRows} from './blessEffectsWindow';
-import {filterBlessEffects} from './filterBlessEffects';
+import {BlessEffectsWindow} from './BlessEffectsWindow';
+import {BlessEffectRows} from './BlessEffectsWindow';
+import {filterBlessEffects} from '../filterBlessEffects';
 
 import './App.css';
 import './BlessEffects.css';
