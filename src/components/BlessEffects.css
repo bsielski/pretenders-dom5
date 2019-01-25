@@ -49,7 +49,11 @@
   background-color: inherit;
   font-family: 'SeshatRegular', serif;
   font-size: 11px;
+  color: #6688ff;
   text-decoration: underline;
+}
+.bless_effects_open_button:hover {
+  cursor: pointer;
 }
 
 .bless_effects__table {
