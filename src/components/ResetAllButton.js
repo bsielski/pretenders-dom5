@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './ResetButton.css';
+import './ResetAllButton.css';
 
-export function ResetButton(props) {
+export function ResetAllButton(props) {
 
     return (
 	//<div>
@@ -12,7 +12,7 @@ export function ResetButton(props) {
             className="reset_button"
             onClick={props.onClick}
 	    >
-            Reset points
+            Reset all points
 	  </button>
 	//</div>
     );
