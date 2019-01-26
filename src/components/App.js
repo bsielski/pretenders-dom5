@@ -199,17 +199,6 @@ class App extends Component {
 		      path={this.state.path}
 		      />
 
-		    
-		    <BlessEffects
-		      nations={this.nations}
-		      nationId={this.state.nationId}
-		      blessPoints={blessPoints}
-		      isBlessEffectsWindowOpen={this.state.isBlessEffectsWindowOpen}
-		      blessEffects={this.blessEffects}
-		      openBlessEffectsWindow={this.openBlessEffectsWindow}
-		      closeBlessEffectsWindow={this.closeBlessEffectsWindow}
-		      />
-
 		    <Dominion
 		      nations={this.nations}
 		      nationId={this.state.nationId}
@@ -229,7 +218,17 @@ class App extends Component {
 		      changeRadio={this.changeRadio}
 		      />
 
-		  </div>
+		    <BlessEffects
+		      nations={this.nations}
+		      nationId={this.state.nationId}
+		      blessPoints={blessPoints}
+		      isBlessEffectsWindowOpen={this.state.isBlessEffectsWindowOpen}
+		      blessEffects={this.blessEffects}
+		      openBlessEffectsWindow={this.openBlessEffectsWindow}
+		      closeBlessEffectsWindow={this.closeBlessEffectsWindow}
+		      />
+
+                  </div>
 
 		  <div className="column">
 
