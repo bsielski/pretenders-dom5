@@ -8,8 +8,8 @@ export function ResetAllButton(props) {
 	//<div>
   	  <button
 	    type="button"
-            id="reset-button"
-            className="reset_button"
+            id="reset_all_button"
+            className="reset_all_button"
             onClick={props.onClick}
 	    >
             Reset all points
