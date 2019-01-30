@@ -1,12 +1,18 @@
 import React from 'react';
 
+import {ResetMagicButton} from './ResetMagicButton';
 import './App.css';
 import './Magic.css';
 
 export class Magic extends React.Component {
     constructor(props) {
 	super(props);
+	this.handleResetMagic = this.handleResetMagic.bind(this);
 	this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleResetMagic(e) {
+	this.props.resetMagic(e);
     }
 
     handleChange(e) {
@@ -80,7 +86,10 @@ export class Magic extends React.Component {
 			   id="blood-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--blood" />
 		  </div>
 		</div>
-	      </div>
+		</div>
+		<ResetMagicButton
+		  onClick={this.handleResetMagic}
+		  />
 	    </div>
 	);
     }

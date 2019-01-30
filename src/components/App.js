@@ -71,6 +71,8 @@ class App extends Component {
 	this.openBlessEffectsWindow = this.openBlessEffectsWindow.bind(this);
 	this.closeBlessEffectsWindow = this.closeBlessEffectsWindow.bind(this);
 	this.resetNation = this.resetNation.bind(this);
+	this.resetMagic = this.resetMagic.bind(this);
+	this.resetScales = this.resetScales.bind(this);
     }
 
     resetNation(event) {
@@ -95,6 +97,32 @@ class App extends Component {
 	    imprisonment: 1,
 	});
 
+    }
+    resetMagic(event) {
+	this.setState({
+	    path: {
+		f: 0,
+		a: 0,
+		w: 0,
+		e: 0,
+		s: 0,
+		d: 0,
+		n: 0,
+		b: 0,
+	    }
+	});
+    }
+
+    resetScales(event) {
+	this.setState({
+	    dominion: 1,
+	    order: 0,
+	    productivity: 0,
+	    heat: this.nations[this.state.nationId].heat,
+	    growth: this.nations[this.state.nationId].growth,
+	    fortune: 0,
+	    magic: 0,
+	});
     }
 
     changeOption(event) {
@@ -196,7 +224,9 @@ class App extends Component {
 		    
 		    <Magic
 		      changePathLevel={this.changePathLevel}
-		      path={this.state.path}
+	              path={this.state.path}
+            	      resetMagic={this.resetMagic}
+
 		      />
 
 		    <Dominion
@@ -210,6 +240,7 @@ class App extends Component {
 		      growth={this.state.growth}
 		      fortune={this.state.fortune}
 		      magic={this.state.magic}
+            	      resetScales={this.resetScales}
 		      />
 		    
 	    	    <Imprisonment

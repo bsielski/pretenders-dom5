@@ -1,5 +1,6 @@
 import React from 'react';
 import {NationScalesInfo} from './NationScalesInfo';
+import {ResetScalesButton} from './ResetScalesButton';
 
 import './App.css';
 import './Dominion.css';
@@ -7,7 +8,12 @@ import './Dominion.css';
 export class Dominion extends React.Component {
     constructor(props) {
 	super(props);
+	this.handleResetScales = this.handleResetScales.bind(this);
 	this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleResetScales(e) {
+	this.props.resetScales(e);
     }
 
     handleChange(e) {
@@ -96,6 +102,9 @@ export class Dominion extends React.Component {
 		  </div>
 		</div>
 	      </div>
+	      <ResetScalesButton
+	        onClick={this.handleResetScales}
+		/>
 	    </div>
 	);
     }
