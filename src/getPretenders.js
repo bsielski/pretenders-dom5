@@ -438,7 +438,7 @@ export function getPretenders() {
 	    startdom: 2
 	},
 	216: {
-	    W: 2,
+	    F: 2,
 	    name: "Dragon",
 	    pathcost: 80,
 	    pointcost: 260,
@@ -1998,7 +1998,7 @@ export function getPretenders() {
 	    F: 1,
 	    W: 1,
 	    S: 1,
-	    name: "Titan of Forethough",
+	    name: "Titan of Forethought",
 	    pathcost: 60,
 	    pointcost: 250,
 	    realm1: 3,
@@ -2048,7 +2048,7 @@ export function getPretenders() {
 	3209: {
 	    E: 1,
 	    N: 2,
-	    name: "Titan of the Growth",
+	    name: "Titan of Growth",
 	    pathcost: 60,
 	    pointcost: 180,
 	    startdom: 3,
