@@ -5,7 +5,7 @@ export function getPretenders() {
 	    S: 2,
 	    name: "Divine Glyph",
 	    pathcost: 40,
-	    pointcost: 120,
+	    pointcost: 110,
 	    startdom: 4
 	},
 	1026: {
@@ -13,7 +13,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Carrion Dragon",
 	    pathcost: 80,
-	    pointcost: 150,
+	    pointcost: 180,
 	    shapechange: 1027,
 	    startdom: 2
 	},
@@ -22,7 +22,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Dagon",
 	    pathcost: 60,
-	    pointcost: 290,
+	    pointcost: 300,
 	    realm1: 9,
 	    startdom: 3
 	},
@@ -31,7 +31,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Destroyer of Worlds",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 220,
 	    realm1: 8,
 	    startdom: 3
 	},
@@ -40,7 +40,7 @@ export function getPretenders() {
 	    D: 2,
 	    name: "Lord of The Summer Plague",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 230,
 	    realm1: 5,
 	    startdom: 3
 	},
@@ -49,7 +49,7 @@ export function getPretenders() {
 	    E: 1,
 	    name: "Asynja",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 1,
 	    startdom: 3
 	},
@@ -58,7 +58,7 @@ export function getPretenders() {
 	    B: 1,
 	    name: "Moloch",
 	    pathcost: 80,
-	    pointcost: 280,
+	    pointcost: 320,
 	    realm1: 5,
 	    startdom: 2
 	},
@@ -67,7 +67,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Son of Fenrer",
 	    pathcost: 80,
-	    pointcost: 150,
+	    pointcost: 170,
 	    realm1: 1,
 	    startdom: 2
 	},
@@ -76,7 +76,7 @@ export function getPretenders() {
 	    E: 2,
 	    name: "Titan of the Forge",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 230,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -95,7 +95,7 @@ export function getPretenders() {
 	    W: 2,
 	    name: "Old Man of the Sea",
 	    pathcost: 30,
-	    pointcost: 270,
+	    pointcost: 260,
 	    realm1: 9,
 	    startdom: 3
 	},
@@ -105,7 +105,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Lord of the Waves",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 230,
 	    realm1: 9,
 	    startdom: 3
 	},
@@ -114,7 +114,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Nyorai",
 	    pathcost: 60,
-	    pointcost: 220,
+	    pointcost: 200,
 	    realm1: 4,
 	    startdom: 3
 	},
@@ -124,7 +124,7 @@ export function getPretenders() {
 	    E: 1,
 	    name: "Tiwaz of War",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 220,
 	    startdom: 3
 	},
 	1341: {
@@ -132,7 +132,7 @@ export function getPretenders() {
 	    E: 1,
 	    name: "Devi of Darkness",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 8,
 	    startdom: 3
 	},
@@ -141,7 +141,7 @@ export function getPretenders() {
 	    W: 2,
 	    name: "Titan of Rivers",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -150,7 +150,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Titan of Love",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -159,7 +159,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Devi of Good Fortunes",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 230,
 	    realm1: 8,
 	    startdom: 3
 	},
@@ -169,7 +169,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Celestial General",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 4,
 	    startdom: 3
 	},
@@ -178,7 +178,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Colossal Fetish",
 	    pathcost: 40,
-	    pointcost: 270,
+	    pointcost: 260,
 	    startdom: 4
 	},
 	1348: {
@@ -186,7 +186,7 @@ export function getPretenders() {
 	    N: 2,
 	    name: "Titan of Serpents and Medicine",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -195,7 +195,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Devourer of Souls",
 	    pathcost: 80,
-	    pointcost: 140,
+	    pointcost: 170,
 	    startdom: 2
 	},
 	1370: {
@@ -203,7 +203,7 @@ export function getPretenders() {
 	    W: 2,
 	    name: "Volla of the Bountiful Forest",
 	    pathcost: 60,
-	    pointcost: 210,
+	    pointcost: 190,
 	    startdom: 3
 	},
 	1371: {
@@ -212,7 +212,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Titan of Death and Rebirth",
 	    pathcost: 60,
-	    pointcost: 230,
+	    pointcost: 210,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -220,7 +220,7 @@ export function getPretenders() {
 	    A: 3,
 	    name: "Annunaki of the Sky",
 	    pathcost: 60,
-	    pointcost: 280,
+	    pointcost: 270,
 	    realm1: 5,
 	    startdom: 3
 	},
@@ -229,7 +229,7 @@ export function getPretenders() {
 	    W: 2,
 	    name: "Annunaki of Sweet Waters",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 5,
 	    startdom: 3
 	},
@@ -239,7 +239,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Annunaki of the Morning Star",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 220,
 	    realm1: 5,
 	    startdom: 3
 	},
@@ -248,7 +248,7 @@ export function getPretenders() {
 	    N: 2,
 	    name: "Lord of the Forest",
 	    pathcost: 60,
-	    pointcost: 210,
+	    pointcost: 180,
 	    realm1: 2,
 	    startdom: 3
 	},
@@ -258,7 +258,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Keeper of the Bridge",
 	    pathcost: 60,
-	    pointcost: 220,
+	    pointcost: 190,
 	    realm1: 1,
 	    startdom: 3
 	},
@@ -267,7 +267,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Gorgon",
 	    pathcost: 80,
-	    pointcost: 240,
+	    pointcost: 230,
 	    realm1: 3,
 	    startdom: 2
 	},
@@ -275,7 +275,7 @@ export function getPretenders() {
 	    F: 3,
 	    name: "Solar Disc",
 	    pathcost: 60,
-	    pointcost: 230,
+	    pointcost: 220,
 	    realm1: 5,
 	    startdom: 3
 	},
@@ -284,7 +284,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Polypal Queen",
 	    pathcost: 20,
-	    pointcost: 170,
+	    pointcost: 160,
 	    startdom: 4
 	},
 	1428: {
@@ -307,7 +307,7 @@ export function getPretenders() {
 	    W: 2,
 	    name: "Father of Winters",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 230,
 	    realm1: 1,
 	    startdom: 3
 	},
@@ -317,7 +317,7 @@ export function getPretenders() {
 	    B: 1,
 	    name: "Mother of Monsters",
 	    pathcost: 60,
-	    pointcost: 220,
+	    pointcost: 210,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -352,14 +352,14 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Ageless Olm",
 	    pathcost: 60,
-	    pointcost: 130,
+	    pointcost: 140,
 	    startdom: 2
 	},
 	179: {
 	    D: 3,
 	    name: "Master Lich",
 	    pathcost: 40,
-	    pointcost: 240,
+	    pointcost: 250,
 	    realm1: 10,
 	    startdom: 2
 	},
@@ -377,7 +377,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Lawgiver",
 	    pathcost: 40,
-	    pointcost: 80,
+	    pointcost: 90,
 	    shapechange: 1897,
 	    startdom: 1
 	},
@@ -393,7 +393,7 @@ export function getPretenders() {
 	    D: 2,
 	    name: "Fomorian God King",
 	    pathcost: 60,
-	    pointcost: 290,
+	    pointcost: 280,
 	    startdom: 3
 	},
 	1905: {
@@ -408,7 +408,7 @@ export function getPretenders() {
 	    B: 3,
 	    name: "Son of the Fallen",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 240,
 	    startdom: 3
 	},
 	2137: {
@@ -416,7 +416,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Urmahlullu",
 	    pathcost: 60,
-	    pointcost: 180,
+	    pointcost: 200,
 	    realm1: 5,
 	    startdom: 2
 	},
@@ -425,7 +425,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Sphinx",
 	    pathcost: 60,
-	    pointcost: 190,
+	    pointcost: 200,
 	    realm1: 5,
 	    startdom: 2
 	},
@@ -434,14 +434,14 @@ export function getPretenders() {
 	    A: 2,
 	    name: "Virtue",
 	    pathcost: 80,
-	    pointcost: 240,
+	    pointcost: 260,
 	    startdom: 2
 	},
 	216: {
-	    W: 2,
+	    F: 2,
 	    name: "Dragon",
 	    pathcost: 80,
-	    pointcost: 240,
+	    pointcost: 260,
 	    realm1: 10,
 	    shapechange: 226,
 	    startdom: 2
@@ -451,7 +451,7 @@ export function getPretenders() {
 	    S: 2,
 	    name: "Great Siddha",
 	    pathcost: 80,
-	    pointcost: 160,
+	    pointcost: 140,
 	    realm1: 8,
 	    startdom: 2
 	},
@@ -461,20 +461,20 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Oni Kunshu",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    startdom: 3
 	},
 	2205: {
 	    D: 2,
 	    name: "Great Sauromancer",
-	    pointcost: 90,
+	    pointcost: 100,
 	    startdom: 1
 	},
 	2206: {
 	    E: 1,
 	    name: "Eldest Dwarf",
 	    pathcost: 20,
-	    pointcost: 80,
+	    pointcost: 70,
 	    realm1: 1,
 	    startdom: 1
 	},
@@ -489,7 +489,7 @@ export function getPretenders() {
 	    N: 3,
 	    name: "Irminsul",
 	    pathcost: 60,
-	    pointcost: 170,
+	    pointcost: 160,
 	    realm1: 1,
 	    startdom: 4
 	},
@@ -498,7 +498,7 @@ export function getPretenders() {
 	    N: 2,
 	    name: "Asynja",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 220,
 	    realm1: 1,
 	    startdom: 3
 	},
@@ -543,7 +543,7 @@ export function getPretenders() {
 	    D: 2,
 	    name: "Titan of the Underworld",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 220,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -553,7 +553,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Teteo Inan",
 	    pathcost: 60,
-	    pointcost: 270,
+	    pointcost: 260,
 	    realm1: 6,
 	    startdom: 3
 	},
@@ -563,7 +563,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Annunaki of Love and War",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 5,
 	    startdom: 3
 	},
@@ -581,7 +581,7 @@ export function getPretenders() {
 	    N: 2,
 	    name: "Annunaki of Growth and Rebirth",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 250,
 	    realm1: 5,
 	    startdom: 3
 	},
@@ -589,7 +589,7 @@ export function getPretenders() {
 	    D: 3,
 	    name: "Annunaki of the Underworld",
 	    pathcost: 60,
-	    pointcost: 270,
+	    pointcost: 260,
 	    realm1: 5,
 	    startdom: 3
 	},
@@ -615,7 +615,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Teotl of War",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 6,
 	    startdom: 3
 	},
@@ -625,7 +625,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Teotl of the Sky",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 220,
 	    realm1: 6,
 	    startdom: 3
 	},
@@ -634,7 +634,7 @@ export function getPretenders() {
 	    D: 2,
 	    name: "Teotl of the Underworld",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 6,
 	    startdom: 3
 	},
@@ -642,7 +642,7 @@ export function getPretenders() {
 	    D: 3,
 	    name: "Neter of the Underworld",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 7,
 	    startdom: 3
 	},
@@ -652,7 +652,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Neter of Kings",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 220,
 	    realm1: 7,
 	    startdom: 3
 	},
@@ -671,7 +671,7 @@ export function getPretenders() {
 	    N: 2,
 	    name: "Idol of Beasts",
 	    pathcost: 40,
-	    pointcost: 150,
+	    pointcost: 160,
 	    realm1: 1,
 	    startdom: 4
 	},
@@ -695,7 +695,7 @@ export function getPretenders() {
 	    N: 3,
 	    name: "Horned One",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 2,
 	    startdom: 3
 	},
@@ -704,7 +704,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Bodhisattva of Mercy",
 	    pathcost: 80,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 4,
 	    startdom: 2
 	},
@@ -720,7 +720,7 @@ export function getPretenders() {
 	    N: 2,
 	    name: "Statue of Fertility",
 	    pathcost: 40,
-	    pointcost: 150,
+	    pointcost: 170,
 	    realm1: 3,
 	    startdom: 4
 	},
@@ -729,7 +729,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Statue of the Bloody Mother",
 	    pathcost: 40,
-	    pointcost: 160,
+	    pointcost: 170,
 	    realm1: 6,
 	    startdom: 4
 	},
@@ -738,7 +738,7 @@ export function getPretenders() {
 	    E: 2,
 	    name: "Golden Idol",
 	    pathcost: 40,
-	    pointcost: 120,
+	    pointcost: 130,
 	    realm1: 5,
 	    startdom: 4
 	},
@@ -747,7 +747,7 @@ export function getPretenders() {
 	    E: 1,
 	    name: "Statue of War",
 	    pathcost: 40,
-	    pointcost: 150,
+	    pointcost: 170,
 	    realm1: 3,
 	    startdom: 4
 	},
@@ -755,7 +755,7 @@ export function getPretenders() {
 	    S: 3,
 	    name: "Neter of the Moon",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 7,
 	    startdom: 3
 	},
@@ -764,7 +764,7 @@ export function getPretenders() {
 	    E: 1,
 	    name: "Statue of War",
 	    pathcost: 40,
-	    pointcost: 150,
+	    pointcost: 170,
 	    realm1: 4,
 	    startdom: 4
 	},
@@ -773,7 +773,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Kamadhenu",
 	    pathcost: 80,
-	    pointcost: 240,
+	    pointcost: 250,
 	    realm1: 8,
 	    startdom: 2
 	},
@@ -804,14 +804,14 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Earth made Flesh",
 	    pathcost: 60,
-	    pointcost: 280,
+	    pointcost: 270,
 	    startdom: 3
 	},
 	2503: {
 	    E: 3,
 	    name: "Golden Pillar",
 	    pathcost: 40,
-	    pointcost: 150,
+	    pointcost: 170,
 	    startdom: 4
 	},
 	251: {
@@ -824,7 +824,7 @@ export function getPretenders() {
 	2549: {
 	    S: 1,
 	    name: "Maharishi",
-	    pointcost: 90,
+	    pointcost: 80,
 	    realm1: 8,
 	    startdom: 1
 	},
@@ -834,7 +834,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Raksharani",
 	    pathcost: 40,
-	    pointcost: 160,
+	    pointcost: 150,
 	    shapechange: 2551,
 	    startdom: 2
 	},
@@ -842,7 +842,7 @@ export function getPretenders() {
 	    S: 3,
 	    name: "Ahura of Wisdom",
 	    pathcost: 60,
-	    pointcost: 290,
+	    pointcost: 280,
 	    startdom: 3
 	},
 	2553: {
@@ -858,7 +858,7 @@ export function getPretenders() {
 	    W: 2,
 	    name: "Ahura of the Waters",
 	    pathcost: 80,
-	    pointcost: 260,
+	    pointcost: 250,
 	    startdom: 2
 	},
 	2555: {
@@ -866,7 +866,7 @@ export function getPretenders() {
 	    S: 2,
 	    name: "Spenta Mainyu",
 	    pathcost: 80,
-	    pointcost: 260,
+	    pointcost: 250,
 	    startdom: 2
 	},
 	2556: {
@@ -874,7 +874,7 @@ export function getPretenders() {
 	    W: 2,
 	    name: "Celestial Carp",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 230,
 	    realm1: 4,
 	    startdom: 3
 	},
@@ -884,7 +884,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Yazad King",
 	    pathcost: 40,
-	    pointcost: 210,
+	    pointcost: 200,
 	    startdom: 2
 	},
 	2608: {
@@ -892,7 +892,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Azi",
 	    pathcost: 80,
-	    pointcost: 220,
+	    pointcost: 260,
 	    shapechange: 2609,
 	    startdom: 2
 	},
@@ -902,7 +902,7 @@ export function getPretenders() {
 	    B: 1,
 	    name: "Angra Mainyu",
 	    pathcost: 60,
-	    pointcost: 280,
+	    pointcost: 260,
 	    startdom: 3
 	},
 	2611: {
@@ -925,7 +925,7 @@ export function getPretenders() {
 	    W: 2,
 	    name: "Dragon",
 	    pathcost: 80,
-	    pointcost: 220,
+	    pointcost: 260,
 	    realm1: 10,
 	    shapechange: 267,
 	    startdom: 2
@@ -934,7 +934,7 @@ export function getPretenders() {
 	    N: 2,
 	    name: "Dragon",
 	    pathcost: 80,
-	    pointcost: 220,
+	    pointcost: 260,
 	    realm1: 10,
 	    shapechange: 268,
 	    startdom: 2
@@ -945,14 +945,14 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Viracocha",
 	    pathcost: 60,
-	    pointcost: 290,
+	    pointcost: 270,
 	    startdom: 3
 	},
 	2686: {
 	    F: 3,
 	    name: "Apu Inti",
 	    pathcost: 60,
-	    pointcost: 290,
+	    pointcost: 280,
 	    startdom: 3
 	},
 	269: {
@@ -960,7 +960,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Wyrm",
 	    pathcost: 80,
-	    pointcost: 299,
+	    pointcost: 230,
 	    realm1: 1,
 	    startdom: 2
 	},
@@ -968,7 +968,7 @@ export function getPretenders() {
 	    A: 2,
 	    name: "Heavenly Condor",
 	    pathcost: 80,
-	    pointcost: 180,
+	    pointcost: 190,
 	    startdom: 2
 	},
 	2695: {
@@ -977,7 +977,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Sapa Inca",
 	    pathcost: 40,
-	    pointcost: 200,
+	    pointcost: 190,
 	    startdom: 2
 	},
 	2696: {
@@ -985,14 +985,14 @@ export function getPretenders() {
 	    E: 2,
 	    name: "Stone Huaca",
 	    pathcost: 40,
-	    pointcost: 120,
+	    pointcost: 130,
 	    startdom: 4
 	},
 	2698: {
 	    A: 3,
 	    name: "Apu Illapa",
 	    pathcost: 60,
-	    pointcost: 280,
+	    pointcost: 270,
 	    startdom: 3
 	},
 	2699: {
@@ -1015,7 +1015,7 @@ export function getPretenders() {
 	    D: 2,
 	    name: "Immortal Coya",
 	    pathcost: 30,
-	    pointcost: 160,
+	    pointcost: 170,
 	    startdom: 2
 	},
 	2755: {
@@ -1023,7 +1023,7 @@ export function getPretenders() {
 	    D: 2,
 	    name: "Hun Came",
 	    pathcost: 60,
-	    pointcost: 290,
+	    pointcost: 280,
 	    realm1: 6,
 	    startdom: 3
 	},
@@ -1041,7 +1041,7 @@ export function getPretenders() {
 	    B: 1,
 	    name: "Hun Balam",
 	    pathcost: 80,
-	    pointcost: 170,
+	    pointcost: 190,
 	    realm1: 6,
 	    startdom: 2
 	},
@@ -1050,7 +1050,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Demon Macaw",
 	    pathcost: 80,
-	    pointcost: 170,
+	    pointcost: 180,
 	    realm1: 6,
 	    startdom: 2
 	},
@@ -1059,7 +1059,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Drakon",
 	    pathcost: 80,
-	    pointcost: 220,
+	    pointcost: 250,
 	    realm1: 3,
 	    startdom: 2
 	},
@@ -1068,7 +1068,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Thrice Horned Boar",
 	    pathcost: 80,
-	    pointcost: 150,
+	    pointcost: 200,
 	    realm1: 2,
 	    startdom: 2
 	},
@@ -1077,7 +1077,7 @@ export function getPretenders() {
 	    A: 1,
 	    name: "Solar Eagle",
 	    pathcost: 80,
-	    pointcost: 230,
+	    pointcost: 240,
 	    realm1: 10,
 	    startdom: 2
 	},
@@ -1085,7 +1085,7 @@ export function getPretenders() {
 	    A: 2,
 	    name: "Celestial Gryphon",
 	    pathcost: 80,
-	    pointcost: 180,
+	    pointcost: 200,
 	    realm1: 5,
 	    startdom: 2
 	},
@@ -1094,7 +1094,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Celestial Lion",
 	    pathcost: 80,
-	    pointcost: 160,
+	    pointcost: 170,
 	    realm1: 5,
 	    startdom: 2
 	},
@@ -1103,7 +1103,7 @@ export function getPretenders() {
 	    E: 1,
 	    name: "Man-Eater",
 	    pathcost: 80,
-	    pointcost: 200,
+	    pointcost: 220,
 	    realm1: 5,
 	    startdom: 2
 	},
@@ -1111,7 +1111,7 @@ export function getPretenders() {
 	    D: 2,
 	    name: "Raven of the Underworld",
 	    pathcost: 80,
-	    pointcost: 140,
+	    pointcost: 150,
 	    realm1: 10,
 	    startdom: 2
 	},
@@ -1120,7 +1120,7 @@ export function getPretenders() {
 	    E: 1,
 	    name: "Myrmecoleon",
 	    pathcost: 80,
-	    pointcost: 150,
+	    pointcost: 190,
 	    realm1: 7,
 	    startdom: 2
 	},
@@ -1128,7 +1128,7 @@ export function getPretenders() {
 	    E: 2,
 	    name: "Earth Serpent",
 	    pathcost: 80,
-	    pointcost: 240,
+	    pointcost: 270,
 	    realm1: 10,
 	    startdom: 2
 	},
@@ -1136,7 +1136,7 @@ export function getPretenders() {
 	    F: 2,
 	    name: "Solar Serpent",
 	    pathcost: 80,
-	    pointcost: 180,
+	    pointcost: 210,
 	    realm1: 7,
 	    startdom: 2
 	},
@@ -1144,7 +1144,7 @@ export function getPretenders() {
 	    D: 2,
 	    name: "Serpent of Chaos",
 	    pathcost: 80,
-	    pointcost: 230,
+	    pointcost: 240,
 	    realm1: 7,
 	    startdom: 2
 	},
@@ -1153,7 +1153,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Dog of the Underworld",
 	    pathcost: 80,
-	    pointcost: 120,
+	    pointcost: 140,
 	    realm1: 2,
 	    startdom: 2
 	},
@@ -1162,7 +1162,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Hound of Hades",
 	    pathcost: 80,
-	    pointcost: 170,
+	    pointcost: 190,
 	    realm1: 3,
 	    startdom: 2
 	},
@@ -1171,7 +1171,7 @@ export function getPretenders() {
 	    A: 1,
 	    name: "Hieracosphinx",
 	    pathcost: 80,
-	    pointcost: 190,
+	    pointcost: 200,
 	    realm1: 7,
 	    startdom: 2
 	},
@@ -1180,7 +1180,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Criosphinx",
 	    pathcost: 80,
-	    pointcost: 120,
+	    pointcost: 130,
 	    realm1: 7,
 	    startdom: 2
 	},
@@ -1189,7 +1189,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Wadjet",
 	    pathcost: 80,
-	    pointcost: 170,
+	    pointcost: 200,
 	    realm1: 7,
 	    startdom: 2
 	},
@@ -1198,7 +1198,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Ormr",
 	    pathcost: 80,
-	    pointcost: 180,
+	    pointcost: 200,
 	    realm1: 1,
 	    startdom: 2
 	},
@@ -1207,7 +1207,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Linnormr",
 	    pathcost: 80,
-	    pointcost: 210,
+	    pointcost: 230,
 	    realm1: 1,
 	    startdom: 2
 	},
@@ -1216,7 +1216,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Svartalf Mastersmith",
 	    pathcost: 20,
-	    pointcost: 200,
+	    pointcost: 260,
 	    realm1: 1,
 	    shapechange: 2803,
 	    startdom: 1
@@ -1225,7 +1225,7 @@ export function getPretenders() {
 	    W: 3,
 	    name: "Protogenos of the Sea",
 	    pathcost: 80,
-	    pointcost: 230,
+	    pointcost: 220,
 	    realm1: 9,
 	    startdom: 4
 	},
@@ -1233,7 +1233,7 @@ export function getPretenders() {
 	    W: 3,
 	    name: "Father of the Sea",
 	    pathcost: 80,
-	    pointcost: 220,
+	    pointcost: 210,
 	    realm1: 2,
 	    startdom: 4
 	},
@@ -1251,7 +1251,7 @@ export function getPretenders() {
 	    D: 3,
 	    name: "Statue of the Underworld",
 	    pathcost: 40,
-	    pointcost: 170,
+	    pointcost: 190,
 	    realm1: 3,
 	    startdom: 4
 	},
@@ -1260,7 +1260,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Titan of Winds and Waves",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -1269,14 +1269,14 @@ export function getPretenders() {
 	    D: 1,
 	    name: "King of Frozen Bones",
 	    pathcost: 20,
-	    pointcost: 140,
+	    pointcost: 150,
 	    startdom: 1
 	},
 	2853: {
 	    D: 1,
 	    name: "Ghost King",
 	    pathcost: 20,
-	    pointcost: 240,
+	    pointcost: 230,
 	    startdom: 2
 	},
 	2855: {
@@ -1294,7 +1294,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Son of the Sea",
 	    pathcost: 60,
-	    pointcost: 280,
+	    pointcost: 270,
 	    realm1: 2,
 	    startdom: 3
 	},
@@ -1304,7 +1304,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Telkhine God-King",
 	    pathcost: 40,
-	    pointcost: 290,
+	    pointcost: 270,
 	    shapechange: 2882,
 	    startdom: 2
 	},
@@ -1313,7 +1313,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Morgen High Queen",
 	    pathcost: 10,
-	    pointcost: 130,
+	    pointcost: 120,
 	    startdom: 1
 	},
 	2930: {
@@ -1322,7 +1322,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Hooded Spirit",
 	    pathcost: 80,
-	    pointcost: 290,
+	    pointcost: 270,
 	    realm1: 2,
 	    startdom: 2
 	},
@@ -1331,7 +1331,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Nerid",
 	    pathcost: 60,
-	    pointcost: 200,
+	    pointcost: 180,
 	    realm1: 9,
 	    startdom: 3
 	},
@@ -1347,14 +1347,14 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Golden Lion",
 	    pathcost: 80,
-	    pointcost: 160,
+	    pointcost: 200,
 	    realm1: 7,
 	    startdom: 2
 	},
 	2959: {
 	    S: 1,
 	    name: "Chiranjivi",
-	    pointcost: 190,
+	    pointcost: 180,
 	    startdom: 1
 	},
 	2960: {
@@ -1370,7 +1370,7 @@ export function getPretenders() {
 	2961: {
 	    N: 1,
 	    name: "Centauride Enchantress",
-	    pointcost: 120,
+	    pointcost: 130,
 	    startdom: 1
 	},
 	2977: {
@@ -1408,13 +1408,13 @@ export function getPretenders() {
 	3054: {
 	    S: 2,
 	    name: "Firstborn of the Star",
-	    pointcost: 130,
+	    pointcost: 140,
 	    startdom: 1
 	},
 	3055: {
 	    W: 1,
 	    name: "Grand Hydromancer",
-	    pointcost: 100,
+	    pointcost: 90,
 	    realm1: 9,
 	    startdom: 1
 	},
@@ -1455,7 +1455,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Kami of the Sun",
 	    pathcost: 60,
-	    pointcost: 280,
+	    pointcost: 270,
 	    realm1: 4,
 	    startdom: 3
 	},
@@ -1464,7 +1464,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Kami of the Moon",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 4,
 	    startdom: 3
 	},
@@ -1473,7 +1473,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Kami of Storms",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 4,
 	    startdom: 3
 	},
@@ -1483,7 +1483,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Morrigna",
 	    pathcost: 60,
-	    pointcost: 380,
+	    pointcost: 340,
 	    realm1: 2,
 	    startdom: 3
 	},
@@ -1493,7 +1493,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Duiu of Thunder",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 2,
 	    startdom: 3
 	},
@@ -1502,7 +1502,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Duiu of Farming",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 210,
 	    realm1: 2,
 	    startdom: 3
 	},
@@ -1512,7 +1512,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Duiu of War",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 2,
 	    startdom: 3
 	},
@@ -1522,7 +1522,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Matrona of the Healing Spring",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 230,
 	    realm1: 2,
 	    startdom: 3
 	},
@@ -1531,7 +1531,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Deives of the Sun",
 	    pathcost: 60,
-	    pointcost: 220,
+	    pointcost: 200,
 	    realm1: 1,
 	    startdom: 3
 	},
@@ -1540,7 +1540,7 @@ export function getPretenders() {
 	    D: 2,
 	    name: "Dharmapala of the Underworld",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 4,
 	    startdom: 3
 	},
@@ -1556,14 +1556,14 @@ export function getPretenders() {
 	    D: 3,
 	    name: "Saurolich",
 	    pathcost: 40,
-	    pointcost: 240,
+	    pointcost: 260,
 	    startdom: 2
 	},
 	383: {
 	    D: 3,
 	    name: "Prince of Death",
 	    pathcost: 80,
-	    pointcost: 270,
+	    pointcost: 260,
 	    realm1: 3,
 	    startdom: 2
 	},
@@ -1572,7 +1572,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Neter of Crafts",
 	    pathcost: 60,
-	    pointcost: 230,
+	    pointcost: 210,
 	    realm1: 7,
 	    startdom: 3
 	},
@@ -1581,7 +1581,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Neteret of Joy",
 	    pathcost: 60,
-	    pointcost: 220,
+	    pointcost: 200,
 	    realm1: 7,
 	    startdom: 3
 	},
@@ -1590,7 +1590,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Neter of the Sun",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 7,
 	    startdom: 3
 	},
@@ -1598,7 +1598,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Neteret of Many Names",
 	    pathcost: 20,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 7,
 	    startdom: 3
 	},
@@ -1608,7 +1608,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Neter of Chaos",
 	    pathcost: 60,
-	    pointcost: 230,
+	    pointcost: 210,
 	    realm1: 7,
 	    startdom: 3
 	},
@@ -1616,14 +1616,14 @@ export function getPretenders() {
 	    D: 3,
 	    name: "Lich Queen",
 	    pathcost: 40,
-	    pointcost: 160,
+	    pointcost: 170,
 	    realm1: 7,
 	    startdom: 2
 	},
 	401: {
 	    N: 1,
 	    name: "Bitch Queen",
-	    pointcost: 160,
+	    pointcost: 170,
 	    realm1: 1,
 	    shapechange: 402,
 	    startdom: 1
@@ -1633,7 +1633,7 @@ export function getPretenders() {
 	    S: 2,
 	    name: "Statue of Order",
 	    pathcost: 40,
-	    pointcost: 150,
+	    pointcost: 170,
 	    realm1: 3,
 	    startdom: 4
 	},
@@ -1648,7 +1648,7 @@ export function getPretenders() {
 	    B: 1,
 	    name: "Great Warlock",
 	    pathcost: 10,
-	    pointcost: 100,
+	    pointcost: 90,
 	    startdom: 1
 	},
 	499: {
@@ -1657,7 +1657,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Nataraja",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 240,
 	    realm1: 8,
 	    startdom: 3
 	},
@@ -1665,7 +1665,7 @@ export function getPretenders() {
 	    B: 1,
 	    name: "Skratti",
 	    pathcost: 10,
-	    pointcost: 140,
+	    pointcost: 130,
 	    startdom: 1
 	},
 	501: {
@@ -1674,7 +1674,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Allfather",
 	    pathcost: 40,
-	    pointcost: 280,
+	    pointcost: 270,
 	    realm1: 1,
 	    startdom: 3
 	},
@@ -1689,7 +1689,7 @@ export function getPretenders() {
 	    S: 3,
 	    name: "Void Lurker",
 	    pathcost: 20,
-	    pointcost: 150,
+	    pointcost: 140,
 	    startdom: 4
 	},
 	550: {
@@ -1705,7 +1705,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Titan of War and Wisdom",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -1722,7 +1722,7 @@ export function getPretenders() {
 	    E: 1,
 	    name: "Titan of Heaven",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 220,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -1732,7 +1732,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Teotl of Rain",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 6,
 	    startdom: 3
 	},
@@ -1741,7 +1741,7 @@ export function getPretenders() {
 	    B: 2,
 	    name: "Teotl of the Night",
 	    pathcost: 60,
-	    pointcost: 290,
+	    pointcost: 280,
 	    realm1: 6,
 	    startdom: 3
 	},
@@ -1750,7 +1750,7 @@ export function getPretenders() {
 	    D: 1,
 	    name: "Son of Niefel",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 240,
 	    startdom: 3
 	},
 	606: {
@@ -1758,7 +1758,7 @@ export function getPretenders() {
 	    N: 2,
 	    name: "Great Mother",
 	    pathcost: 60,
-	    pointcost: 280,
+	    pointcost: 270,
 	    realm1: 2,
 	    startdom: 3
 	},
@@ -1768,7 +1768,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Baphomet",
 	    pathcost: 40,
-	    pointcost: 160,
+	    pointcost: 170,
 	    startdom: 4
 	},
 	608: {
@@ -1785,14 +1785,14 @@ export function getPretenders() {
 	    B: 1,
 	    name: "Bog Mummy",
 	    pathcost: 40,
-	    pointcost: 240,
+	    pointcost: 230,
 	    startdom: 2
 	},
 	644: {
 	    D: 2,
 	    name: "Dracolich",
 	    pathcost: 80,
-	    pointcost: 180,
+	    pointcost: 220,
 	    shapechange: 645,
 	    startdom: 2
 	},
@@ -1807,7 +1807,7 @@ export function getPretenders() {
 	653: {
 	    N: 1,
 	    name: "Serpent King",
-	    pointcost: 80,
+	    pointcost: 90,
 	    realm1: 7,
 	    shapechange: 654,
 	    startdom: 1
@@ -1817,7 +1817,7 @@ export function getPretenders() {
 	    E: 1,
 	    name: "Scorpion King",
 	    pathcost: 60,
-	    pointcost: 160,
+	    pointcost: 240,
 	    realm1: 5,
 	    startdom: 2
 	},
@@ -1825,7 +1825,7 @@ export function getPretenders() {
 	    B: 3,
 	    name: "Fountain of Blood",
 	    pathcost: 40,
-	    pointcost: 150,
+	    pointcost: 160,
 	    realm1: 10,
 	    startdom: 4
 	},
@@ -1835,7 +1835,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Monolith",
 	    pathcost: 40,
-	    pointcost: 160,
+	    pointcost: 180,
 	    realm1: 2,
 	    realm2: 1,
 	    startdom: 4
@@ -1845,7 +1845,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Shedu",
 	    pathcost: 80,
-	    pointcost: 200,
+	    pointcost: 210,
 	    realm1: 5,
 	    startdom: 2
 	},
@@ -1853,7 +1853,7 @@ export function getPretenders() {
 	    N: 2,
 	    name: "Rams-Headed Serpent",
 	    pathcost: 80,
-	    pointcost: 180,
+	    pointcost: 200,
 	    realm1: 2,
 	    startdom: 2
 	},
@@ -1862,7 +1862,7 @@ export function getPretenders() {
 	    N: 2,
 	    name: "Lord of the Wild",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -1872,7 +1872,7 @@ export function getPretenders() {
 	    B: 1,
 	    name: "Smoking Mirror",
 	    pathcost: 20,
-	    pointcost: 90,
+	    pointcost: 100,
 	    shapechange: 858,
 	    startdom: 1
 	},
@@ -1881,14 +1881,14 @@ export function getPretenders() {
 	    B: 2,
 	    name: "Vampire Queen",
 	    pathcost: 40,
-	    pointcost: 210,
+	    pointcost: 250,
 	    startdom: 1
 	},
 	872: {
 	    D: 1,
 	    name: "Ghost King",
 	    pathcost: 20,
-	    pointcost: 220,
+	    pointcost: 200,
 	    realm1: 10,
 	    startdom: 2
 	},
@@ -1910,7 +1910,7 @@ export function getPretenders() {
 	    W: 1,
 	    name: "Jade Emperor",
 	    pathcost: 60,
-	    pointcost: 220,
+	    pointcost: 200,
 	    realm1: 4,
 	    startdom: 3
 	},
@@ -1927,7 +1927,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Lord of The Desert Sun",
 	    pathcost: 60,
-	    pointcost: 250,
+	    pointcost: 240,
 	    realm1: 5,
 	    startdom: 3
 	},
@@ -1945,7 +1945,7 @@ export function getPretenders() {
 	    W: 2,
 	    name: "Titan of the Sea",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 230,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -1971,7 +1971,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Great Black Bull",
 	    pathcost: 80,
-	    pointcost: 190,
+	    pointcost: 200,
 	    realm1: 3,
 	    startdom: 2
 	},
@@ -1980,7 +1980,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Great White Bull",
 	    pathcost: 80,
-	    pointcost: 190,
+	    pointcost: 200,
 	    realm1: 3,
 	    startdom: 2
 	},
@@ -1990,7 +1990,7 @@ export function getPretenders() {
 	    E: 1,
 	    name: "Eldest Cyclops",
 	    pathcost: 60,
-	    pointcost: 240,
+	    pointcost: 220,
 	    realm1: 3,
 	    startdom: 2
 	},
@@ -1998,9 +1998,9 @@ export function getPretenders() {
 	    F: 1,
 	    W: 1,
 	    S: 1,
-	    name: "Titan of Forethough",
+	    name: "Titan of Forethought",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    realm1: 3,
 	    startdom: 3
 	},
@@ -2016,7 +2016,7 @@ export function getPretenders() {
 	    S: 1,
 	    name: "Enkidu Great Sage",
 	    pathcost: 10,
-	    pointcost: 130,
+	    pointcost: 120,
 	    startdom: 1
 	},
 	3192: {
@@ -2041,16 +2041,16 @@ export function getPretenders() {
 	    N: 3,
 	    name: "Titan of the Hunt",
 	    pathcost: 60,
-	    pointcost: 260,
+	    pointcost: 250,
 	    startdom: 3,
 	    realm1: 3
 	},
 	3209: {
 	    E: 1,
 	    N: 2,
-	    name: "Titan of the Growth",
+	    name: "Titan of Growth",
 	    pathcost: 60,
-	    pointcost: 200,
+	    pointcost: 180,
 	    startdom: 3,
 	    realm1: 3
 	},
@@ -2059,7 +2059,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Titan of the Spring",
 	    pathcost: 60,
-	    pointcost: 220,
+	    pointcost: 200,
 	    startdom: 3,
 	    realm1: 3
 	},
@@ -2069,7 +2069,7 @@ export function getPretenders() {
 	    N: 1,
 	    name: "Titan of the Crossroads",
 	    pathcost: 60,
-	    pointcost: 340,
+	    pointcost: 300,
 	    startdom: 3,
 	    realm1: 3
 	},
