@@ -10,6 +10,7 @@ It is writen in [React](https://reactjs.org/) framework.
 
 
 ## Changelog
+- Version 1.10.1: Fix some typos. Update many bless effects. Update many Pretendent costs. Fix paths for Dragon (id 216).
 - Version 1.10.0: Move bless effects section below all input firms. Add buttons for resetting all points, resetting magic points and resetting scale points. Copy info about nation bless bonus and favorite temperature to appropriate sections. Fix text color and cursor shape of the "Show all bless list" button.
 - Version 1.9.4: Upgrade node modules.
 - Version 1.9.3: Fix missing paths for: Raksharani, Sapa Inca, Ayar.
