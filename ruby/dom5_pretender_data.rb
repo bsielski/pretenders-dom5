@@ -3,7 +3,7 @@ require 'json'
 
 module Dom5
   PRETENDER_FIELDS_STR = [ :id, :name ]
-  PRETENDER_FIELDS_INT = [ :startdom, :pathcost, 
+  PRETENDER_FIELDS_INT = [ :startdom, :pathcost, :minprison,
                            :f, :a, :w, :e,
                            :s, :d, :n, :b ]
   PRETENDER_FIELDS = PRETENDER_FIELDS_STR +
