@@ -28,9 +28,11 @@ module Dom5
       end
     end
 
+    ERAS = Hash[ *%w|1 EA 2 MA 3 LA| ]
     def read_nations
       read_a_file('nations') do | nation |
         nation = Nation.new( *nation.fields(*NATION_FIELDS) )
+        nation.era = ERAS[nation.era]
         @nations[ nation[:id] ] = nation
       end
     end
