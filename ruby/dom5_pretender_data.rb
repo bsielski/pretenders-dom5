@@ -14,8 +14,8 @@ module Dom5
     end
   end
 
-  NATION_FIELDS = [ :id, :name, :epithet, :era,
-                    :realms, :bless_bonus, :cheap_gods ]
+  NATION_FIELDS = [ :id, :name, :epithet, :era, :realms,
+                    :bless_bonus, :scales, :cheap_gods ]
   Nation = Struct.new(*NATION_FIELDS) do
     def to_json(*args)
       to_h.to_json

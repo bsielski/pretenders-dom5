@@ -2,12 +2,15 @@ module Dom5
 
   # Nation property numbers. These should all be listed in
   # attribute_keys.csv, but not all there.
-  ATTR_NO_UNDEAD_PRETENDER = 41
   ATTR_HOME_REALM = 289
   ATTR_CHEAP_GOD_20 = 314
   ATTR_CHEAP_GOD_40 = 315
   ATTR_BLESS_BONUS  = 330..337
   BLESS_PATHS = %w[F A W E S D N B].map(&:intern)
+  
+  ATTR_NO_UNDEAD_PRETENDER = 41
+  ATTR_COLD_SCALE = 58
+  ATTR_GROWTH_SCALE = 324
 
   module InspectorReader
     def read
@@ -77,7 +80,7 @@ module Dom5
           pr_na[:monster_number ]
       end
     end
-
+    
     def read_nation_attrs
       read_a_file("attributes_by_nation") do | nat_attr |
         attr, nation_id, val = nat_attr.fields(:attribute,
@@ -97,6 +100,12 @@ module Dom5
           nation.cheap_gods[ val ] = 40
         elsif attr_i == ATTR_NO_UNDEAD_PRETENDER
           @no_undead_nations << nation_id
+        elsif attr_i == ATTR_COLD_SCALE
+          nation.scales ||= {}
+          nation.scales[:heat] = -val.to_i
+        elsif attr_i == ATTR_GROWTH_SCALE
+          nation.scales ||= {}
+          nation.scales[:growth] = val.to_i
         elsif ATTR_BLESS_BONUS.include?(attr_i)
           bless_path = BLESS_PATHS[attr_i - ATTR_BLESS_BONUS.begin]
           nation.bless_bonus ||= {}
