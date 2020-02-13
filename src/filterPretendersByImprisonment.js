@@ -6,7 +6,7 @@ export function filterPretendersByImprisonment(pretenders, pretenderIds, impriso
   else {
     return pretenderIds.filter(id => {
       return (
-        (pretenders[id].cantbeawake === false)
+        (pretenders[id].minprison == 0)
       );
     });
   }
