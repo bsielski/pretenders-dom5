@@ -8,6 +8,10 @@ A calculator for [Dominions 5](http://www.illwinter.com/dom5/). It allows to pic
 
 It is writen in [React](https://reactjs.org/) framework.
 
+## Installation
+
+npm install (once)
+npm run build
 
 ## Changelog
 - Version 1.10.1: Fix some typos. Update many bless effects. Update many Pretendent costs. Fix paths for Dragon (id 216).
