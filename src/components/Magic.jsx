@@ -86,10 +86,10 @@ export class Magic extends React.Component {
 			   id="blood-picker__input" className="value-picker__input value-picker__input--magic value-picker__input--blood" />
 		  </div>
 		</div>
-		</div>
-		<ResetMagicButton
-		  onClick={this.handleResetMagic}
-		  />
+	      </div>
+	      <ResetMagicButton
+		onClick={this.handleResetMagic}
+		/>
 	    </div>
 	);
     }

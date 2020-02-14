@@ -11,30 +11,30 @@ export class Pretenders extends React.Component {
 	    return (
 		{
 		    pretenderId: pretenderId,
-				name: pretender.name,
-				pointsLeft: this.props.pointsLeftWithoutPretenders -
-                			pretenderCost(pretender,
-							  this.props.nations[this.props.nationId],
-							  this.props.path,
-							  this.props.dominion),
-				dominion: pretender.startdom > this.props.dominion ?
-				          pretender.startdom : this.props.dominion,
-				f: pretender.f > this.props.path.f ?
-   				   pretender.f : this.props.path.f,
-				a: pretender.a > this.props.path.a ?
-				   pretender.a : this.props.path.a,
-				w: pretender.w > this.props.path.w ?
-				   pretender.w : this.props.path.w,
-				e: pretender.e > this.props.path.e ?
-				   pretender.e : this.props.path.e,
-				s: pretender.s > this.props.path.s ?
-				   pretender.s : this.props.path.s,
-				d: pretender.d > this.props.path.d ?
-				   pretender.d : this.props.path.d,
-				n: pretender.n > this.props.path.n ?
-				   pretender.n : this.props.path.n,
-				b: pretender.b > this.props.path.b ?
-				   pretender.b : this.props.path.b,
+		    name: pretender.name,
+		    pointsLeft: this.props.pointsLeftWithoutPretenders -
+                	pretenderCost(pretender,
+				      this.props.nations[this.props.nationId],
+				      this.props.path,
+				      this.props.dominion),
+		    dominion: pretender.startdom > this.props.dominion ?
+			pretender.startdom : this.props.dominion,
+		    f: pretender.f > this.props.path.f ?
+   			pretender.f : this.props.path.f,
+		    a: pretender.a > this.props.path.a ?
+			pretender.a : this.props.path.a,
+		    w: pretender.w > this.props.path.w ?
+			pretender.w : this.props.path.w,
+		    e: pretender.e > this.props.path.e ?
+			pretender.e : this.props.path.e,
+		    s: pretender.s > this.props.path.s ?
+			pretender.s : this.props.path.s,
+		    d: pretender.d > this.props.path.d ?
+			pretender.d : this.props.path.d,
+		    n: pretender.n > this.props.path.n ?
+			pretender.n : this.props.path.n,
+		    b: pretender.b > this.props.path.b ?
+			pretender.b : this.props.path.b,
 		}
 	    );
 	}).sort((a, b) => {

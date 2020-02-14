@@ -10,9 +10,9 @@ import './BlessEffects.css';
 
 export class BlessEffects extends React.Component {
     render() {
-		let this_nation = this.props.nations[this.props.nationId];
-		let this_bless  = this_nation.bless_bonus;
-		return(
+	let this_nation = this.props.nations[this.props.nationId];
+	let this_bless  = this_nation.bless_bonus;
+	return(
 	    <div className="form">
 	      <header className="form__header">Bless Effects</header>
 	      <BlessEffectsWindow
@@ -30,8 +30,8 @@ export class BlessEffects extends React.Component {
 		n={this_bless.n}
 		b={this_bless.b}
 		/>
-		
-		<div className="form__body form__body--bless_effects">
+	      
+	      <div className="form__body form__body--bless_effects">
 		<div className="form__section">
 		  <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--fire">F{this.props.blessPoints.f}</div>
 		  <div className="value-picker__label value-picker__label--bless_point value-picker__label--magic value-picker__label--air">A{this.props.blessPoints.a}</div>
