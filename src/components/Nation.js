@@ -24,10 +24,10 @@ export class Nation extends React.Component {
 	const nationOptions = Object.keys(this.props.nations).map(nationId => {
 	    return (
 		<option key={nationId} value={nationId} className={"nation-picker__option nation-picker__option--era_" + this.props.nations[nationId].era}>
-		  {this.props.nations[nationId].label}
+			{this.props.nations[nationId].era} {this.props.nations[nationId].name}: {this.props.nations[nationId].epithet}
 		</option>
 	    );
-	});
+		});
 
 	return (
 	    <div className="form">
