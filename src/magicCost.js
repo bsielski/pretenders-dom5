@@ -18,20 +18,20 @@ function magicPathCost(newPathCost, baseLevel, wantedLevel) {
 
 export function magicCost(pretenderStartLevels, pretenderNewPathCost, wantedLevels) {
   return (
-      magicPathCost(pretenderNewPathCost, pretenderStartLevels.F, wantedLevels.f)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.A, wantedLevels.a)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.W, wantedLevels.w)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.E, wantedLevels.e)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.S, wantedLevels.s)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.D, wantedLevels.d)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.N, wantedLevels.n)
-    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.B, wantedLevels.b)
+      magicPathCost(pretenderNewPathCost, pretenderStartLevels.f, wantedLevels.f)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.a, wantedLevels.a)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.w, wantedLevels.w)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.e, wantedLevels.e)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.s, wantedLevels.s)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.d, wantedLevels.d)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.n, wantedLevels.n)
+    + magicPathCost(pretenderNewPathCost, pretenderStartLevels.b, wantedLevels.b)
   );
 }
 
 
 // console.log( "Should be 350: " +
-//   magicCost( {F: 0, A: 0, W: 0, E: 0, S: 1, D: 0, N: 0, B: 0}, 10,
-//              {F: 1, A: 2, W: 0, E: 0, S: 3, D: 8, N: 0, B: 0}
+//   magicCost( {f: 0, a: 0, w: 0, e: 0, s: 1, d: 0, n: 0, b: 0}, 10,
+//              {f: 1, a: 2, w: 0, e: 0, s: 3, d: 8, n: 0, b: 0}
 //            )
 // );
