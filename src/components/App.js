@@ -32,12 +32,16 @@ class App extends Component {
 		 label: "Awake (0 points)",
                },
 	    2: { points: 150,
-		 label: "Dormant (gain 150 points)",
+		 label: "Dormant (+150 points)",
                },
 	    3: { points: 350,
-		 label: "Imprisoned (gain 350 points)",
+		 label: "Imprisoned (+350 points)",
                },
 	};
+	this.magic_paths = ['f', 'a', 'w', 'e',
+						's', 'd', 'n', 'b'];
+	this.scales = ['order', 'productivity', 'heat',
+				   'growth', 'luck', 'magic'];
 	this.pretenders = getPretenders();
 	this.nations = getNations();
 	this.blessEffects = getBlessEffects();
@@ -76,26 +80,29 @@ class App extends Component {
     }
 
     resetNation(event) {
-	this.setState({
-	    path: {
-		f: 0,
-		a: 0,
-		w: 0,
-		e: 0,
-		s: 0,
-		d: 0,
-		n: 0,
-		b: 0,
-	    },
-	    dominion: 1,
-	    order: 0,
-	    productivity: 0,
-	    heat: this.nations[this.state.nationId].heat,
-	    growth: this.nations[this.state.nationId].growth,
-	    fortune: 0,
-	    magic: 0,
-	    imprisonment: 1,
-	});
+		const curr_nation = this.nations[this.state.nationId];
+		const start_scales = curr_nation['scales'];
+		this.scales.forEach(scale => {
+			if ( ! start_scales[scale] ) { start_scales[scale] = 0; }
+		});
+		this.setState({
+				path: { f: 0,
+						a: 0,
+						w: 0,
+						e: 0,
+						s: 0,
+						d: 0,
+						n: 0,
+						b: 0, },
+					dominion: 1,
+					order: start_scales.order,
+					productivity: start_scales.productivity,
+					heat: start_scales.heat, 
+					growth: start_scales.growth, 
+					fortune: start_scales.luck,
+					magic: start_scales.magic,
+					imprisonment: 1,
+					});
 
     }
     resetMagic(event) {
@@ -114,98 +121,88 @@ class App extends Component {
     }
 
     resetScales(event) {
-	this.setState({
-	    dominion: 1,
-	    order: 0,
-	    productivity: 0,
-	    heat: this.nations[this.state.nationId].heat,
-	    growth: this.nations[this.state.nationId].growth,
-	    fortune: 0,
-	    magic: 0,
-	});
+		const curr_nation = this.nations[this.state.nationId];
+		const start_scales = curr_nation['scales'];
+		this.scales.forEach(scale => {
+			if ( ! start_scales[scale] ) { start_scales[scale] = 0; }
+		});
+		this.setState({	dominion: 1,
+					    order: start_scales.order,
+     					productivity: start_scales.productivity,
+					    heat: start_scales.heat, 
+					    growth: start_scales.growth, 
+					    fortune: start_scales.luck,
+					    magic: start_scales.magic
+					});
     }
 
     changeOption(event) {
-	const target = event.target;
-	this.setState({[target.name]: target.value});
+		const target = event.target;
+		this.setState({[target.name]: target.value});
     }
 
     changeNumber(event) {
-	const target = event.target;
-	this.setState({[target.name]: parseInt(target.value, 10)});
+		const target = event.target;
+		this.setState({[target.name]: parseInt(target.value, 10)});
     }
 
     changePathLevel(event) {
-	const target = event.target;
-	const newPath = Object.assign({}, this.state.path);
-	newPath[target.name] = parseInt(target.value, 10);
-	this.setState({path: newPath});
+		const target = event.target;
+		const newPath = Object.assign({}, this.state.path);
+		newPath[target.name] = parseInt(target.value, 10);
+		this.setState({ path: newPath });
     }
 
     changeRadio(event) {
-	const target = event.target;
-	this.setState({
-	    imprisonment: parseInt(target.value, 10)
-	});
+		const target = event.target;
+		this.setState({ imprisonment: parseInt(target.value, 10) });
     }
 
     openBlessEffectsWindow() {
-	console.log("OPEN");
-	this.setState(
-	    {
-		isBlessEffectsWindowOpen: true,
-	    }
-	);
+		this.setState({	isBlessEffectsWindowOpen: true });
     }
 
     closeBlessEffectsWindow() {
-	this.setState(
-	    {
-		isBlessEffectsWindowOpen: false,
-	    }
-	);
+		this.setState({	isBlessEffectsWindowOpen: false });
     }
 
 
 
     
     render() {
-
-	const pointsLeftWithoutPretenders = this.points
-              + this.imprisonmentOptions[this.state.imprisonment].points
-              - scalesCost( {
-                  order: 0,
-                  productivity: 0,
-                  heat: this.nations[this.state.nationId].heat,
-                  growth: this.nations[this.state.nationId].growth,
-                  fortune: 0,
-                  magic: 0,
+		const curr_nation = this.nations[this.state.nationId];
+		const start_scales = curr_nation['scales'];
+		this.scales.forEach(scale => {
+			if ( ! start_scales[scale] ) { start_scales[scale] = 0; }
+		});		
+		const pointsLeftWithoutPretenders = this.points
+			+ this.imprisonmentOptions[this.state.imprisonment].points
+			- scalesCost( {
+					order: start_scales.order,
+					productivity: start_scales.productivity,
+					heat: start_scales.heat,
+					growth: start_scales.growth,
+					fortune: start_scales.luck,
+					magic: start_scales.magic,
               },
-                            {
-                                order: this.state.order,
-                                productivity: this.state.productivity,
-                                heat: this.state.heat,
-                                growth: this.state.growth,
-                                fortune: this.state.fortune,
-                                magic: this.state.magic,
-                            }
-                          );
+				{
+					order: this.state.order,
+					productivity: this.state.productivity,
+					heat: this.state.heat,
+					growth: this.state.growth,
+					fortune: this.state.fortune,
+					magic: this.state.magic,
+				}
+				);
+	
 
-	const blessBonuses = {
-	    f: this.nations[this.state.nationId].blessF,
-	    a: this.nations[this.state.nationId].blessA,
-	    w: this.nations[this.state.nationId].blessW,
-	    e: this.nations[this.state.nationId].blessE,
-	    s: this.nations[this.state.nationId].blessS,
-	    d: this.nations[this.state.nationId].blessD,
-	    n: this.nations[this.state.nationId].blessN,
-	    b: this.nations[this.state.nationId].blessB,
-	};
-
+	const blessBonuses = curr_nation['bless_bonus'];
+	this.magic_paths.forEach(path => {
+			if ( ! blessBonuses[path] ) { blessBonuses[path] = 0; }
+		});
 	const blessPoints = totalBlessPoints(this.state.path, blessBonuses);
 
 	const filteredPretenderByImprisonment = filterPretendersByImprisonment(this.pretenders, this.nations[this.state.nationId].pretenders, this.state.imprisonment);
-
 	return (
 	    <div className="application_container">
 	      <main>
