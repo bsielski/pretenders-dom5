@@ -1,7 +1,7 @@
 import React from 'react';
 import {NationInfo} from './NationInfo';
 import {ResetAllButton} from './ResetAllButton';
-
+import { path } from 'ramda';
 import './App.css';
 import './Nation.css';
 
@@ -47,16 +47,16 @@ export class Nation extends React.Component {
 		    />
 		</div>
 		< NationInfo
-		  f={this.props.nations[this.props.nationId].blessF}
-		  a={this.props.nations[this.props.nationId].blessA}
-		  w={this.props.nations[this.props.nationId].blessW}
-		  e={this.props.nations[this.props.nationId].blessE}
-		  s={this.props.nations[this.props.nationId].blessS}
-		  d={this.props.nations[this.props.nationId].blessD}
-		  n={this.props.nations[this.props.nationId].blessN}
-		  b={this.props.nations[this.props.nationId].blessB}
-		  heat={this.props.nations[this.props.nationId].heat}
-		  growth={this.props.nations[this.props.nationId].growth}
+		  f={path(['bless_bonus', 'f'], this.props.nations[this.props.nationId])}
+		  a={path(['bless_bonus', 'a'], this.props.nations[this.props.nationId])}
+		  w={path(['bless_bonus', 'w'], this.props.nations[this.props.nationId])}
+		  e={path(['bless_bonus', 'e'], this.props.nations[this.props.nationId])}
+		  s={path(['bless_bonus', 's'], this.props.nations[this.props.nationId])}
+		  d={path(['bless_bonus', 'd'], this.props.nations[this.props.nationId])}
+		  n={path(['bless_bonus', 'n'], this.props.nations[this.props.nationId])}
+		  b={path(['bless_bonus', 'b'], this.props.nations[this.props.nationId])}
+		  heat={path(['scales', 'heat'], this.props.nations[this.props.nationId])}
+		  growth={path(['scales', 'growth'], this.props.nations[this.props.nationId])}
 		  />
 	      </div>
 	    </div>
