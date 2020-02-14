@@ -1,6 +1,5 @@
 import React from 'react';
-import {magicCost} from '../magicCost';
-import {dominionCost} from '../dominionCost';
+import {pretenderCost} from '../pretenderCost';
 
 import './App.css';
 import './Pretenders.css';
@@ -8,30 +7,34 @@ import './Pretenders.css';
 export class Pretenders extends React.Component {
     render() {
 	const pretenderRows = this.props.filteredPretenderByImprisonment.map(pretenderId => {
-	    // console.log(pretenderId);
 	    const pretender = this.props.pretenders[pretenderId];
 	    return (
 		{
 		    pretenderId: pretenderId,
-		    name: pretender.name,
-		    pointsLeft: this.props.pointsLeftWithoutPretenders - magicCost(
-                        { F: pretender.F, A: pretender.A, W: pretender.W, E: pretender.E,
-                          S: pretender.S, D: pretender.D, N: pretender.N, B: pretender.B,
-                        },
-                        pretender.pathcost,
-                        this.props.path
-                    ) - pretender.pointcost - dominionCost(pretender.startdom, this.props.dominion)
-                        + (this.props.nations[this.props.nationId].cheapgods20.includes(pretenderId) ? 20 : 0)
-                        + (this.props.nations[this.props.nationId].cheapgods40.includes(pretenderId) ? 40 : 0),
-		    dominion: pretender.startdom > this.props.dominion ? pretender.startdom : this.props.dominion,
-		    f: pretender.F > this.props.path.f ? pretender.F : this.props.path.f,
-		    a: pretender.A > this.props.path.a ? pretender.A : this.props.path.a,
-		    w: pretender.W > this.props.path.w ? pretender.W : this.props.path.w,
-		    e: pretender.E > this.props.path.e ? pretender.E : this.props.path.e,
-		    s: pretender.S > this.props.path.s ? pretender.S : this.props.path.s,
-		    d: pretender.D > this.props.path.d ? pretender.D : this.props.path.d,
-		    n: pretender.N > this.props.path.n ? pretender.N : this.props.path.n,
-		    b: pretender.B > this.props.path.b ? pretender.B : this.props.path.b,
+				name: pretender.name,
+				pointsLeft: this.props.pointsLeftWithoutPretenders -
+                			pretenderCost(pretender,
+							  this.props.nations[this.props.nationId],
+							  this.props.path,
+							  this.props.dominion),
+				dominion: pretender.startdom > this.props.dominion ?
+				          pretender.startdom : this.props.dominion,
+				f: pretender.f > this.props.path.f ?
+   				   pretender.f : this.props.path.f,
+				a: pretender.a > this.props.path.a ?
+				   pretender.a : this.props.path.a,
+				w: pretender.w > this.props.path.w ?
+				   pretender.w : this.props.path.w,
+				e: pretender.e > this.props.path.e ?
+				   pretender.e : this.props.path.e,
+				s: pretender.s > this.props.path.s ?
+				   pretender.s : this.props.path.s,
+				d: pretender.d > this.props.path.d ?
+				   pretender.d : this.props.path.d,
+				n: pretender.n > this.props.path.n ?
+				   pretender.n : this.props.path.n,
+				b: pretender.b > this.props.path.b ?
+				   pretender.b : this.props.path.b,
 		}
 	    );
 	}).sort((a, b) => {
