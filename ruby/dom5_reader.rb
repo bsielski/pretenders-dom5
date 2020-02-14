@@ -6,7 +6,7 @@ module Dom5
   ATTR_CHEAP_GOD_20 = 314
   ATTR_CHEAP_GOD_40 = 315
   ATTR_BLESS_BONUS  = 330..337
-  BLESS_PATHS = %w[F A W E S D N B].map(&:intern)
+  BLESS_PATHS = %w[f a w e s d n b].map(&:intern)
   
   ATTR_NO_UNDEAD_PRETENDER = 41
   ATTR_COLD_SCALE = 58
