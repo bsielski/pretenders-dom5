@@ -21,10 +21,15 @@ export class Nation extends React.Component {
     }
     
     render() {
-	const nationOptions = Object.keys(this.props.nations).map(nationId => {
+        const { nations, nationId } = this.props;
+	const nationOptions = Object.keys(nations).map(nId => {
 	    return (
-		<option key={nationId} value={nationId} className={"nation-picker__option nation-picker__option--era_" + this.props.nations[nationId].era}>
-		  {this.props.nations[nationId].era} {this.props.nations[nationId].name}: {this.props.nations[nationId].epithet}
+		<option
+                  key={nId}
+                  value={nId}
+                  className={"nation-picker__option nation-picker__option--era_" + nations[nId].era}
+                  >
+		  {nations[nId].era} {nations[nId].name}: {nations[nId].epithet}
 		</option>
 	    );
 	});
@@ -35,7 +40,7 @@ export class Nation extends React.Component {
 	      <div className="form__body form__body--nation">
 		<div className="form__body">
 		  <select
-		    name="nationId" value={this.props.nationId}
+		    name="nationId" value={nationId}
 		    onChange={this.handleSelection}
 		    className="nation-picker__select"
 		    id="nation-picker__select"
@@ -47,16 +52,16 @@ export class Nation extends React.Component {
 		    />
 		</div>
 		< NationInfo
-		  f={path(['bless_bonus', 'f'], this.props.nations[this.props.nationId])}
-		  a={path(['bless_bonus', 'a'], this.props.nations[this.props.nationId])}
-		  w={path(['bless_bonus', 'w'], this.props.nations[this.props.nationId])}
-		  e={path(['bless_bonus', 'e'], this.props.nations[this.props.nationId])}
-		  s={path(['bless_bonus', 's'], this.props.nations[this.props.nationId])}
-		  d={path(['bless_bonus', 'd'], this.props.nations[this.props.nationId])}
-		  n={path(['bless_bonus', 'n'], this.props.nations[this.props.nationId])}
-		  b={path(['bless_bonus', 'b'], this.props.nations[this.props.nationId])}
-		  heat={path(['scales', 'heat'], this.props.nations[this.props.nationId])}
-		  growth={path(['scales', 'growth'], this.props.nations[this.props.nationId])}
+		  f={path(['bless_bonus', 'f'], nations[nationId])}
+		  a={path(['bless_bonus', 'a'], nations[nationId])}
+		  w={path(['bless_bonus', 'w'], nations[nationId])}
+		  e={path(['bless_bonus', 'e'], nations[nationId])}
+		  s={path(['bless_bonus', 's'], nations[nationId])}
+		  d={path(['bless_bonus', 'd'], nations[nationId])}
+		  n={path(['bless_bonus', 'n'], nations[nationId])}
+		  b={path(['bless_bonus', 'b'], nations[nationId])}
+		  heat={path(['scales', 'heat'], nations[nationId])}
+		  growth={path(['scales', 'growth'], nations[nationId])}
 		  />
 	      </div>
 	    </div>
