@@ -5,7 +5,7 @@ import Footer from './Footer';
 import Nation from './Nation';
 import {Pretenders} from './Pretenders';
 import {BlessEffects} from './BlessEffects';
-import {Imprisonment} from './Imprisonment';
+import Imprisonment from './Imprisonment';
 import Magic from './Magic';
 import Dominion from './Dominion';
 import {getPretenders} from '../getPretenders';
@@ -248,12 +248,16 @@ class App extends Component {
 		                  />
 		      }
                       />
-	    	    <Imprisonment
-		      imprisonmentOptions={this.imprisonmentOptions}
-		      imprisonment={this.state.imprisonment}
-		      changeRadio={this.changeRadio}
-		      />
-
+	    	    <Box
+                      title="Imprisonment"
+		      body={<Imprisonment
+		                  imprisonmentOptions={this.imprisonmentOptions}
+		                  imprisonment={this.state.imprisonment}
+		                  changeRadio={this.changeRadio}
+		                  />
+                      }
+                      />
+                    
 		    <BlessEffects
 		      nations={this.nations}
 		      nationId={this.state.nationId}
