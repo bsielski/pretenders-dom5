@@ -39,9 +39,9 @@ class App extends Component {
                },
 	};
 	this.magic_paths = ['f', 'a', 'w', 'e',
-						's', 'd', 'n', 'b'];
+			    's', 'd', 'n', 'b'];
 	this.scales = ['order', 'productivity', 'heat',
-				   'growth', 'luck', 'magic'];
+		       'growth', 'luck', 'magic'];
 	this.pretenders = getPretenders();
 	this.nations = getNations();
 	this.blessEffects = getBlessEffects();
@@ -80,29 +80,29 @@ class App extends Component {
     }
 
     resetNation(event) {
-		const curr_nation = this.nations[this.state.nationId];
-		const start_scales = curr_nation['scales'];
-		this.scales.forEach(scale => {
-			if ( ! start_scales[scale] ) { start_scales[scale] = 0; }
-		});
-		this.setState({
-				path: { f: 0,
-						a: 0,
-						w: 0,
-						e: 0,
-						s: 0,
-						d: 0,
-						n: 0,
-						b: 0, },
-					dominion: 1,
-					order: start_scales.order,
-					productivity: start_scales.productivity,
-					heat: start_scales.heat, 
-					growth: start_scales.growth, 
-					fortune: start_scales.luck,
-					magic: start_scales.magic,
-					imprisonment: 1,
-					});
+	const curr_nation = this.nations[this.state.nationId];
+	const start_scales = curr_nation['scales'];
+	this.scales.forEach(scale => {
+	    if ( ! start_scales[scale] ) { start_scales[scale] = 0; }
+	});
+	this.setState({
+	    path: { f: 0,
+		    a: 0,
+		    w: 0,
+		    e: 0,
+		    s: 0,
+		    d: 0,
+		    n: 0,
+		    b: 0, },
+	    dominion: 1,
+	    order: start_scales.order,
+	    productivity: start_scales.productivity,
+	    heat: start_scales.heat, 
+	    growth: start_scales.growth, 
+	    fortune: start_scales.luck,
+	    magic: start_scales.magic,
+	    imprisonment: 1,
+	});
 
     }
     resetMagic(event) {
@@ -121,85 +121,85 @@ class App extends Component {
     }
 
     resetScales(event) {
-		const curr_nation = this.nations[this.state.nationId];
-		const start_scales = curr_nation['scales'];
-		this.scales.forEach(scale => {
-			if ( ! start_scales[scale] ) { start_scales[scale] = 0; }
-		});
-		this.setState({	dominion: 1,
-					    order: start_scales.order,
-     					productivity: start_scales.productivity,
-					    heat: start_scales.heat, 
-					    growth: start_scales.growth, 
-					    fortune: start_scales.luck,
-					    magic: start_scales.magic
-					});
+	const curr_nation = this.nations[this.state.nationId];
+	const start_scales = curr_nation['scales'];
+	this.scales.forEach(scale => {
+	    if ( ! start_scales[scale] ) { start_scales[scale] = 0; }
+	});
+	this.setState({	dominion: 1,
+			order: start_scales.order,
+     			productivity: start_scales.productivity,
+			heat: start_scales.heat, 
+			growth: start_scales.growth, 
+			fortune: start_scales.luck,
+			magic: start_scales.magic
+		      });
     }
 
     changeOption(event) {
-		const target = event.target;
-		this.setState({[target.name]: target.value});
+	const target = event.target;
+	this.setState({[target.name]: target.value});
     }
 
     changeNumber(event) {
-		const target = event.target;
-		this.setState({[target.name]: parseInt(target.value, 10)});
+	const target = event.target;
+	this.setState({[target.name]: parseInt(target.value, 10)});
     }
 
     changePathLevel(event) {
-		const target = event.target;
-		const newPath = Object.assign({}, this.state.path);
-		newPath[target.name] = parseInt(target.value, 10);
-		this.setState({ path: newPath });
+	const target = event.target;
+	const newPath = Object.assign({}, this.state.path);
+	newPath[target.name] = parseInt(target.value, 10);
+	this.setState({ path: newPath });
     }
 
     changeRadio(event) {
-		const target = event.target;
-		this.setState({ imprisonment: parseInt(target.value, 10) });
+	const target = event.target;
+	this.setState({ imprisonment: parseInt(target.value, 10) });
     }
 
     openBlessEffectsWindow() {
-		this.setState({	isBlessEffectsWindowOpen: true });
+	this.setState({	isBlessEffectsWindowOpen: true });
     }
 
     closeBlessEffectsWindow() {
-		this.setState({	isBlessEffectsWindowOpen: false });
+	this.setState({	isBlessEffectsWindowOpen: false });
     }
 
 
 
     
     render() {
-		const curr_nation = this.nations[this.state.nationId];
-		const start_scales = curr_nation['scales'];
-		this.scales.forEach(scale => {
-			if ( ! start_scales[scale] ) { start_scales[scale] = 0; }
-		});		
-		const pointsLeftWithoutPretenders = this.points
-			+ this.imprisonmentOptions[this.state.imprisonment].points
-			- scalesCost( {
-					order: start_scales.order,
-					productivity: start_scales.productivity,
-					heat: start_scales.heat,
-					growth: start_scales.growth,
-					fortune: start_scales.luck,
-					magic: start_scales.magic,
+	const curr_nation = this.nations[this.state.nationId];
+	const start_scales = curr_nation['scales'];
+	this.scales.forEach(scale => {
+	    if ( ! start_scales[scale] ) { start_scales[scale] = 0; }
+	});		
+	const pointsLeftWithoutPretenders = this.points
+	      + this.imprisonmentOptions[this.state.imprisonment].points
+	      - scalesCost( {
+		  order: start_scales.order,
+		  productivity: start_scales.productivity,
+		  heat: start_scales.heat,
+		  growth: start_scales.growth,
+		  fortune: start_scales.luck,
+		  magic: start_scales.magic,
               },
-				{
-					order: this.state.order,
-					productivity: this.state.productivity,
-					heat: this.state.heat,
-					growth: this.state.growth,
-					fortune: this.state.fortune,
-					magic: this.state.magic,
-				}
-				);
+			    {
+				order: this.state.order,
+				productivity: this.state.productivity,
+				heat: this.state.heat,
+				growth: this.state.growth,
+				fortune: this.state.fortune,
+				magic: this.state.magic,
+			    }
+			  );
 	
 
 	const blessBonuses = curr_nation['bless_bonus'];
 	this.magic_paths.forEach(path => {
-			if ( ! blessBonuses[path] ) { blessBonuses[path] = 0; }
-		});
+	    if ( ! blessBonuses[path] ) { blessBonuses[path] = 0; }
+	});
 	const blessPoints = totalBlessPoints(this.state.path, blessBonuses);
 
 	const filteredPretenderByImprisonment = filterPretendersByImprisonment(this.pretenders, this.nations[this.state.nationId].pretenders, this.state.imprisonment);
