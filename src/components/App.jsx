@@ -6,7 +6,7 @@ import Nation from './Nation';
 import {Pretenders} from './Pretenders';
 import {BlessEffects} from './BlessEffects';
 import {Imprisonment} from './Imprisonment';
-import {Magic} from './Magic';
+import Magic from './Magic';
 import Dominion from './Dominion';
 import {getPretenders} from '../getPretenders';
 import {filterPretendersByImprisonment} from '../filterPretendersByImprisonment';
@@ -221,11 +221,14 @@ class App extends Component {
 		                  />
                       }
 		      />
-		    <Magic
-		      changePathLevel={this.changePathLevel}
-	              path={this.state.path}
-            	      resetMagic={this.resetMagic}
-
+		    <Box
+                      title="Magic"
+		      body={<Magic
+		                  changePathLevel={this.changePathLevel}
+	                          path={this.state.path}
+            	                  resetMagic={this.resetMagic}
+                                  />
+                      }
 		      />
 
                     <Box
