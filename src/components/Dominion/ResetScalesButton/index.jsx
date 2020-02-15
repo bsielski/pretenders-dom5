@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ResetScalesButton.css';
+//import styles from './ResetScalesButton.module.scss';
 
 export function ResetScalesButton(props) {
 
@@ -8,10 +8,11 @@ export function ResetScalesButton(props) {
   	<button
 	  type="button"
           id="reset_scales_button"
-          className="reset_scales_button"
           onClick={props.onClick}
 	  >
           Reset scales points
 	</button>
     );
 }
+
+export default ResetScalesButton;
