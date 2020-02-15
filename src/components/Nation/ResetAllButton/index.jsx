@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './ResetAllButton.css';
+//import styles from './ResetAllButton.module.scss';
 
-export function ResetAllButton(props) {
+function ResetAllButton(props) {
 
     return (
   	<button
@@ -15,3 +15,5 @@ export function ResetAllButton(props) {
 	</button>
     );
 }
+
+export default ResetAllButton;

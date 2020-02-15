@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import Box from './Box';
 import {DebugBar} from './DebugBar';
 import {Footer} from './Footer';
-import {Nation} from './Nation';
+import Nation from './Nation';
 import {Pretenders} from './Pretenders';
 import {BlessEffects} from './BlessEffects';
 import {Imprisonment} from './Imprisonment';
@@ -210,15 +211,16 @@ class App extends Component {
 		<div className="columns_container">
 
 		  <div className="column">
-		    
-		    <Nation
-		      nations={this.nations}
-		      nationId={this.state.nationId}
-		      changeOption={this.changeOption}
-	    	      resetNation={this.resetNation}
-
+		    <Box
+                      title="Nation"
+		      body={<Nation
+		                  nations={this.nations}
+		                  nationId={this.state.nationId}
+		                  changeOption={this.changeOption}
+	    	                  resetNation={this.resetNation}
+		                  />
+                      }
 		      />
-		    
 		    <Magic
 		      changePathLevel={this.changePathLevel}
 	              path={this.state.path}
