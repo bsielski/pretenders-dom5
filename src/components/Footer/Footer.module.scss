@@ -1,4 +1,4 @@
-.footer {
+.container {
     padding: 5px 10px;
     background-color: rgb(64, 56, 56);
     border-color: #c1ab5d;
@@ -7,26 +7,26 @@
     border-radius: 16px;
 }
 
-.footer__row {
+.row {
     
 }
 
-.footer__page_title {
+.page_title {
     color: #cccccc;
     font-size: 14px;
 }
 
-.footer__caption {
+.caption {
     color: #cccccc;
     font-size: 12px;
 }
 
-.footer__value {
+.value {
     color: #cccccc;
     font-size: 13px;
 }
 
-.footer__link {
+.link {
     color: #cccccc;
     font-size: 13px;
 }

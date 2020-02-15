@@ -1,0 +1,73 @@
+.container {
+    color: #eeeeee;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 3px;
+}
+
+.section {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.picker {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin: 2px 2px;
+}
+
+.picker_scale {
+    @extend .picker;
+    flex-flow: column;
+    margin: 2px 1px;
+}
+
+.picker_dominion {
+    @extend .picker;
+    margin-right: 12px;
+    flex-flow: column;
+}
+
+.label {
+    font-size: 12px;
+    padding: 2px 6px;
+    font-family: monospace;;
+    display: block;
+}
+
+.label_dominion {
+    @extend .label;
+    background-color: #ffffee;
+    color: #111111;
+    padding: 2px 3px;
+}
+
+.label_scale {
+    @extend .label;
+    font-size: 10px;
+    padding: 2px;
+}
+
+.input {
+    color: #eeeeee;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: monospace;
+    width: 2.5em;
+    background-color: inherit;
+    border-width: 0;
+    text-align: center;
+}
+
+.input_scale {
+    @extend .input;
+    padding: 0;
+    width: 2.4em;
+    margin: 0;
+}
+
+.input_dominion {
+    @extend .input;
+}

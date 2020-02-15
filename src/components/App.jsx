@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Box from './Box';
 import {DebugBar} from './DebugBar';
-import {Footer} from './Footer';
+import Footer from './Footer';
 import Nation from './Nation';
 import {Pretenders} from './Pretenders';
 import {BlessEffects} from './BlessEffects';
 import {Imprisonment} from './Imprisonment';
 import {Magic} from './Magic';
-import {Dominion} from './Dominion';
+import Dominion from './Dominion';
 import {getPretenders} from '../getPretenders';
 import {filterPretendersByImprisonment} from '../filterPretendersByImprisonment';
 import {getNations} from '../nations';
@@ -215,7 +215,7 @@ class App extends Component {
                       title="Nation"
 		      body={<Nation
 		                  nations={this.nations}
-		                  nationId={this.state.nationId}
+	                          nationId={this.state.nationId}
 		                  changeOption={this.changeOption}
 	    	                  resetNation={this.resetNation}
 		                  />
@@ -228,20 +228,23 @@ class App extends Component {
 
 		      />
 
-		    <Dominion
-		      nations={this.nations}
-		      nationId={this.state.nationId}
-		      changeNumber={this.changeNumber}
-		      dominion={this.state.dominion}
-		      order={this.state.order}
-		      productivity={this.state.productivity}
-		      heat={this.state.heat}
-		      growth={this.state.growth}
-		      fortune={this.state.fortune}
-		      magic={this.state.magic}
-            	      resetScales={this.resetScales}
-		      />
-		    
+                    <Box
+                      title="Dominion"
+		      body={<Dominion
+		                  nations={this.nations}
+		                  nationId={this.state.nationId}
+		                  changeNumber={this.changeNumber}
+		                  dominion={this.state.dominion}
+		                  order={this.state.order}
+		                  productivity={this.state.productivity}
+		                  heat={this.state.heat}
+		                  growth={this.state.growth}
+		                  fortune={this.state.fortune}
+		                  magic={this.state.magic}
+            	                  resetScales={this.resetScales}
+		                  />
+		      }
+                      />
 	    	    <Imprisonment
 		      imprisonmentOptions={this.imprisonmentOptions}
 		      imprisonment={this.state.imprisonment}
@@ -299,7 +302,6 @@ class App extends Component {
 	    </div>	
 	);
     }
-
 }
 
 export default App;
