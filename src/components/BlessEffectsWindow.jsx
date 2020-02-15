@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './BlessEffectsWindow.css';
-import {BlessEffectsRows} from './BlessEffectsRows';
+import BlessEffectsRows from './BlessEffectsRows';
 
 export class BlessEffectsWindow extends React.Component {
     constructor(props) {
