@@ -3,9 +3,12 @@ import React from 'react';
 import styles from './ScalesPicker.module.scss';
 
 function ScalesPicker(props) {
-    const { dominion, order, productivity, heat, growth, fortune, magic } = props;
+    const {
+        changeNumber, dominion,
+        order, productivity, heat, growth, fortune, magic
+    } = props;
     const handleChange = (e) => {
-	props.changeNumber(e);
+	changeNumber(e);
     }
 
     return (

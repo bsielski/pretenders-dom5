@@ -3,11 +3,10 @@ import React from 'react';
 import styles from './MagicPicker.module.scss';
 
 function MagicPicker(props) {
-
+    const { changePathLevel, path } = props;
     const handleChange = (e) => {
-	props.changePathLevel(e);
+	changePathLevel(e);
     }
-    const { path } = props;
 
     return (
 	<div className={styles.container}>

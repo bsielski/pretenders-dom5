@@ -3,8 +3,9 @@ import React from 'react';
 //import styles from './ResetMagicButton.module.scss';
 
 function ResetMagicButton(props) {
+    const { resetMagic } = props;
     const handleResetMagic = (e) => {
-	props.resetMagic(e);
+	resetMagic(e);
     };
 
     return (

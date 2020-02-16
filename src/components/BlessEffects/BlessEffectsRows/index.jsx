@@ -5,14 +5,15 @@ import BlessPointsCell from '../BlessPointsCell';
 import styles from './BlessEffectsRows.module.scss';
 
 function BlessEffectsRows(props) {
-    const rows = props.effects.map(effect => {
+    const { effects } = props;
+    const rows = effects.map(effect => {
         const { id, scales, name, shortDescription, incarnate } = effect;
 	return (
 	    <tr key={id} className={styles.row}>
               <BlessPointsCell effect={effect}/>
               <td className={styles.scales}>
 		{
-		    (scales.heat    ? ("Heat: " + scales.heat + " "      ) : "")
+		    (scales.heat ? ("Heat: " + scales.heat + " "      ) : "")
 			+ (scales.growth  ? ("Growth: " + scales.growth + " "  ) : "")
 			+ (scales.fortune ? ("Fortune: " + scales.fortune + " " ) : "")
 			+ (scales.magic   ? ("Magic: " + scales.magic + " " ) : "")

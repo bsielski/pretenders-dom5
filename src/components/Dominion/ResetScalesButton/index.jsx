@@ -2,13 +2,13 @@ import React from 'react';
 
 //import styles from './ResetScalesButton.module.scss';
 
-export function ResetScalesButton(props) {
-
+function ResetScalesButton(props) {
+    const { onClick } = props;
     return (
   	<button
 	  type="button"
           id="reset_scales_button"
-          onClick={props.onClick}
+          onClick={onClick}
 	  >
           Reset scales points
 	</button>
