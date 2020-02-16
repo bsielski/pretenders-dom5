@@ -4,7 +4,7 @@ import {DebugBar} from './DebugBar';
 import Footer from './Footer';
 import Nation from './Nation';
 import {Pretenders} from './Pretenders';
-import {BlessEffects} from './BlessEffects';
+import BlessEffects from './BlessEffects';
 import Imprisonment from './Imprisonment';
 import Magic from './Magic';
 import Dominion from './Dominion';
@@ -258,15 +258,19 @@ class App extends Component {
                       }
                       />
                     
-		    <BlessEffects
-		      nations={this.nations}
-		      nationId={this.state.nationId}
-		      blessPoints={blessPoints}
-		      isBlessEffectsWindowOpen={this.state.isBlessEffectsWindowOpen}
-		      blessEffects={this.blessEffects}
-		      openBlessEffectsWindow={this.openBlessEffectsWindow}
-		      closeBlessEffectsWindow={this.closeBlessEffectsWindow}
-		      />
+		    <Box
+                      title="Bless Effects"
+		      body={<BlessEffects
+		                  nations={this.nations}
+		                  nationId={this.state.nationId}
+		                  blessPoints={blessPoints}
+		                  isBlessEffectsWindowOpen={this.state.isBlessEffectsWindowOpen}
+		                  blessEffects={this.blessEffects}
+		                  openBlessEffectsWindow={this.openBlessEffectsWindow}
+		                  closeBlessEffectsWindow={this.closeBlessEffectsWindow}
+		                  />
+                      }
+                      />
 
                   </div>
 

@@ -1,0 +1,85 @@
+.container {
+    color: #eeeeee;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 3px;
+    color: #dddddd;
+    font-size: 11px;
+    flex-flow: column;
+    padding: 3px 0;
+}
+
+.section {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.label {
+    font-size: 12px;
+    font-family: monospace;;
+    display: block;
+    margin: 2px 2px;
+    padding: 2px 5px;
+}
+
+.label_fire {
+    @extend .label;
+    background-color: #b03523;
+}
+.label_air {
+    @extend .label;
+    background-color: #a38e96;
+}
+.label_water {
+    @extend .label;
+    background-color: #331d98;
+}
+.label_earth {
+    @extend .label;
+    background-color: #b08130;
+}
+.label_astral {
+    @extend .label;
+    background-color: #709b96;
+}
+.label_death {
+    @extend .label;
+    background-color: #701b63;
+}
+.label_nature {
+    @extend .label;
+    background-color: #3d7523;
+}
+.label_blood {
+    @extend .label;
+    background-color: #7d1b16;
+}
+
+.open_button {
+  border-width: 0;
+  padding: 0 5px;
+  background-color: inherit;
+  font-family: 'SeshatRegular', serif;
+  font-size: 11px;
+  color: #6688ff;
+  text-decoration: underline;
+}
+
+.open_button:hover {
+  cursor: pointer;
+}
+
+.table {
+    table-layout: auto;
+    /* width: 560px; */
+    color: #cccccc;
+}
+
+.table_header {
+    font-size: 11px;
+}
+
+.table_header {
+    font-size: 11px;
+}
