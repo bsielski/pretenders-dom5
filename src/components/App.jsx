@@ -3,7 +3,7 @@ import Box from './Box';
 import {DebugBar} from './DebugBar';
 import Footer from './Footer';
 import Nation from './Nation';
-import {Pretenders} from './Pretenders';
+import Pretenders from './Pretenders';
 import BlessEffects from './BlessEffects';
 import Imprisonment from './Imprisonment';
 import Magic from './Magic';
@@ -276,17 +276,21 @@ class App extends Component {
 
 		  <div className="column">
 
-		    <Pretenders
-		      filteredPretenderByImprisonment={filteredPretenderByImprisonment}
-		      pointsLeftWithoutPretenders={pointsLeftWithoutPretenders}
-		      pretenders={this.pretenders}
-		      path={this.state.path}
-		      dominion={this.state.dominion}
-		      nationId={this.state.nationId}
-		      nations={this.nations}
-		      />
-		    
+		    <Box
+                      title="Pretenders"
+		      body={<Pretenders
+		                  filteredPretenderByImprisonment={filteredPretenderByImprisonment}
+		                  pointsLeftWithoutPretenders={pointsLeftWithoutPretenders}
+		                  pretenders={this.pretenders}
+		                  path={this.state.path}
+		                  dominion={this.state.dominion}
+		                  nationId={this.state.nationId}
+		                  nations={this.nations}
+		                  />
+		      }
+                      />
 		  </div>
+
 		</div>
 
 	      </main>

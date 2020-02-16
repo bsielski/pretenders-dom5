@@ -1,75 +1,76 @@
-
-.pretenders-table {
+.table {
     font-size: 12px;
     color: #cccccc;
 }
 
-.pretenders-table__header {
+.table_header {
     font-size: 10px;
 }
 
-.pretenders-table__cell {
+.table_cell {
     padding: 1px;
     font-size: 11px;
     text-align: center;
     background: linear-gradient(#3f4142, #3d3940);
 }
 
-.pretenders-table__cell--name {
+.table_cell_name {
+    @extend .table_cell;
     text-align: left;
 }
 
-.pretenders-table__cell--id {
+.table_cell_id {
+    @extend .table_cell;
     font-size: 8px;
 }
 
-.pretenders-table__text--magic {
-    color: #eeeeee;
-    font-size: 11px;
-    font-weight: normal;
-    font-family: monospace;
-    padding: 0 1px;
-}
-
-.pretenders-table__cell--fire {
+.table_cell_fire {
+    @extend .table_cell;
     background-image: none;
     background-color: #b03523;
 }
 
-.pretenders-table__cell--air {
+.table_cell_air {
+    @extend .table_cell;
     background-image: none;
     background-color: #a38e96;
     color: #f6f6f6;
 }
 
-.pretenders-table__cell--water {
+.table_cell_water {
+    @extend .table_cell;
     background-image: none;
     background-color: #331d98;
 }
 
-.pretenders-table__cell--earth {
+.table_cell_earth {
+    @extend .table_cell;
     background-image: none;
     background-color: #b08130;
     color: #f6f6f6;
 }
 
-.pretenders-table__cell--astral {
+.table_cell_astral {
+    @extend .table_cell;
     background-image: none;
     background-color: #709b96;
     color: #f6f6f6;
 }
 
-.pretenders-table__cell--death {
+.table_cell_death {
+    @extend .table_cell;
     background-image: none;
     background-color: #701b63;
 }
 
-.pretenders-table__cell--nature {
+.table_cell_nature {
+    @extend .table_cell;
     background-image: none;
     background-color: #3d7523;
 }
 
-.pretenders-table__cell--blood {
+.table_cell_blood {
+    @extend .table_cell;
     background-image: none;
     background-color: #7d1b16;
 }
