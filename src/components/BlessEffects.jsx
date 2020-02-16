@@ -1,7 +1,7 @@
 import React from 'react';
 import NationBlessBonusInfo from './NationBlessBonusInfo';
 
-import {BlessEffectsWindow} from './BlessEffectsWindow';
+import BlessEffectsWindow from './BlessEffectsWindow';
 import BlessEffectsRows from './BlessEffectsRows';
 import {filterBlessEffects} from '../filterBlessEffects';
 
