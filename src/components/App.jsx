@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Box from './Box';
-import {DebugBar} from './DebugBar';
+import DebugBar from './DebugBar';
 import Footer from './Footer';
 import Nation from './Nation';
 import Pretenders from './Pretenders';
