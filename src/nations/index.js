@@ -2,7 +2,7 @@ import {getPretenders} from './getPretenders';
 import {putPretendersToNations} from './nationsPretenders';
 
 export function getNations() {
-	const nationsData = require('./data/nations.json');
+	const nationsData = require('../data/nations.json');
 	nationsData["0"] = {
 		"id": "0",
 		"name": "Any nation",

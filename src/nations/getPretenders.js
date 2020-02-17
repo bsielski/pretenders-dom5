@@ -1,6 +1,6 @@
 export function getPretenders() {
-	let pretenders = require('./data/pretenders.json');
-	let costs = require('./data/pretender_costs.json');
+	let pretenders = require('../data/pretenders.json');
+	let costs = require('../data/pretender_costs.json');
 	
 	for (var pret_id of Object.keys(costs)) {
 		if ( costs[pret_id] === null ) {

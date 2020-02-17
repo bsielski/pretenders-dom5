@@ -8,7 +8,7 @@ import BlessEffects from './BlessEffects';
 import Imprisonment from './Imprisonment';
 import Magic from './Magic';
 import Dominion from './Dominion';
-import {getPretenders} from '../getPretenders';
+import {getPretenders} from '../nations/getPretenders';
 import {filterPretendersByImprisonment} from '../filterPretendersByImprisonment';
 import {getNations} from '../nations';
 import {scalesCost} from '../scalesCost';
@@ -310,7 +310,7 @@ class App extends Component {
 		growth={this.state.growth}
 		fortune={this.state.fortune}
 		magic={this.state.magic}
-		noOfPretenders={filteredPretenderByImprisonment.length}
+		//noOfPretenders={filteredPretenderByImprisonment.length}
 		isBlessEffectsWindowOpen={this.state.isBlessEffectsWindowOpen}
 		/>
 
