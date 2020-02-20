@@ -55,7 +55,8 @@ module Dom5
         pretender_dat = unit.fields(*PRETENDER_FIELDS_STR) +
                         unit.fields(*PRETENDER_FIELDS_INT).map(&:to_i)
         pretender = Pretender.new( *pretender_dat )
-        pretender.pathcost ||= 10
+        # Default path cost if none specified
+        pretender.pathcost = 10 if pretender.pathcost.zero?
         @pretenders[pret_id] = pretender
         
         [ :realm1, :realm2, :realm3 ].each do | r_key |
