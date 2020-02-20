@@ -1,6 +1,6 @@
 {
   "name": "pretenders-dom5",
-  "version": "1.11.0",
+  "version": "1.11.1",
   "private": true,
   "dependencies": {
     "node-sass": "^4.13.1",
