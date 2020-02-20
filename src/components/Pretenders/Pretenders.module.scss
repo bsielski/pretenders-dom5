@@ -1,0 +1,76 @@
+.table {
+    font-size: 12px;
+    color: #cccccc;
+}
+
+.table_header {
+    font-size: 10px;
+}
+
+.table_cell {
+    padding: 1px;
+    font-size: 11px;
+    text-align: center;
+    background: linear-gradient(#3f4142, #3d3940);
+}
+
+.table_cell_name {
+    @extend .table_cell;
+    text-align: left;
+}
+
+.table_cell_id {
+    @extend .table_cell;
+    font-size: 8px;
+}
+
+.table_cell_fire {
+    @extend .table_cell;
+    background-image: none;
+    background-color: #b03523;
+}
+
+.table_cell_air {
+    @extend .table_cell;
+    background-image: none;
+    background-color: #a38e96;
+    color: #f6f6f6;
+}
+
+.table_cell_water {
+    @extend .table_cell;
+    background-image: none;
+    background-color: #331d98;
+}
+
+.table_cell_earth {
+    @extend .table_cell;
+    background-image: none;
+    background-color: #b08130;
+    color: #f6f6f6;
+}
+
+.table_cell_astral {
+    @extend .table_cell;
+    background-image: none;
+    background-color: #709b96;
+    color: #f6f6f6;
+}
+
+.table_cell_death {
+    @extend .table_cell;
+    background-image: none;
+    background-color: #701b63;
+}
+
+.table_cell_nature {
+    @extend .table_cell;
+    background-image: none;
+    background-color: #3d7523;
+}
+
+.table_cell_blood {
+    @extend .table_cell;
+    background-image: none;
+    background-color: #7d1b16;
+}

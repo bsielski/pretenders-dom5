@@ -1,0 +1,74 @@
+.container {
+    color: #eeeeee;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 3px;
+}
+
+.section {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+.picker {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin: 2px 2px;
+    flex-flow: column;
+}
+
+.label {
+    font-size: 12px;
+    padding: 2px 6px;
+    font-family: monospace;;
+    display: block;
+    padding: 2px 5px;
+}
+
+.label_fire {
+    @extend .label;
+    background-color: #b03523;
+}
+.label_air {
+    @extend .label;
+    background-color: #a38e96;
+}
+.label_water {
+    @extend .label;
+    background-color: #331d98;
+}
+.label_earth {
+    @extend .label;
+    background-color: #b08130;
+}
+.label_astral {
+    @extend .label;
+    background-color: #709b96;
+}
+.label_death {
+    @extend .label;
+    background-color: #701b63;
+}
+.label_nature {
+    @extend .label;
+    background-color: #3d7523;
+}
+.label_blood {
+    @extend .label;
+    background-color: #7d1b16;
+}
+
+.input {
+    color: #eeeeee;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: monospace;
+    width: 2.5em;
+    background-color: inherit;
+    border-width: 0;
+    text-align: center;
+    padding: 0;
+}
