@@ -3,7 +3,7 @@ export function getPretenders() {
 	let costs = require('./data/pretender_costs.json');
 	
 	for (var pret_id of Object.keys(costs)) {
-		if ( costs[pret_id] === null ) {
+		if ( costs[pret_id].pointcost == null ) {
 			delete pretenders[pret_id];
 		}
 		else if (pretenders[pret_id]) {
