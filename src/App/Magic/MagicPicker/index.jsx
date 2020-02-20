@@ -3,9 +3,30 @@ import React from 'react';
 import styles from './MagicPicker.module.scss';
 
 function MagicPicker(props) {
-    const { changePathLevel, path } = props;
-    const handleChange = (e) => {
-	changePathLevel(e);
+    const {
+        f, changeFire,
+        a, changeAir,
+        w, changeWater,
+        e, changeEarth,
+        s, changeAstral,
+        d, changeDeath,
+        n, changeNature,
+        b, changeBlood,
+    } = props;
+
+    const handleChange = (event) => {
+        const level = parseInt(event.target.value, 10);
+        const path = event.target.name;
+        switch (path) {
+        case "f": changeFire(level);   break;
+        case "a": changeAir(level);    break;
+        case "w": changeWater(level);  break;
+        case "e": changeEarth(level);  break;
+        case "s": changeAstral(level); break;
+        case "d": changeDeath(level);  break;
+        case "n": changeNature(level); break;
+        case "b": changeBlood(level);  break;
+        }
     }
 
     return (
@@ -16,7 +37,7 @@ function MagicPicker(props) {
 		F
 	      </label>
 	      <input type="number" name="f" onChange={handleChange} min="0" max="10"
-                     value={path.f}
+                     value={f}
 		     id="fire-picker__input" className={styles.input}/>
 	    </div>
 	    <div className={styles.picker}>
@@ -24,7 +45,7 @@ function MagicPicker(props) {
 		A
 	      </label>
 	      <input type="number" name="a" onChange={handleChange} min="0" max="10"
-                     value={path.a}
+                     value={a}
 		     id="air-picker__input" className={styles.input} />
 	    </div>
 	    <div className={styles.picker}>
@@ -32,7 +53,7 @@ function MagicPicker(props) {
 		W
 	      </label>
 	      <input type="number" name="w" onChange={handleChange} min="0" max="10"
-                     value={path.w}
+                     value={w}
 		     id="water-picker__input" className={styles.input} />
 	    </div>
 	    <div className={styles.picker}>
@@ -40,7 +61,7 @@ function MagicPicker(props) {
 		E
 	      </label>
 	      <input type="number" name="e" onChange={handleChange} min="0" max="10"
-                     value={path.e}
+                     value={e}
 		     id="earth-picker__input" className={styles.input} />
 	    </div>
 	  </div>
@@ -50,7 +71,7 @@ function MagicPicker(props) {
 		S
 	      </label>
 	      <input type="number" name="s" onChange={handleChange} min="0" max="10"
-                     value={path.s}
+                     value={s}
 		     id="astral-picker__input" className={styles.input} />
 	    </div>
 	    <div className={styles.picker}>
@@ -58,7 +79,7 @@ function MagicPicker(props) {
 		D
 	      </label>
 	      <input type="number" name="d" onChange={handleChange} min="0" max="10"
-                     value={path.d}
+                     value={d}
 		     id="death-picker__input" className={styles.input} />
 	    </div>
 	    <div className={styles.picker}>
@@ -66,7 +87,7 @@ function MagicPicker(props) {
 		N
 	      </label>
 	      <input type="number" name="n" onChange={handleChange} min="0" max="10"
-                     value={path.n}
+                     value={n}
 		     id="nature-picker__input" className={styles.input} />
 	    </div>
 	    <div className={styles.picker}>
@@ -74,7 +95,7 @@ function MagicPicker(props) {
 		B
 	      </label>
 	      <input type="number" name="b" onChange={handleChange} min="0" max="10"
-                     value={path.b}
+                     value={b}
 		     id="blood-picker__input" className={styles.input} />
 	    </div>
 	  </div>

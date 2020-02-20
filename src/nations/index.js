@@ -1,7 +1,7 @@
 import {getPretenders} from './getPretenders';
 import {putPretendersToNations} from './nationsPretenders';
 
-export function getNations() {
+function getNations() {
 	const nationsData = require('../data/nations.json');
 	nationsData["0"] = {
 		"id": "0",
@@ -19,3 +19,5 @@ export function getNations() {
 	putPretendersToNations(nationsData, getPretenders());
 	return nationsData;
 };
+
+export default getNations;

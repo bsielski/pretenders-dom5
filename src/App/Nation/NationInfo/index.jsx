@@ -3,7 +3,9 @@ import React from 'react';
 import styles from './NationInfo.module.scss';
 
 function NationInfo(props) {
-    const { f, a, w, e, s, d, n, b, heat, growth } = props;
+    const { f, a, w, e, s, d, n, b } = props.blessBonus;
+    const { heat, growth } = props.defaultScales;
+    
     const fBonus = f ? " Fire +"   + f : "";
     const aBonus = a ? " Air +"    + a : "";
     const wBonus = w ? " Water +"  + w : "";
@@ -12,7 +14,7 @@ function NationInfo(props) {
     const dBonus = d ? " Death +"  + d : "";
     const nBonus = n ? " Nature +" + n : "";
     const bBonus = b ? " Blood +"  + b : "";
-    const heatLabel = heat ? "Farourite temperature: "  + heat : "";
+    const heatLabel = heat ? "Favourite temperature: "  + heat : "";
     const growthLabel = growth ? "Default growth: "  + growth : "";
     return (
 	<div className={styles.container}>

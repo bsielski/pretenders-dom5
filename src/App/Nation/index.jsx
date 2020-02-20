@@ -1,17 +1,18 @@
 import React from 'react';
 import NationInfo from './NationInfo';
 import ResetAllButton from './ResetAllButton';
-import { path } from 'ramda';
 
 import styles from './Nation.module.scss';
 
 function Nation(props) {
-    const { resetNation, changeOption, nations, nationId } = props;
-    const handleResetAll = (e) => {
-	resetNation(e);
-    }
-    const handleSelection = (e) => {
-	changeOption(e);
+    const {
+        blessBonus, defaultScales,
+        nations, nationId, changeNation,
+        resetAllPoints
+    } = props;
+
+    const handleSelection = (event) => {
+        changeNation(event.target.value);
     }
 
     const nationOptions = Object.keys(nations).map(nId => {
@@ -37,21 +38,13 @@ function Nation(props) {
 	      {nationOptions}
 	    </select>
 	    <ResetAllButton
-	      onClick={handleResetAll}
-	      />
+              resetAllPoints={resetAllPoints}
+              />
 	  </div>
 	  < NationInfo
-	    f={path(['bless_bonus', 'f'], nations[nationId])}
-	    a={path(['bless_bonus', 'a'], nations[nationId])}
-	    w={path(['bless_bonus', 'w'], nations[nationId])}
-	    e={path(['bless_bonus', 'e'], nations[nationId])}
-	    s={path(['bless_bonus', 's'], nations[nationId])}
-	    d={path(['bless_bonus', 'd'], nations[nationId])}
-	    n={path(['bless_bonus', 'n'], nations[nationId])}
-	    b={path(['bless_bonus', 'b'], nations[nationId])}
-	    heat={path(['scales', 'heat'], nations[nationId])}
-	    growth={path(['scales', 'growth'], nations[nationId])}
-	    />
+            blessBonus={blessBonus}
+            defaultScales={defaultScales}
+            />
 	</div>
     );
 }

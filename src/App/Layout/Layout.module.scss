@@ -1,0 +1,13 @@
+.container {
+    width: 100%;
+}
+
+.columnsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.column {
+    max-width: 755px;
+}

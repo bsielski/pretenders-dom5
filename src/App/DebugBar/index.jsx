@@ -1,13 +1,15 @@
 import React from 'react';
-
 import styles from './DebugBar.module.scss';
 
 function DebugBar(props) {
     // const { noOfPretenders } = props;
+    // const fBonus = props.blessBonus.f
     return (
         <div>
-          {
-          /*
+          {/*
+                  <section className={styles.row}>F bless bonus: {fBonus}</section>
+
+          
           <section className={styles.row}>Number of Pretenders: {noOfPretenders}</section>
           <section className={styles.row}>Points left (without pretender): {props.points}</section>
           <section className={styles.row}>Selected nation is: {props.nation}</section>
