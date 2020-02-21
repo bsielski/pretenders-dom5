@@ -1,80 +1,9 @@
-import getNations from '../nations';
-import { defaultTo } from 'ramda';
 import imprisonmentPointsPerLevel from './imprisonmentPointsPerLevel';
-
-const scaleCost = (defaultLevel, level) => {
-  return ((level - defaultLevel) * 40);
-};
-
-const heatCost = (defaultLevel, level) => {
-  const cost = Math.abs(scaleCost(defaultLevel, level));
-  if (cost > 120) {
-    return -120;
-  }
-  return -cost;
-};
-
-const getUpdatedScalesCost = (defaultScales, scales) => {
-    return {
-        order: scaleCost(
-            defaultScales.order,
-            scales.order
-        ),
-        productivity: scaleCost(
-            defaultScales.productivity,
-            scales.productivity
-        ),
-        heat: heatCost(
-            defaultScales.heat,
-            scales.heat
-        ),
-        growth: scaleCost(
-            defaultScales.growth,
-            scales.growth
-        ),
-        fortune: scaleCost(
-            defaultScales.fortune,
-            scales.fortune
-        ),
-        magic: scaleCost(
-            defaultScales.magic,
-            scales.magic
-        )
-    };
-};
-
-const getDefaultScales = (nationId) => {
-    const scales = defaultTo(
-        {},
-        getNations()[nationId].scales
-    );
-    const order = defaultTo(0, scales.order);
-    const productivity = defaultTo(0, scales.productivity);
-    const heat = defaultTo(0, scales.heat);
-    const growth = defaultTo(0, scales.growth);
-    const fortune = defaultTo(0, scales.fortune);
-    const magic = defaultTo(0, scales.magic);
-    return {
-        order, productivity, heat,
-        growth, fortune, magic
-    };
-};
-
-const getBlessBonus = (nationId) => {
-    const bonus = defaultTo(
-        {},
-        getNations()[nationId].bless_bonus
-    );
-    const f = defaultTo(0, bonus.f);
-    const a = defaultTo(0, bonus.a);
-    const w = defaultTo(0, bonus.w);
-    const e = defaultTo(0, bonus.e);
-    const s = defaultTo(0, bonus.s);
-    const d = defaultTo(0, bonus.d);
-    const n = defaultTo(0, bonus.n);
-    const b = defaultTo(0, bonus.b);
-    return { f, a, w, e, s, d, n, b };
-};
+import scaleCost from './scaleCost';
+import heatCost from './heatCost';
+import getUpdatedScalesCosts from './getUpdatedScalesCosts';
+import getDefaultScales from './getDefaultScales';
+import getBlessBonus from './getBlessBonus';
 
 const CHANGE_NATION = "CHANGE_NATION";
 const RESET_ALL_POINTS = "RESET_ALL_POINTS";
@@ -114,7 +43,7 @@ function reducer(state, action) {
             nationId: id,
             defaultScales,
             blessBonus: getBlessBonus(id),
-            scalesCosts: getUpdatedScalesCost(defaultScales, state.scales)
+            scalesCosts: getUpdatedScalesCosts(defaultScales, state.scales)
         };
     case RESET_ALL_POINTS:
         return {
