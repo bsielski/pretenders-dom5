@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './NationScalesInfo.module.scss';
 
 function NationScalesInfo(props) {
-    const { heat, growth } = props;
+    const { heat, growth } = props.defaultScales;
     const heatLabel = heat ? "Farourite temperature: "  + heat : "";
     const growthLabel = growth ? "Default growth: "  + growth : "";
     return (

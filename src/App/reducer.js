@@ -1,5 +1,47 @@
 import getNations from '../nations';
 import { defaultTo } from 'ramda';
+import imprisonmentPointsPerLevel from './imprisonmentPointsPerLevel';
+
+const scaleCost = (defaultLevel, level) => {
+  return ((level - defaultLevel) * 40);
+};
+
+const heatCost = (defaultLevel, level) => {
+  const cost = Math.abs(scaleCost(defaultLevel, level));
+  if (cost > 120) {
+    return -120;
+  }
+  return -cost;
+};
+
+const getUpdatedScalesCost = (defaultScales, scales) => {
+    return {
+        order: scaleCost(
+            defaultScales.order,
+            scales.order
+        ),
+        productivity: scaleCost(
+            defaultScales.productivity,
+            scales.productivity
+        ),
+        heat: heatCost(
+            defaultScales.heat,
+            scales.heat
+        ),
+        growth: scaleCost(
+            defaultScales.growth,
+            scales.growth
+        ),
+        fortune: scaleCost(
+            defaultScales.fortune,
+            scales.fortune
+        ),
+        magic: scaleCost(
+            defaultScales.magic,
+            scales.magic
+        )
+    };
+};
 
 const getDefaultScales = (nationId) => {
     const scales = defaultTo(
@@ -67,6 +109,10 @@ export const initialState = {
         order: 0, productivity: 0, heat: 0,
         growth: 0, fortune: 0, magic: 0,
     },
+    scalesCosts: {
+        order: 0, productivity: 0, heat: 0,
+        growth: 0, fortune: 0, magic: 0
+    },
     blessBonus: {
         f: 0, a: 0, w: 0, e: 0,
         s: 0, d: 0, n: 0, b: 0,
@@ -74,36 +120,42 @@ export const initialState = {
     f: 0, a: 0, w: 0, e: 0,
     s: 0, d: 0, n: 0, b: 0,
     dominion: 1,
-    order: 0,
-    productivity: 0,
-    heat: 0,
-    growth: 0,
-    fortune: 0,
-    magic: 0,
+    scales: {
+        order: 0, productivity: 0, heat: 0,
+        growth: 0, fortune: 0, magic: 0
+    },
     imprisonment: 1,
+    pointsForImprisonment: 0,
     isBlessEffectsWindowOpen: false,
 };
 
 export function reducer(state, action) {
     switch (action.type) {
     case CHANGE_NATION:
-        const id = action.payload.id;
+        let id = action.payload.id;
+        let defaultScales = getDefaultScales(id);
         return {
             ...state,
             nationId: id,
-            defaultScales: getDefaultScales(id),
-            blessBonus: getBlessBonus(id)
+            defaultScales,
+            blessBonus: getBlessBonus(id),
+            scalesCosts: getUpdatedScalesCost(defaultScales, state.scales)
         };
     case RESET_ALL_POINTS:
-        const defaultScales = getDefaultScales(state.nationId);
         return {
             ...state,
-            defaultScales,
+            scalesCosts: {
+                order: 0, productivity: 0, heat: 0,
+                growth: 0, fortune: 0, magic: 0
+            },
+            scales: getDefaultScales(state.nationId),            
+            defaultScales: getDefaultScales(state.nationId),
             f: 0, a: 0, w: 0, e: 0,
             s: 0, d: 0, n: 0, b: 0,
             dominion: 1,
             ...getDefaultScales(state.nationId),
             imprisonment: 1,
+            pointsForImprisonment: imprisonmentPointsPerLevel[1],
         };
     case CHANGE_FIRE:
         return { ...state, f: action.payload.level };
@@ -128,22 +180,89 @@ export function reducer(state, action) {
             s: 0, d: 0, n: 0, b: 0,
         };
     case CHANGE_DOMINION:
-        return { ...state, dominion: action.payload.level };
+        return { ...state,
+                 dominion: action.payload.level
+               };
     case CHANGE_ORDER:
-        return { ...state, order: action.payload.level };
+        return {
+            ...state,
+            scalesCosts: {
+                ...state.scalesCosts,
+                order: scaleCost(state.defaultScales.order, action.payload.level)
+            },
+            scales: {
+                ...state.scales,
+                order: action.payload.level
+            }
+        };
     case CHANGE_PRODUCTIVITY:
-        return { ...state, productivity: action.payload.level };
+        return {
+            ...state,
+            scalesCosts: {
+                ...state.scalesCosts,
+                productivity: scaleCost(state.defaultScales.productivity, action.payload.level)
+            },
+            scales: {
+                ...state.scales,
+                productivity: action.payload.level
+            }
+        };
     case CHANGE_HEAT:
-        return { ...state, heat: action.payload.level };
+        return {
+            ...state,
+            scalesCosts: {
+                ...state.scalesCosts,
+                heat: heatCost(state.defaultScales.heat, action.payload.level)
+            },
+            scales: {
+                ...state.scales,
+                heat: action.payload.level
+            }
+        };
     case CHANGE_GROWTH:
-        return { ...state, growth: action.payload.level };
+        return {
+            ...state,
+            scalesCosts: {
+                ...state.scalesCosts,
+                growth: scaleCost(state.defaultScales.growth, action.payload.level)
+            },
+            scales: {
+                ...state.scales,
+                growth: action.payload.level
+            }
+        };
     case CHANGE_FORTUNE:
-        return { ...state, fortune: action.payload.level };
+        return {
+            ...state,
+            scalesCosts: {
+                ...state.scalesCosts,
+                fortune: scaleCost(state.defaultScales.fortune, action.payload.level)
+            },
+            scales: {
+                ...state.scales,
+                fortune: action.payload.level
+            }
+        };
     case CHANGE_MAGIC:
-        return { ...state, magic: action.payload.level };
+        return {
+            ...state,
+            scalesCosts: {
+                ...state.scalesCosts,
+                magic: scaleCost(state.defaultScales.magic, action.payload.level)
+            },
+            scales: {
+                ...state.scales,
+                magic: action.payload.level
+            }
+        };
     case RESET_SCALES_POINTS:
         return {
             ...state,
+            scalesCosts: {
+                order: 0, productivity: 0, heat: 0,
+                growth: 0, fortune: 0, magic: 0
+            },
+            scales: getDefaultScales(state.nationId),
             defaultScales: getDefaultScales(state.nationId),
             dominion: 1,
             ...getDefaultScales(state.nationId),
@@ -152,7 +271,8 @@ export function reducer(state, action) {
         const level = action.payload.level;
         return {
             ...state,
-            imprisonment: parseInt(level, 10)
+            imprisonment: parseInt(level, 10),
+            pointsForImprisonment: imprisonmentPointsPerLevel[level],
         };
     case SHOW_BLESS_LIST:
         return {

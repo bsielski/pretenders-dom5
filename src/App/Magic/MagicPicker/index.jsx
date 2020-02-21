@@ -26,6 +26,7 @@ function MagicPicker(props) {
         case "d": changeDeath(level);  break;
         case "n": changeNature(level); break;
         case "b": changeBlood(level);  break;
+        default: break;    
         }
     }
 

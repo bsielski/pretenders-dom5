@@ -3,35 +3,40 @@ import NationBlessBonusInfo from './NationBlessBonusInfo';
 import BlessEffectsWindow from './BlessEffectsWindow';
 import BlessEffectsRows from './BlessEffectsRows';
 
-import {filterBlessEffects} from '../../filterBlessEffects';
+import {totalBlessPoints} from './blessPoints';
+
+import {filterBlessEffects} from './filterBlessEffects';
+import {getBlessEffects} from './getBlessEffects';
 
 import styles from './BlessEffects.module.scss';
 
 function BlessEffects(props) {
     const {
-        nations, nationId,
-        isBlessEffectsWindowOpen, closeBlessEffectsWindow,
-        blessEffects, blessPoints,
-        openBlessEffectsWindow
+        blessBonus,
+        showBlessList, closeBlessList,
+        isBlessEffectsWindowOpen,
+        f,a,w,e,s,d,n,b,
     } = props;
-    let this_nation = nations[nationId];
-    let this_bless  = this_nation.bless_bonus;
+    const path = {f,a,w,e,s,d,n,b}
+    const blessPoints = totalBlessPoints(path, blessBonus);
+    const blessEffects = getBlessEffects();
+
     return(
 	<div className={styles.container}>
 	  <BlessEffectsWindow
 	    isOpen={isBlessEffectsWindowOpen}
-	    onClose={closeBlessEffectsWindow}
+	    onClose={closeBlessList}
 	    blessEffects={blessEffects}
 	    />
 	  <NationBlessBonusInfo
-	    f={this_bless.f}
-	    a={this_bless.a}
-	    w={this_bless.w}
-	    e={this_bless.e}
-	    s={this_bless.s}
-	    d={this_bless.d}
-	    n={this_bless.n}
-	    b={this_bless.b}
+	    f={blessBonus.f}
+	    a={blessBonus.a}
+	    w={blessBonus.w}
+	    e={blessBonus.e}
+	    s={blessBonus.s}
+	    d={blessBonus.d}
+	    n={blessBonus.n}
+	    b={blessBonus.b}
 	    />
 	  
 	  <div className={styles.section}>
@@ -47,7 +52,7 @@ function BlessEffects(props) {
 	  
 	  <p>
 	    Available Blesses
-	    <button className={styles.open_button} onClick={openBlessEffectsWindow}>
+	    <button className={styles.open_button} onClick={showBlessList}>
 	      Show all bless list
 	    </button>
 	  </p>

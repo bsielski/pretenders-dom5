@@ -3,37 +3,42 @@ import NationScalesInfo from './NationScalesInfo';
 import ScalesPicker from './ScalesPicker';
 import ResetScalesButton from './ResetScalesButton';
 
-import { path } from 'ramda';
-
 import styles from './Dominion.module.scss';
 
 function Dominion(props) {
     const {
         resetScalesPoints,
+        changeDominion,
+        changeOrder,
+        changeProductivity,
+        changeHeat,
+        changeGrowth,
+        changeFortune,
+        changeMagic,
+        defaultScales,
         dominion,
-        order, productivity, heat,
-        growth, fortune, magic
+        scales,
     } = props;
     
     return (
 	<div className={styles.container}>
-	  {/*< NationScalesInfo
-		   heat={path(['scales', 'heat'], nations[nationId])}
-		   growth={path(['scales', 'growth'], nations[nationId])}
-		   />
-	           < ScalesPicker
-                         changeNumber={changeNumber}
-                         dominion={dominion}
-		         order={order}
-		         productivity={productivity}
-		         heat={heat}
-		         growth={growth}
-		         fortune={fortune}
-		         magic={magic}
-		     />*/}
- 	           <ResetScalesButton
-                     resetScalesPoints={resetScalesPoints}
-	             />
+	  <NationScalesInfo
+	    defaultScales={defaultScales}
+	    />
+	  < ScalesPicker
+            changeDominion={changeDominion}
+            changeOrder={changeOrder}
+            changeProductivity={changeProductivity}
+            changeHeat={changeHeat}
+            changeGrowth={changeGrowth}
+            changeFortune={changeFortune}
+            changeMagic={changeMagic}
+            dominion={dominion}
+	    scales={scales}
+	    />
+ 	  <ResetScalesButton
+            resetScalesPoints={resetScalesPoints}
+	    />
 	</div>
     );
 }

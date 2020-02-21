@@ -4,11 +4,39 @@ import styles from './ScalesPicker.module.scss';
 
 function ScalesPicker(props) {
     const {
-        changeNumber, dominion,
-        order, productivity, heat, growth, fortune, magic
+        dominion,
+        scales,
+        changeDominion,
+        changeOrder,
+        changeProductivity,
+        changeHeat,
+        changeGrowth,
+        changeFortune,
+        changeMagic,
     } = props;
-    const handleChange = (e) => {
-	changeNumber(e);
+
+    const {
+        order,
+        productivity,
+        heat,
+        growth,
+        fortune,
+        magic
+    } = scales;
+
+    const handleChange = (event) => {
+        const level = parseInt(event.target.value, 10);
+        const scale = event.target.name;
+        switch (scale) {
+        case "dominion": changeDominion(level);   break;
+        case "order": changeOrder(level);   break;
+        case "productivity": changeProductivity(level);    break;
+        case "heat": changeHeat(level);  break;
+        case "growth": changeGrowth(level);  break;
+        case "fortune": changeFortune(level); break;
+        case "magic": changeMagic(level);  break;
+        default: break;
+        }
     }
 
     return (
@@ -22,11 +50,9 @@ function ScalesPicker(props) {
               <input type="number" name="dominion" onChange={handleChange}
 		     min="1" max="10" value={dominion} id="dominion-picker__input"
 		     className={styles.input_dominion} />
-
 	    </div>
 	  </div>
-
-          
+      
 	  <div className={styles.section}>
 
 	    <div className={styles.picker_scale}>
@@ -88,7 +114,6 @@ function ScalesPicker(props) {
 		     min="-3" max="3" value={magic} id="magic-picker__input"
 		     className={styles.input_scale} />
 	    </div>
-            
           </div>
         </div>
     );

@@ -1,18 +1,37 @@
 import React from 'react';
-import {pretenderCost} from '../../pretenderCost';
+
+import {filterPretendersByImprisonment} from './filterPretendersByImprisonment';
+
+import {pretenderCost} from './pretenderCost';
+import { sum } from 'ramda';
 
 import styles from './Pretenders.module.scss';
 
 function Pretenders(props) {
+
     const {
-        filteredPretenderByImprisonment,
-        pretenders,
-        pointsLeftWithoutPretenders,
         nations,
+        pretenders,
         nationId,
-	path,
+        imprisonment,
+        pointsForImprisonment,
+        scalesCosts,
+	f, a, w, e, s, d, n, b,
 	dominion,
     } = props;
+
+    const path = {f, a, w, e, s, d, n, b};
+
+    const points = 425;
+
+    const totalCostOfScales = sum(Object.values(scalesCosts));
+    const pointsLeftWithoutPretenders = points + pointsForImprisonment - totalCostOfScales;
+
+    const filteredPretenderByImprisonment = filterPretendersByImprisonment(
+        pretenders,
+        nations[nationId].pretenders,
+        imprisonment
+    );
     
     const pretenderRows = filteredPretenderByImprisonment.map(pretenderId => {
 	const pretender = pretenders[pretenderId];
@@ -20,13 +39,13 @@ function Pretenders(props) {
 	    {
 		pretenderId: pretenderId,
 		name: pretender.name,
-		pointsLeft: pointsLeftWithoutPretenders -
-                    pretenderCost(pretender,
-				  nations[nationId],
-				  path,
-				  dominion),
-		dominion: pretender.startdom > dominion ?
-		    pretender.startdom : dominion,
+		pointsLeft: pointsLeftWithoutPretenders - pretenderCost(
+                    pretender,
+		    nations[nationId],
+		    path,
+		    dominion
+                ),
+		dominion: pretender.startdom > dominion ? pretender.startdom : dominion,
 		f: pretender.f > path.f ? pretender.f : path.f,
 		a: pretender.a > path.a ? pretender.a : path.a,
 		w: pretender.w > path.w ? pretender.w : path.w,
@@ -49,7 +68,7 @@ function Pretenders(props) {
 	return (
 	    <tr key={data.pretenderId}>
 	      <td className={styles.table_cell_name}>{data.name + " "}
-		<span className={styles.table_cell_id}>{"(id: " + data.pretenderId + ")"}</span>
+	        <span className={styles.table_cell_id}>{"(id: " + data.pretenderId + ")"}</span>
 	      </td>
 	      <td className={styles.table_cell}>{data.pointsLeft}</td>
 	      <td className={styles.table_cell}>{data.dominion}</td>

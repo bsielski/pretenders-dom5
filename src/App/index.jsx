@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import Layout from './Layout';
 import Nation from './Nation';
 import Magic from './Magic';
@@ -14,7 +14,7 @@ import { reducer, initialState } from './reducer';
 import './App.module.scss';
 
 function App(props) {
-    const { nations, version } = props;
+    const { nations, pretenders, version } = props;
 
     const [state, dispatch] = React.useReducer(reducer, initialState);
 
@@ -81,24 +81,30 @@ function App(props) {
         dispatch({type: 'CHANGE_IMPRISONMENT', payload: {level}});
     };
     const showBlessList = () => {
-        dispatch({type: 'SHOW_BLESS_LIST:'});
+        dispatch({type: 'SHOW_BLESS_LIST'});
     };
     const closeBlessList = () => {
-        dispatch({type: 'CLOSE_BLESS_LIST:'});
+        dispatch({type: 'CLOSE_BLESS_LIST'});
     };
 
-    const { blessBonus, defaultScales,
+    const { nationId,
+            blessBonus, defaultScales,
             f, a, w, e, s, d, n, b,
+            dominion,
+            scales,
+            scalesCosts,
+            imprisonment, pointsForImprisonment,
+            isBlessEffectsWindowOpen
           } = state;
 
-    const nation = (<Nation
+    const nationComponent = (<Nation
                     changeNation={changeNation}
                     resetAllPoints={resetAllPoints}
                     nations={nations}
                     blessBonus={blessBonus}
                     defaultScales={defaultScales}
                     />);
-    const magic = (<Magic
+    const magicComponent = (<Magic
                    resetMagicPoints={resetMagicPoints}
                    f={f} changeFire={changeFire}
                    a={a} changeAir={changeAir}
@@ -109,23 +115,66 @@ function App(props) {
                    n={n} changeNature={changeNature}
                    b={b} changeBlood={changeBlood}
                    />);
-    const dominion = (<Dominion
+    const dominionComponent = (<Dominion
                       resetScalesPoints={resetScalesPoints}
+                      defaultScales={defaultScales}
+                      changeDominion={changeDominion}
+                      changeOrder={changeOrder}
+                      changeProductivity={changeProductivity}
+                      changeHeat={changeHeat}
+                      changeGrowth={changeGrowth}
+                      changeFortune={changeFortune}
+                      changeMagic={changeMagic}
+                      dominion={dominion}
+	              scales={scales}
                       />);
-    const footer = (<Footer
-                    version={version}
-                    />);
+    const imprisonmentComponent = (<Imprisonment
+                                   changeImprisonment={changeImprisonment}
+                                   imprisonment={imprisonment}
+                                   />);
+
+    const blessEffectsComponent = (<BlessEffects
+                                   showBlessList={showBlessList}
+                                   closeBlessList={closeBlessList}
+                                   blessBonus={blessBonus}
+                                   isBlessEffectsWindowOpen={isBlessEffectsWindowOpen}
+                                   f={f} a={a} w={w} e={e}
+                                   s={s} d={d} n={n} b={b}
+
+                                   />);
+
+    
+    const pretendersComponent = (<Pretenders
+                                 f={f} a={a} w={w} e={e}
+                                 s={s} d={d} n={n} b={b}
+                                 nations={nations}
+                                 nationId={nationId}
+                                 dominion={dominion}
+                                 pretenders={pretenders}
+                                 pointsForImprisonment={pointsForImprisonment}
+                                 imprisonment={imprisonment}
+                                 scalesCosts={scalesCosts}
+                                 />);
+
+    const footerComponent = (<Footer
+                             version={version}
+                             />);
+    const debugBarComponent = (<DebugBar
+                               pointsForImprisonment={pointsForImprisonment}
+                               scalesCosts={scalesCosts}
+                               isBlessEffectsWindowOpen={isBlessEffectsWindowOpen}
+                               />);
 
     return (
         <Layout
-	  nation = {nation}
-              magic = {magic}
-              dominion = {dominion}
-              // imprisonment = {imprisonment}
-              // blessEffects = {blessEffects}
-              // pretenders = {pretenders}
-              footer = {footer}
-              // debugBar = {debugBar}
+	  nation = {nationComponent}
+          magic = {magicComponent}
+          dominion = {dominionComponent}
+          imprisonment = {imprisonmentComponent}
+          blessEffects = {blessEffectsComponent}
+          pretenders = {pretendersComponent}
+          footer = {footerComponent}
+          debugBar = {debugBarComponent}
           />
     );
 }

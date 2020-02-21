@@ -1,4 +1,4 @@
-export function getPretenders() {
+function getPretenders() {
 	let pretenders = require('../data/pretenders.json');
 	let costs = require('../data/pretender_costs.json');
 	
@@ -13,6 +13,7 @@ export function getPretenders() {
     return(pretenders);
 }
 
+export default getPretenders;
 // const prets = getPretenders()
 // console.log(
 //   prets[2797]

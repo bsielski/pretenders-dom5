@@ -1,6 +1,6 @@
 // import {getPretenders} from './pretenders';
 export function filterPretendersByImprisonment(pretenders, pretenderIds, imprisonmentLevel) {
-  if (imprisonmentLevel !== 1) {
+  if (imprisonmentLevel > 1) {
     return pretenderIds;
   }
   else {

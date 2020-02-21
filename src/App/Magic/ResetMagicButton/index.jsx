@@ -1,6 +1,6 @@
 import React from 'react';
 
-//import styles from './ResetMagicButton.module.scss';
+import styles from './ResetMagicButton.module.scss';
 
 function ResetMagicButton(props) {
     const { resetMagicPoints } = props;
@@ -14,7 +14,8 @@ function ResetMagicButton(props) {
 	  type="button"
           id="reset_magic_button"
           onClick={handleClick}
-	  >
+	  className={styles.button}
+          >
           Reset magic points
 	</button>
     );
