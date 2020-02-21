@@ -9,7 +9,8 @@ import Pretenders from './Pretenders';
 import Footer from './Footer';
 import DebugBar from './DebugBar';
 
-import { reducer, initialState } from './reducer';
+import initialState from './initialState';
+import reducer from './reducer';
 
 import './App.module.scss';
 

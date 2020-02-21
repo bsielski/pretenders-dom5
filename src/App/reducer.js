@@ -103,33 +103,8 @@ const CHANGE_IMPRISONMENT = "CHANGE_IMPRISONMENT";
 const SHOW_BLESS_LIST = "SHOW_BLESS_LIST";
 const CLOSE_BLESS_LIST = "CLOSE_BLESS_LIST";
 
-export const initialState = {
-    nationId: 0,
-    defaultScales: {
-        order: 0, productivity: 0, heat: 0,
-        growth: 0, fortune: 0, magic: 0,
-    },
-    scalesCosts: {
-        order: 0, productivity: 0, heat: 0,
-        growth: 0, fortune: 0, magic: 0
-    },
-    blessBonus: {
-        f: 0, a: 0, w: 0, e: 0,
-        s: 0, d: 0, n: 0, b: 0,
-    },
-    f: 0, a: 0, w: 0, e: 0,
-    s: 0, d: 0, n: 0, b: 0,
-    dominion: 1,
-    scales: {
-        order: 0, productivity: 0, heat: 0,
-        growth: 0, fortune: 0, magic: 0
-    },
-    imprisonment: 1,
-    pointsForImprisonment: 0,
-    isBlessEffectsWindowOpen: false,
-};
 
-export function reducer(state, action) {
+function reducer(state, action) {
     switch (action.type) {
     case CHANGE_NATION:
         let id = action.payload.id;
@@ -285,6 +260,8 @@ export function reducer(state, action) {
             isBlessEffectsWindowOpen: false
         };
     default:
-        return initialState;
+        return state;
     }
 }
+
+export default reducer;
