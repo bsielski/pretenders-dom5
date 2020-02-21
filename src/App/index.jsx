@@ -19,106 +19,52 @@ function App(props) {
 
     const [state, dispatch] = React.useReducer(reducer, initialState);
 
-    const changeNation = (id) => {
-        dispatch({type: 'CHANGE_NATION', payload: {id}});
-    };
-    const resetAllPoints = () => {
-        dispatch({type: 'RESET_ALL_POINTS'});
-    };
-    const changeFire = (level) => {
-        dispatch({type: 'CHANGE_FIRE', payload: {level}});
-    };
-    const changeAir = (level) => {
-        dispatch({type: 'CHANGE_AIR', payload: {level}});
-    };
-    const changeWater = (level) => {
-        dispatch({type: 'CHANGE_WATER', payload: {level}});
-    };
-    const changeEarth = (level) => {
-        dispatch({type: 'CHANGE_EARTH', payload: {level}});
-    };
-    const changeAstral = (level) => {
-        dispatch({type: 'CHANGE_ASTRAL', payload: {level}});
-    };
-    const changeDeath = (level) => {
-        dispatch({type: 'CHANGE_DEATH', payload: {level}});
-    };
-    const changeNature = (level) => {
-        dispatch({type: 'CHANGE_NATURE', payload: {level}});
-    };
-    const changeBlood = (level) => {
-        dispatch({type: 'CHANGE_BLOOD', payload: {level}});
-    };
-    const resetMagicPoints = () => {
-        dispatch({type: 'RESET_MAGIC_POINTS'});
-    };
+    const changeNation   = (id)    => { dispatch({type: 'CHANGE_NATION', payload: {id}}) };
+    const resetAllPoints = ()      => { dispatch({type: 'RESET_ALL_POINTS'}) };
+    const changeFire     = (level) => { dispatch({type: 'CHANGE_FIRE', payload: {level}}) };
+    const changeAir      = (level) => { dispatch({type: 'CHANGE_AIR', payload: {level}}) };
+    const changeWater    = (level) => { dispatch({type: 'CHANGE_WATER', payload: {level}}) };
+    const changeEarth    = (level) => { dispatch({type: 'CHANGE_EARTH', payload: {level}}) };
+    const changeAstral   = (level) => { dispatch({type: 'CHANGE_ASTRAL', payload: {level}}) };
+    const changeDeath    = (level) => { dispatch({type: 'CHANGE_DEATH', payload: {level}}) };
+    const changeNature   = (level) => { dispatch({type: 'CHANGE_NATURE', payload: {level}}) };
+    const changeBlood    = (level) => { dispatch({type: 'CHANGE_BLOOD', payload: {level}}) };
+    const resetMagicPoints = ()    => { dispatch({type: 'RESET_MAGIC_POINTS'}) };
 
-    const changeDominion = (level) => {
-        dispatch({type: 'CHANGE_DOMINION', payload: {level}});
-    };
-    const changeOrder = (level) => {
-        dispatch({type: 'CHANGE_ORDER', payload: {level}});
-    };
-    const changeProductivity = (level) => {
-        dispatch({type: 'CHANGE_PRODUCTIVITY', payload: {level}});
-    };
-    const changeHeat = (level) => {
-        dispatch({type: 'CHANGE_HEAT', payload: {level}});
-    };
-    const changeGrowth = (level) => {
-        dispatch({type: 'CHANGE_GROWTH', payload: {level}});
-    };
-    const changeFortune = (level) => {
-        dispatch({type: 'CHANGE_FORTUNE', payload: {level}});
-    };
-    const changeMagic = (level) => {
-        dispatch({type: 'CHANGE_MAGIC', payload: {level}});
-    };
-    const resetScalesPoints = () => {
-        dispatch({type: 'RESET_SCALES_POINTS'});
-    };
+    const changeDominion = (level) => { dispatch({type: 'CHANGE_DOMINION', payload: {level}}) };
+    const changeOrder    = (level) => { dispatch({type: 'CHANGE_ORDER', payload: {level}}) };
+    const changeProductivity = (level) => { dispatch({type: 'CHANGE_PRODUCTIVITY', payload: {level}}) };
+    const changeHeat     = (level) => { dispatch({type: 'CHANGE_HEAT', payload: {level}}) };
+    const changeGrowth   = (level) => { dispatch({type: 'CHANGE_GROWTH', payload: {level}}) };
+    const changeFortune  = (level) => { dispatch({type: 'CHANGE_FORTUNE', payload: {level}}) };
+    const changeMagic    = (level) => { dispatch({type: 'CHANGE_MAGIC', payload: {level}}) };
+    const resetScalesPoints = ()   => { dispatch({type: 'RESET_SCALES_POINTS'}) };
 
-    const changeImprisonment = (level) => {
-        dispatch({type: 'CHANGE_IMPRISONMENT', payload: {level}});
-    };
-    const showBlessList = () => {
-        dispatch({type: 'SHOW_BLESS_LIST'});
-    };
-    const closeBlessList = () => {
-        dispatch({type: 'CLOSE_BLESS_LIST'});
-    };
-
-    const { nationId,
-            blessBonus, defaultScales,
-            f, a, w, e, s, d, n, b,
-            dominion,
-            scales,
-            scalesCosts,
-            imprisonment, pointsForImprisonment,
-            isBlessEffectsWindowOpen
-          } = state;
+    const changeImprisonment = (level) => { dispatch({type: 'CHANGE_IMPRISONMENT', payload: {level}}) };
+    const showBlessList      = ()      => { dispatch({type: 'SHOW_BLESS_LIST'}) };
+    const closeBlessList     = ()      => { dispatch({type: 'CLOSE_BLESS_LIST'}) };
 
     const nationComponent = (<Nation
                     changeNation={changeNation}
                     resetAllPoints={resetAllPoints}
                     nations={nations}
-                    blessBonus={blessBonus}
-                    defaultScales={defaultScales}
+                    blessBonus={state.blessBonus}
+                    defaultScales={state.defaultScales}
                     />);
     const magicComponent = (<Magic
                    resetMagicPoints={resetMagicPoints}
-                   f={f} changeFire={changeFire}
-                   a={a} changeAir={changeAir}
-                   w={w} changeWater={changeWater}
-                   e={e} changeEarth={changeEarth}
-                   s={s} changeAstral={changeAstral}
-                   d={d} changeDeath={changeDeath}
-                   n={n} changeNature={changeNature}
-                   b={b} changeBlood={changeBlood}
+                   f={state.f} changeFire={changeFire}
+                   a={state.a} changeAir={changeAir}
+                   w={state.w} changeWater={changeWater}
+                   e={state.e} changeEarth={changeEarth}
+                   s={state.s} changeAstral={changeAstral}
+                   d={state.d} changeDeath={changeDeath}
+                   n={state.n} changeNature={changeNature}
+                   b={state.b} changeBlood={changeBlood}
                    />);
     const dominionComponent = (<Dominion
                       resetScalesPoints={resetScalesPoints}
-                      defaultScales={defaultScales}
+                      defaultScales={state.defaultScales}
                       changeDominion={changeDominion}
                       changeOrder={changeOrder}
                       changeProductivity={changeProductivity}
@@ -126,44 +72,39 @@ function App(props) {
                       changeGrowth={changeGrowth}
                       changeFortune={changeFortune}
                       changeMagic={changeMagic}
-                      dominion={dominion}
-	              scales={scales}
+                      dominion={state.dominion}
+	              scales={state.scales}
                       />);
     const imprisonmentComponent = (<Imprisonment
                                    changeImprisonment={changeImprisonment}
-                                   imprisonment={imprisonment}
+                                   imprisonment={state.imprisonment}
                                    />);
-
     const blessEffectsComponent = (<BlessEffects
                                    showBlessList={showBlessList}
                                    closeBlessList={closeBlessList}
-                                   blessBonus={blessBonus}
-                                   isBlessEffectsWindowOpen={isBlessEffectsWindowOpen}
-                                   f={f} a={a} w={w} e={e}
-                                   s={s} d={d} n={n} b={b}
-
+                                   blessBonus={state.blessBonus}
+                                   isBlessEffectsWindowOpen={state.isBlessEffectsWindowOpen}
+                                   f={state.f} a={state.a} w={state.w} e={state.e}
+                                   s={state.s} d={state.d} n={state.n} b={state.b}
                                    />);
-
-    
     const pretendersComponent = (<Pretenders
-                                 f={f} a={a} w={w} e={e}
-                                 s={s} d={d} n={n} b={b}
+                                 f={state.f} a={state.a} w={state.w} e={state.e}
+                                 s={state.s} d={state.d} n={state.n} b={state.b}
                                  nations={nations}
-                                 nationId={nationId}
-                                 dominion={dominion}
+                                 nationId={state.nationId}
+                                 dominion={state.dominion}
                                  pretenders={pretenders}
-                                 pointsForImprisonment={pointsForImprisonment}
-                                 imprisonment={imprisonment}
-                                 scalesCosts={scalesCosts}
+                                 pointsForImprisonment={state.pointsForImprisonment}
+                                 imprisonment={state.imprisonment}
+                                 scalesCosts={state.scalesCosts}
                                  />);
-
     const footerComponent = (<Footer
                              version={version}
                              />);
     const debugBarComponent = (<DebugBar
-                               pointsForImprisonment={pointsForImprisonment}
-                               scalesCosts={scalesCosts}
-                               isBlessEffectsWindowOpen={isBlessEffectsWindowOpen}
+                               pointsForImprisonment={state.pointsForImprisonment}
+                               scalesCosts={state.scalesCosts}
+                               isBlessEffectsWindowOpen={state.isBlessEffectsWindowOpen}
                                />);
 
     return (
