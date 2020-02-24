@@ -103,6 +103,7 @@ module Dom5
         natp += @realm_pretenders[ realm ]
       end
       @nation_extra_pretenders[ nation.id ].each do | pret |
+        next unless @pretenders.key?(pret)
         natp << pret
       end
       @nation_not_pretenders[ nation.id ].each do | pret |
