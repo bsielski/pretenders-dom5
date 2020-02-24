@@ -1,3 +1,4 @@
+import pretendersToRemove from './pretendersToRemove';
 const nation_pretenders = require('../data/nations_pretenders.json');
 const nations = require('../data/nations.json');
 
@@ -17,6 +18,11 @@ function getNations() {
     Object.keys(nations).forEach(nationId => {
 	let nation = nations[nationId];
         let pretenderIds = nation_pretenders[nationId];
+        if (pretendersToRemove[nationId]) {
+            pretenderIds = pretenderIds.filter(id => {
+                return !pretendersToRemove[nationId].includes(id);
+            });
+        }
 	if ( ! nation.scales ) { nation.scales = {}; }
 	if ( ! nation.bless_bonus ) { nation.bless_bonus = {}; }
         nation.pretenders = pretenderIds;
