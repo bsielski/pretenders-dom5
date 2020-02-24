@@ -1,4 +1,4 @@
-import getNations from '../nations';
+import getNations from '../getNations';
 import { defaultTo } from 'ramda';
 
 const getDefaultScales = (nationId) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getNations from './nations';
-import getPretenders from './nations/getPretenders';
+import getNations from './getNations';
+import getPretenders from './getPretenders';
 import VERSION from './version';
 import './index.css';
 import App from './App';
