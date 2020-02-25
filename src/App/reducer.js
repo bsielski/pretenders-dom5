@@ -4,38 +4,11 @@ import heatCost from './heatCost';
 import getUpdatedScalesCosts from './getUpdatedScalesCosts';
 import getDefaultScales from './getDefaultScales';
 import getBlessBonus from './getBlessBonus';
-
-const CHANGE_NATION = "CHANGE_NATION";
-const RESET_ALL_POINTS = "RESET_ALL_POINTS";
-
-const CHANGE_FIRE = "CHANGE_FIRE";
-const CHANGE_AIR = "CHANGE_AIR";
-const CHANGE_WATER = "CHANGE_WATER";
-const CHANGE_EARTH = "CHANGE_EARTH";
-const CHANGE_ASTRAL = "CHANGE_ASTRAL";
-const CHANGE_DEATH = "CHANGE_DEATH";
-const CHANGE_NATURE = "CHANGE_NATURE";
-const CHANGE_BLOOD = "CHANGE_BLOOD";
-const RESET_MAGIC_POINTS = "RESET_MAGIC_POINTS";
-
-const CHANGE_DOMINION = "CHANGE_DOMINION";
-const CHANGE_ORDER = "CHANGE_ORDER";
-const CHANGE_PRODUCTIVITY = "CHANGE_PRODUCTIVITY";
-const CHANGE_HEAT = "CHANGE_HEAT";
-const CHANGE_GROWTH = "CHANGE_GROWTH";
-const CHANGE_FORTUNE = "CHANGE_FORTUNE";
-const CHANGE_MAGIC = "CHANGE_MAGIC";
-const RESET_SCALES_POINTS = "RESET_SCALES_POINTS";
-
-const CHANGE_IMPRISONMENT = "CHANGE_IMPRISONMENT";
-
-const SHOW_BLESS_LIST = "SHOW_BLESS_LIST";
-const CLOSE_BLESS_LIST = "CLOSE_BLESS_LIST";
-
+import actionType from './actionType';
 
 function reducer(state, action) {
     switch (action.type) {
-    case CHANGE_NATION:
+    case actionType.CHANGE_NATION:
         let id = action.payload.id;
         let defaultScales = getDefaultScales(id);
         return {
@@ -45,7 +18,7 @@ function reducer(state, action) {
             blessBonus: getBlessBonus(id),
             scalesCosts: getUpdatedScalesCosts(defaultScales, state.scales)
         };
-    case RESET_ALL_POINTS:
+    case actionType.RESET_ALL_POINTS:
         return {
             ...state,
             scalesCosts: {
@@ -61,33 +34,33 @@ function reducer(state, action) {
             imprisonment: 1,
             pointsForImprisonment: imprisonmentPointsPerLevel[1],
         };
-    case CHANGE_FIRE:
+    case actionType.CHANGE_FIRE:
         return { ...state, f: action.payload.level };
-    case CHANGE_AIR:
+    case actionType.CHANGE_AIR:
         return { ...state, a: action.payload.level };
-    case CHANGE_WATER:
+    case actionType.CHANGE_WATER:
         return { ...state, w: action.payload.level };
-    case CHANGE_EARTH:
+    case actionType.CHANGE_EARTH:
         return { ...state, e: action.payload.level };
-    case CHANGE_ASTRAL:
+    case actionType.CHANGE_ASTRAL:
         return { ...state, s: action.payload.level };
-    case CHANGE_DEATH:
+    case actionType.CHANGE_DEATH:
         return { ...state, d: action.payload.level };
-    case CHANGE_NATURE:
+    case actionType.CHANGE_NATURE:
         return { ...state, n: action.payload.level };
-    case CHANGE_BLOOD:
+    case actionType.CHANGE_BLOOD:
         return { ...state, b: action.payload.level };
-    case RESET_MAGIC_POINTS:
+    case actionType.RESET_MAGIC_POINTS:
         return {
             ...state,
             f: 0, a: 0, w: 0, e: 0,
             s: 0, d: 0, n: 0, b: 0,
         };
-    case CHANGE_DOMINION:
+    case actionType.CHANGE_DOMINION:
         return { ...state,
                  dominion: action.payload.level
                };
-    case CHANGE_ORDER:
+    case actionType.CHANGE_ORDER:
         return {
             ...state,
             scalesCosts: {
@@ -99,7 +72,7 @@ function reducer(state, action) {
                 order: action.payload.level
             }
         };
-    case CHANGE_PRODUCTIVITY:
+    case actionType.CHANGE_PRODUCTIVITY:
         return {
             ...state,
             scalesCosts: {
@@ -111,7 +84,7 @@ function reducer(state, action) {
                 productivity: action.payload.level
             }
         };
-    case CHANGE_HEAT:
+    case actionType.CHANGE_HEAT:
         return {
             ...state,
             scalesCosts: {
@@ -123,7 +96,7 @@ function reducer(state, action) {
                 heat: action.payload.level
             }
         };
-    case CHANGE_GROWTH:
+    case actionType.CHANGE_GROWTH:
         return {
             ...state,
             scalesCosts: {
@@ -135,7 +108,7 @@ function reducer(state, action) {
                 growth: action.payload.level
             }
         };
-    case CHANGE_FORTUNE:
+    case actionType.CHANGE_FORTUNE:
         return {
             ...state,
             scalesCosts: {
@@ -147,7 +120,7 @@ function reducer(state, action) {
                 fortune: action.payload.level
             }
         };
-    case CHANGE_MAGIC:
+    case actionType.CHANGE_MAGIC:
         return {
             ...state,
             scalesCosts: {
@@ -159,7 +132,7 @@ function reducer(state, action) {
                 magic: action.payload.level
             }
         };
-    case RESET_SCALES_POINTS:
+    case actionType.RESET_SCALES_POINTS:
         return {
             ...state,
             scalesCosts: {
@@ -171,19 +144,19 @@ function reducer(state, action) {
             dominion: 1,
             ...getDefaultScales(state.nationId),
         };
-    case CHANGE_IMPRISONMENT:
+    case actionType.CHANGE_IMPRISONMENT:
         const level = action.payload.level;
         return {
             ...state,
             imprisonment: parseInt(level, 10),
             pointsForImprisonment: imprisonmentPointsPerLevel[level],
         };
-    case SHOW_BLESS_LIST:
+    case actionType.SHOW_BLESS_LIST:
         return {
             ...state,
             isBlessEffectsWindowOpen: true
         };
-    case CLOSE_BLESS_LIST:
+    case actionType.CLOSE_BLESS_LIST:
         return {
             ...state,
             isBlessEffectsWindowOpen: false
