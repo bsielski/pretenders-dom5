@@ -1,72 +1,74 @@
+import actionType from './actionType';
+
 function createActions(dispatch) {
     return {
         changeNation: (id)  => {
-            dispatch({type: 'CHANGE_NATION', payload: {id}});
+            dispatch({type: actionType.CHANGE_NATION, payload: {id}});
         },
         resetAllPoints: ()   => {
-            dispatch({type: 'RESET_ALL_POINTS'});
+            dispatch({type: actionType.RESET_ALL_POINTS});
         },
         changeFire: (level) => {
-            dispatch({type: 'CHANGE_FIRE', payload: {level}});
+            dispatch({type: actionType.CHANGE_FIRE, payload: {level}});
         },
         changeAir: (level) => {
-            dispatch({type: 'CHANGE_AIR', payload: {level}});
+            dispatch({type: actionType.CHANGE_AIR, payload: {level}});
         },
         changeWater: (level) => {
-            dispatch({type: 'CHANGE_WATER', payload: {level}});
+            dispatch({type: actionType.CHANGE_WATER, payload: {level}});
         },
         changeEarth: (level) => {
-            dispatch({type: 'CHANGE_EARTH', payload: {level}});
+            dispatch({type: actionType.CHANGE_EARTH, payload: {level}});
         },
         changeAstral: (level) => {
-            dispatch({type: 'CHANGE_ASTRAL', payload: {level}});
+            dispatch({type: actionType.CHANGE_ASTRAL, payload: {level}});
         },
         changeDeath: (level) => {
-            dispatch({type: 'CHANGE_DEATH', payload: {level}});
+            dispatch({type: actionType.CHANGE_DEATH, payload: {level}});
         },
         changeNature: (level) => {
-            dispatch({type: 'CHANGE_NATURE', payload: {level}});
+            dispatch({type: actionType.CHANGE_NATURE, payload: {level}});
         },
         changeBlood: (level) => {
-            dispatch({type: 'CHANGE_BLOOD', payload: {level}});
+            dispatch({type: actionType.CHANGE_BLOOD, payload: {level}});
         },
         resetMagicPoints: ()  => {
-            dispatch({type: 'RESET_MAGIC_POINTS'});
+            dispatch({type: actionType.RESET_MAGIC_POINTS});
         },
 
         changeDominion: (level) => {
-            dispatch({type: 'CHANGE_DOMINION', payload: {level}});
+            dispatch({type: actionType.CHANGE_DOMINION, payload: {level}});
         },
         changeOrder: (level) => {
-            dispatch({type: 'CHANGE_ORDER', payload: {level}});
+            dispatch({type: actionType.CHANGE_ORDER, payload: {level}});
         },
         changeProductivity: (level) => {
-            dispatch({type: 'CHANGE_PRODUCTIVITY', payload: {level}});
+            dispatch({type: actionType.CHANGE_PRODUCTIVITY, payload: {level}});
         },
         changeHeat: (level) => {
-            dispatch({type: 'CHANGE_HEAT', payload: {level}});
+            dispatch({type: actionType.CHANGE_HEAT, payload: {level}});
         },
         changeGrowth: (level) => {
-            dispatch({type: 'CHANGE_GROWTH', payload: {level}});
+            dispatch({type: actionType.CHANGE_GROWTH, payload: {level}});
         },
         changeFortune: (level) => {
-            dispatch({type: 'CHANGE_FORTUNE', payload: {level}});
+            dispatch({type: actionType.CHANGE_FORTUNE, payload: {level}});
         },
         changeMagic: (level) => {
-            dispatch({type: 'CHANGE_MAGIC', payload: {level}});
+            dispatch({type: actionType.CHANGE_MAGIC, payload: {level}});
         },
         resetScalesPoints: ()  => {
-            dispatch({type: 'RESET_SCALES_POINTS'});
+            dispatch({type: actionType.RESET_SCALES_POINTS});
         },
 
         changeImprisonment: (level) => {
-            dispatch({type: 'CHANGE_IMPRISONMENT', payload: {level}});
+            dispatch({type: actionType.CHANGE_IMPRISONMENT, payload: {level}});
         },
         showBlessList: ()   => {
-            dispatch({type: 'SHOW_BLESS_LIST'});
+            dispatch({type: actionType.SHOW_BLESS_LIST});
         },
         closeBlessList: ()   => {
-            dispatch({type: 'CLOSE_BLESS_LIST'});
+            dispatch({type: actionType.CLOSE_BLESS_LIST});
         },
     }
 }
