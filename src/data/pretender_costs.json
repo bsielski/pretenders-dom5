@@ -256,5 +256,9 @@
 	"3384": { "name": "Sahira", "pointcost": 200 },
 	"3386": { "name": "Ilah of the Sky", "pointcost": 240 },
 	"3387": { "name": "Ilah of the Sacred Mountain", "pointcost": 230 },
-	"3388": { "name": "Ilah of the Moon", "pointcost": 220 }
+	"3388": { "name": "Ilah of the Moon", "pointcost": 220 },
+	"3394": { "name": "Serpent of the Underworld", "pointcost": 180 },
+	"3395": { "name": "Demiurge", "pointcost": 200 },
+	"3396": { "name": "King in Yellow", "pointcost": 180 },
+	"3416": { "name": "Great Archon", "pointcost": 280 }
 }
