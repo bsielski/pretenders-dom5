@@ -1,12 +1,12 @@
 {
   "name": "pretenders-dom5",
-  "version": "1.11.4",
+  "version": "1.12.0",
   "private": true,
   "dependencies": {
     "node-sass": "^4.13.1",
     "ramda": "^0.27.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-scripts": "3.3.1"
   },
   "scripts": {

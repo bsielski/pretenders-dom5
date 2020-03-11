@@ -16,6 +16,7 @@ npm run build
 ```
 
 ## Changelog
+- Version 1.12.0: Update to 5.42: add LA Vaettiheim nation, add new chassis, update chassis costs.
 - Version 1.11.4: Fix many nations that have many inappropriate pretenders (unavailable for those nations).
 - Version 1.11.3: Fix Sauromatian pretenders bug.
 - Version 1.11.1: Fix new path costs for rainbow pretenders. Remove unused pretenders (Mother of Tuathas etc.).
