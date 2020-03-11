@@ -244,9 +244,9 @@
 	"3208": { "name": "Titan of the Spring", "pointcost": 200 },
 	"3209": { "name": "Titan of Growth", "pointcost": 180 },
 	"3328": { "name": "God Block", "pointcost": 150 },
-	"3329": { "name": "Betyl of the Sun", "pointcost": 120 },
-	"3330": { "name": "Betyl of Writing", "pointcost": 120 },
-	"3331": { "name": "Betyl of the Stars", "pointcost": 120 },
+	"3329": { "name": "Betyl of the Sun", "pointcost": 140 },
+	"3330": { "name": "Betyl of Writing", "pointcost": 140 },
+	"3331": { "name": "Betyl of the Stars", "pointcost": 140 },
 	"3344": { "name": "Statue of Beginnings", "pointcost": 170 },
 	"3345": { "name": "Wooden Colossus", "pointcost": 230 },
 	"3346": { "name": "Bronze Colossus", "pointcost": 370 },
@@ -256,5 +256,9 @@
 	"3384": { "name": "Sahira", "pointcost": 200 },
 	"3386": { "name": "Ilah of the Sky", "pointcost": 240 },
 	"3387": { "name": "Ilah of the Sacred Mountain", "pointcost": 230 },
-	"3388": { "name": "Ilah of the Moon", "pointcost": 220 }
+	"3388": { "name": "Ilah of the Moon", "pointcost": 220 },
+	"3394": { "name": "Serpent of the Underworld", "pointcost": 180 },
+	"3395": { "name": "Demiurge", "pointcost": 200 },
+	"3396": { "name": "King in Yellow", "pointcost": 180 },
+	"3416": { "name": "Great Archon", "pointcost": 280 }
 }
