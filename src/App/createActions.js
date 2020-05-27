@@ -64,6 +64,20 @@ function createActions(dispatch) {
         changeImprisonment: (level) => {
             dispatch({type: actionType.CHANGE_IMPRISONMENT, payload: {level}});
         },
+
+        toggleImmobiles: () => {
+            dispatch({type: actionType.TOGGLE_IMMOBILES});
+        },
+        toggleTitans: () => {
+            dispatch({type: actionType.TOGGLE_TITANS});
+        },
+        toggleMonsters: () => {
+            dispatch({type: actionType.TOGGLE_MONSTERS});
+        },
+        toggleHumanoids: () => {
+            dispatch({type: actionType.TOGGLE_HUMANOIDS});
+        },
+
         showBlessList: ()   => {
             dispatch({type: actionType.SHOW_BLESS_LIST});
         },
