@@ -4,6 +4,7 @@ import Nation from './Nation';
 import Magic from './Magic';
 import Dominion from './Dominion';
 import Imprisonment from './Imprisonment';
+import Chassis from './Chassis';
 import BlessEffects from './BlessEffects';
 import Pretenders from './Pretenders';
 import Footer from './Footer';
@@ -56,6 +57,13 @@ function App(props) {
                                    changeImprisonment={action.changeImprisonment}
                                    imprisonment={state.imprisonment}
                                    />);
+    const chassisComponent = (<Chassis
+                                   toggleImmobiles={action.toggleImmobiles}
+                                   toggleTitans={action.toggleTitans}
+                                   toggleMonsters={action.toggleMonsters}
+                                   toggleHumanoids={action.toggleHumanoids}
+                                   chassis={state.chassis}
+                              />);
     const blessEffectsComponent = (<BlessEffects
                                    showBlessList={action.showBlessList}
                                    closeBlessList={action.closeBlessList}
@@ -73,6 +81,7 @@ function App(props) {
                                  pretenders={pretenders}
                                  pointsForImprisonment={state.pointsForImprisonment}
                                  imprisonment={state.imprisonment}
+                                 chassis={state.chassis}
                                  scalesCosts={state.scalesCosts}
                                  />);
     const footerComponent = (<Footer
@@ -90,6 +99,7 @@ function App(props) {
           magic = {magicComponent}
           dominion = {dominionComponent}
           imprisonment = {imprisonmentComponent}
+          chassis = {chassisComponent}
           blessEffects = {blessEffectsComponent}
           pretenders = {pretendersComponent}
           footer = {footerComponent}

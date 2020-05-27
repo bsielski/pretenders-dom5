@@ -2,6 +2,8 @@ import React from 'react';
 
 import {filterPretendersByImprisonment} from './filterPretendersByImprisonment';
 
+import {filterPretendersByChassis} from './filterPretendersByChassis';
+
 import {pretenderCost} from './pretenderCost';
 import { sum } from 'ramda';
 
@@ -18,22 +20,27 @@ function Pretenders(props) {
         scalesCosts,
 	f, a, w, e, s, d, n, b,
 	dominion,
+        chassis,
     } = props;
 
     const path = {f, a, w, e, s, d, n, b};
-
+    
     const points = 425;
 
     const totalCostOfScales = sum(Object.values(scalesCosts));
     const pointsLeftWithoutPretenders = points + pointsForImprisonment - totalCostOfScales;
 
-    const filteredPretenderByImprisonment = filterPretendersByImprisonment(
+    const filteredPretenderIds = filterPretendersByChassis(
         pretenders,
-        nations[nationId].pretenders,
-        imprisonment
+        filterPretendersByImprisonment(
+            pretenders,
+            nations[nationId].pretenders,
+            imprisonment
+        ),
+        chassis
     );
     
-    const pretenderRows = filteredPretenderByImprisonment.map(pretenderId => {
+    const pretenderRows = filteredPretenderIds.map(pretenderId => {
 	const pretender = pretenders[pretenderId];
 	return (
 	    {

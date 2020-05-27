@@ -3,11 +3,10 @@ import Box from './Box';
 
 import styles from './Layout.module.scss';
 
-
 function Layout(props) {
     
     const {
-        nation, magic, dominion, imprisonment,
+        nation, magic, dominion, imprisonment, chassis,
         blessEffects, pretenders, footer, debugBar
     } = props;
 
@@ -22,6 +21,7 @@ function Layout(props) {
                 <Box title="Dominion" body={dominion} />
 	    	<Box title="Imprisonment" body={imprisonment} />
 		<Box title="Bless Effects" body={blessEffects} />
+	    	<Box title="Chassis" body={chassis} />
               </div>
 
 	      <div className={styles.column}>

@@ -151,11 +151,46 @@ function reducer(state, action) {
             imprisonment: parseInt(level, 10),
             pointsForImprisonment: imprisonmentPointsPerLevel[level],
         };
+
+    case actionType.TOGGLE_IMMOBILES:
+        return {
+            ...state,
+            chassis: {
+                ...state.chassis,
+                4: !state.chassis[4],
+            },
+        };
+    case actionType.TOGGLE_TITANS:
+        return {
+            ...state,
+            chassis: {
+                ...state.chassis,
+                3: !state.chassis[3],
+            },
+        };
+    case actionType.TOGGLE_MONSTERS:
+        return {
+            ...state,
+            chassis: {
+                ...state.chassis,
+                2: !state.chassis[2],
+            },
+        };
+    case actionType.TOGGLE_HUMANOIDS:
+        return {
+            ...state,
+            chassis: {
+                ...state.chassis,
+                1: !state.chassis[1],
+            },
+        };
+
     case actionType.SHOW_BLESS_LIST:
         return {
             ...state,
             isBlessEffectsWindowOpen: true
         };
+
     case actionType.CLOSE_BLESS_LIST:
         return {
             ...state,

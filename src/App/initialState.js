@@ -20,6 +20,12 @@ const initialState = {
         growth: 0, fortune: 0, magic: 0
     },
     imprisonment: 1,
+    chassis: {
+        4: true,
+        3: true,
+        2: true,
+        1: true,
+    },
     pointsForImprisonment: 0,
     isBlessEffectsWindowOpen: false,
 };
