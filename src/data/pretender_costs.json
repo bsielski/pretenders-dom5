@@ -260,5 +260,6 @@
 	"3394": { "name": "Serpent of the Underworld", "pointcost": 180 },
 	"3395": { "name": "Demiurge", "pointcost": 200 },
 	"3396": { "name": "King in Yellow", "pointcost": 180 },
-	"3416": { "name": "Great Archon", "pointcost": 280 }
+	"3416": { "name": "Great Archon", "pointcost": 280 },
+	"3473": { "name": "Firstborn of the Smokeless Flame", "pointcost": 220 }
 }
