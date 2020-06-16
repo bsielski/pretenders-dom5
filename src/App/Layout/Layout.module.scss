@@ -5,9 +5,10 @@
 .columnsContainer {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: stretch;
 }
 
 .column {
     max-width: 755px;
+    flex-grow: 1;
 }

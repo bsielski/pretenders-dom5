@@ -16,16 +16,43 @@ function Layout(props) {
 	    <div className={styles.columnsContainer}>
 
 	      <div className={styles.column}>
-		<Box title="Nation" body={nation} />
-		<Box title="Magic" body={magic} />
-                <Box title="Dominion" body={dominion} />
-	    	<Box title="Imprisonment" body={imprisonment} />
-		<Box title="Bless Effects" body={blessEffects} />
-	    	<Box title="Chassis" body={chassis} />
+
+	        <div className={styles.columnsContainer}>
+                  <div className={styles.column}>
+		    <Box title="Nation" body={nation} />
+                  </div>
+                </div>
+	        <div className={styles.columnsContainer}>
+                  <div className={styles.column}>
+		    <Box title="Magic" body={magic} />
+                  </div>
+                </div>
+	        <div className={styles.columnsContainer}>
+                  <div className={styles.column}>
+                    <Box title="Dominion" body={dominion} />
+                  </div>
+                </div>
+	        <div className={styles.columnsContainer}>
+                  <div className={styles.column}>
+	    	    <Box title="Imprisonment" body={imprisonment} />
+                  </div>
+                  <div className={styles.column}>
+	    	    <Box title="Chassis" body={chassis} />
+                  </div>
+                </div>
+	        <div className={styles.column}>
+	          <div className={styles.columnsContainer}>
+	            <Box title="Bless Effects" body={blessEffects} />
+                  </div>
+                </div>
               </div>
 
 	      <div className={styles.column}>
-		<Box title="Pretenders" body={pretenders} />
+	        <div className={styles.column}>
+	          <div className={styles.columnsContainer}>
+		    <Box title="Pretenders" body={pretenders} />
+                  </div>
+                </div>
 	      </div>
 
 	    </div>
