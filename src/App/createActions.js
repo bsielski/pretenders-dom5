@@ -42,20 +42,56 @@ function createActions(dispatch) {
         changeOrder: (level) => {
             dispatch({type: actionType.CHANGE_ORDER, payload: {level}});
         },
+        increaseOrder: (level) => {
+            dispatch({type: actionType.INCREASE_ORDER});
+        },
+        decreaseOrder: (level) => {
+            dispatch({type: actionType.DECREASE_ORDER});
+        },
         changeProductivity: (level) => {
             dispatch({type: actionType.CHANGE_PRODUCTIVITY, payload: {level}});
+        },
+        increaseProductivity: (level) => {
+            dispatch({type: actionType.INCREASE_PRODUCTIVITY});
+        },
+        decreaseProductivity: (level) => {
+            dispatch({type: actionType.DECREASE_PRODUCTIVITY});
         },
         changeHeat: (level) => {
             dispatch({type: actionType.CHANGE_HEAT, payload: {level}});
         },
+        increaseHeat: (level) => {
+            dispatch({type: actionType.INCREASE_HEAT});
+        },
+        decreaseHeat: (level) => {
+            dispatch({type: actionType.DECREASE_HEAT});
+        },
         changeGrowth: (level) => {
             dispatch({type: actionType.CHANGE_GROWTH, payload: {level}});
+        },
+        increaseGrowth: (level) => {
+            dispatch({type: actionType.INCREASE_GROWTH});
+        },
+        decreaseGrowth: (level) => {
+            dispatch({type: actionType.DECREASE_GROWTH});
         },
         changeFortune: (level) => {
             dispatch({type: actionType.CHANGE_FORTUNE, payload: {level}});
         },
+        increaseFortune: (level) => {
+            dispatch({type: actionType.INCREASE_FORTUNE});
+        },
+        decreaseFortune: (level) => {
+            dispatch({type: actionType.DECREASE_FORTUNE});
+        },
         changeMagic: (level) => {
             dispatch({type: actionType.CHANGE_MAGIC, payload: {level}});
+        },
+        increaseMagic: (level) => {
+            dispatch({type: actionType.INCREASE_MAGIC});
+        },
+        decreaseMagic: (level) => {
+            dispatch({type: actionType.DECREASE_MAGIC});
         },
         resetScalesPoints: ()  => {
             dispatch({type: actionType.RESET_SCALES_POINTS});
