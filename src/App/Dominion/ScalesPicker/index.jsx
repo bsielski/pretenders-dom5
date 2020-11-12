@@ -63,6 +63,13 @@ function ScalesPicker(props) {
 	        <div className={styles.section}>
 
 	          <div className={styles.picker_scale}>
+              <button
+	              type="button"
+                id="reset_scales_button"
+                onClick={handleChange}
+                className={styles.button}>
+                +11
+	            </button>
 	            <label className={styles.label_scale}
 		                 htmlFor="order-picker__input">
 	              Ord
@@ -70,6 +77,13 @@ function ScalesPicker(props) {
 	            <input type="number" name="order" onChange={handleChange}
 		                 min="-3" max="3" value={order} id="order-picker__input"
 		                 className={styles.input_scale} />
+              <button
+	              type="button"
+                id="reset_scales_button"
+                onClick={handleChange}
+                className={styles.button}>
+                -1
+	            </button>
 	          </div>
 
 	          <div className={styles.picker_scale}>
