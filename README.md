@@ -16,6 +16,7 @@ npm run build
 ```
 
 ## Changelog
+- Version 1.15.0: Mobile friendly buttons for scale pickers. They appear when screen width is low. 
 - Version 1.14.1: Fix Lemuria default growth scale.
 - Version 1.14.0: Add EA Ubar.filter. Move chassis filter next to imprisonment box.
 - Version 1.13.0: Add chassis filter. Add report links to footer.
