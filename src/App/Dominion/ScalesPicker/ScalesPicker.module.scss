@@ -71,3 +71,14 @@
 .input_dominion {
     @extend .input;
 }
+
+.button {
+    color: #eeeeee;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: monospace;
+    width: 2.5em;
+    background-color: inherit;
+    border-width: 0;
+    text-align: center;
+}
