@@ -5,12 +5,12 @@ import styles from './Box.module.scss';
 function Box(props) {
     const { title, body } = props;
     return (
-	<div className={styles.container}>
-	  <header className={styles.header}>
+	      <div className={styles.container}>
+	        <header className={styles.header}>
             {title}
           </header>
           {body}
-	</div>
+	      </div>
     );
 }
 

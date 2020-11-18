@@ -8,10 +8,10 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-        <App
-    nations={getNations()}
-    pretenders={getPretenders()}
-    version={VERSION}
-        />,
+    <App
+      nations={getNations()}
+      pretenders={getPretenders()}
+      version={VERSION}
+    />,
     document.getElementById('root'));
 registerServiceWorker();
